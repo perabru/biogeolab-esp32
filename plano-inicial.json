@@ -1,0 +1,2039 @@
+{
+  "schema": 1,
+  "project": "esp32",
+  "updatedAt": "2026-10-31T16:00:00Z",
+  "tasks": [
+    {
+      "id": "H01",
+      "title": "Briefing técnico consolidado",
+      "category": "gestao",
+      "start": "2026-10-31",
+      "due": "2026-10-31",
+      "owner": "Coordenação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Inventário de telas publicado",
+          "done": true
+        },
+        {
+          "id": "c1",
+          "text": "Stack e critérios documentados",
+          "done": true
+        }
+      ],
+      "description": "Entrega anterior desta conversa, já realizada.",
+      "dependencies": [],
+      "status": "done",
+      "optional": false,
+      "priority": "media",
+      "evidence": "briefing.html",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "H02",
+      "title": "Repositório de apresentação publicado",
+      "category": "gestao",
+      "start": "2026-10-31",
+      "due": "2026-10-31",
+      "owner": "Coordenação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "README e capa no GitHub",
+          "done": true
+        },
+        {
+          "id": "c1",
+          "text": "HTML independente publicado",
+          "done": true
+        }
+      ],
+      "description": "Publicação anterior já verificada; não comprova implementação do produto.",
+      "dependencies": [],
+      "status": "done",
+      "optional": false,
+      "priority": "media",
+      "evidence": "https://github.com/perabru/biogeolab-esp32",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P01",
+      "title": "Fechar pergunta de estudo e núcleo do kit",
+      "category": "produto",
+      "start": "2026-11-02",
+      "due": "2026-11-20",
+      "owner": "Seis cursos",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "ADXL355 e ESP32 identificados",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Raman externo separado",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Expansões por estágio",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P02",
+      "title": "Documentar placas, pinos e alimentação",
+      "category": "produto",
+      "start": "2026-11-23",
+      "due": "2026-12-11",
+      "owner": "Eletrônica",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Esquema conferido",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "SPI e seleção do cartão",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Bateria e USB-C compatíveis",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [
+        "P01"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P03",
+      "title": "Definir protocolo, tempo e arquivos",
+      "category": "produto",
+      "start": "2026-12-01",
+      "due": "2026-12-18",
+      "owner": "Informática",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Unidade, sequência e versão",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Origem UTC e tempo monotônico",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Bruto separado do processado",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P04",
+      "title": "Construir gabinete e fixação do sensor",
+      "category": "produto",
+      "start": "2027-01-18",
+      "due": "2027-02-05",
+      "owner": "Eletrônica",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Folgas verificadas",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Base rígida e orientação",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Acesso de manutenção",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P05",
+      "title": "Ler ADXL355 com buffers",
+      "category": "produto",
+      "start": "2027-01-18",
+      "due": "2027-02-12",
+      "owner": "Informática + Eletrônica",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Faixa, ODR e filtro registrados",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Amostras triaxiais",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Perdas contabilizadas",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P06",
+      "title": "Gravar microSD e relacionar RTC",
+      "category": "produto",
+      "start": "2027-02-08",
+      "due": "2027-02-26",
+      "owner": "Informática",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Escrita em blocos",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Arquivo reaberto",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Reinício e relógio identificados",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P07",
+      "title": "Transmitir por Wi-Fi sem bloquear a coleta",
+      "category": "produto",
+      "start": "2027-02-22",
+      "due": "2027-03-12",
+      "owner": "Informática",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Aquisição independente da rede",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Gateway identifica estação",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Fila com reconexão",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [
+        "P05"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P08",
+      "title": "Implementar dashboard e exportação",
+      "category": "produto",
+      "start": "2027-03-01",
+      "due": "2027-03-19",
+      "owner": "Informática",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Série com unidades",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Estado stale",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "CSV e manifesto",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [
+        "P06"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P09",
+      "title": "Medir taxa efetiva, ruído e temporização",
+      "category": "produto",
+      "start": "2027-03-15",
+      "due": "2027-04-02",
+      "owner": "Eletrônica + Informática",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "250 Hz tratado como meta",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Intervalos e perdas medidos",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Condições do ensaio registradas",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P10",
+      "title": "Testar cartão, reinício e ausência de rede",
+      "category": "produto",
+      "start": "2027-03-29",
+      "due": "2027-04-16",
+      "owner": "Informática + Eletrônica",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Cartão cheio e ausente",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Nova sessão no reinício",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Dados preservados identificados",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [
+        "P08"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P11",
+      "title": "Implementar RMS e análise espectral",
+      "category": "produto",
+      "start": "2027-04-05",
+      "due": "2027-04-23",
+      "owner": "Informática",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Janela e filtro",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "PSD com unidade",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Sem inferência de magnitude sísmica",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [
+        "P09"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P12",
+      "title": "Organizar amostras e rastreabilidade",
+      "category": "produto",
+      "start": "2027-03-01",
+      "due": "2027-04-09",
+      "owner": "Análises Clínicas",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Códigos únicos de amostra ambiental",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Integridade e encaminhamento",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Sem diagnóstico humano",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P13",
+      "title": "Definir método e instrumento externo",
+      "category": "produto",
+      "start": "2027-03-22",
+      "due": "2027-04-16",
+      "owner": "Química",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Instrumento disponível confirmado",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Método e referências",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Operação institucional supervisionada",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P14",
+      "title": "Importar espectros e preservar o bruto",
+      "category": "produto",
+      "start": "2027-04-19",
+      "due": "2027-05-07",
+      "owner": "Química + Informática",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Estrutura real validada",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Amostra correta",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Histórico de processamento",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [
+        "P13"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P15",
+      "title": "Planejar e executar campanha ambiental",
+      "category": "produto",
+      "start": "2027-05-03",
+      "due": "2027-05-28",
+      "owner": "Química + Análises Clínicas",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Pontos e instalação",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Registros comparáveis",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Conclusões compatíveis com o método",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P16",
+      "title": "Medir energia e revisar a oferta educacional",
+      "category": "produto",
+      "start": "2027-05-10",
+      "due": "2027-06-04",
+      "owner": "Eletrônica + Administração",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Consumo por perfil",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Autonomia por ensaio",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Custo de laboratório incluído",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P17",
+      "title": "Preparar comunicação e demonstração",
+      "category": "produto",
+      "start": "2027-06-01",
+      "due": "2027-06-25",
+      "owner": "Publicidade",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Imagens reais identificadas",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Seis cursos representados",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Raman não aparece dentro da maleta",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [
+        "P15"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "P18",
+      "title": "Congelar kit, arquivos e manual",
+      "category": "produto",
+      "start": "2027-06-21",
+      "due": "2027-07-16",
+      "owner": "Seis cursos",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Outra equipe reabre a sessão",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Pacote de evidências",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Limitações preservadas",
+          "done": false
+        }
+      ],
+      "description": "Entregar a evidência descrita e atualizar a seção correspondente da monografia.",
+      "dependencies": [
+        "P16"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M01",
+      "title": "Escolher manual institucional e mapa de normas",
+      "category": "monografia",
+      "start": "2026-11-02",
+      "due": "2026-11-13",
+      "owner": "Orientação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Manual institucional localizado",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Edições ABNT conferidas",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Modelo da instituição arquivado",
+          "done": false
+        }
+      ],
+      "description": "NBR 14724:2024 e demais normas de apoio; conferir atualizações na entrega.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M02",
+      "title": "Montar biblioteca e matriz de referências",
+      "category": "monografia",
+      "start": "2026-11-09",
+      "due": "2026-11-27",
+      "owner": "Pesquisa",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Fonte e metadados registrados",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Notas vinculadas às leituras",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Referências auditáveis",
+          "done": false
+        }
+      ],
+      "description": "NBR 6023:2025; ferramenta de referências não dispensa conferência.",
+      "dependencies": [
+        "M01"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M03",
+      "title": "Redigir introdução, problema e objetivos",
+      "category": "monografia",
+      "start": "2026-11-23",
+      "due": "2026-12-11",
+      "owner": "Redação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Pergunta delimitada",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Objetivos verificáveis",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Justificativa sem promessa não demonstrada",
+          "done": false
+        }
+      ],
+      "description": "A seção deve explicar por que o projeto existe e qual evidência responderá à pergunta.",
+      "dependencies": [
+        "M02"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M04",
+      "title": "Escrever fundamentação e trabalhos relacionados",
+      "category": "monografia",
+      "start": "2026-12-07",
+      "due": "2027-01-29",
+      "owner": "Pesquisa",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Conceitos sustentados por fontes",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Comparação de soluções",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Lacuna da pesquisa explícita",
+          "done": false
+        }
+      ],
+      "description": "Organizar em seções; preservar atribuição das ideias conforme NBR 10520:2023.",
+      "dependencies": [
+        "M03"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M05",
+      "title": "Redigir método e protocolo de validação",
+      "category": "monografia",
+      "start": "2027-02-01",
+      "due": "2027-02-19",
+      "owner": "Pesquisa + Equipe técnica",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Dados e instrumentos descritos",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Métricas e critérios definidos",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Limitações do método previstas",
+          "done": false
+        }
+      ],
+      "description": "Descrever procedimento planejado; atualizar com o que foi efetivamente executado.",
+      "dependencies": [
+        "M04"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M06",
+      "title": "Documentar arquitetura e implementação",
+      "category": "monografia",
+      "start": "2027-03-01",
+      "due": "2027-03-26",
+      "owner": "Equipe técnica",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Versões e interfaces",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Figuras autorais identificadas",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Decisões justificadas",
+          "done": false
+        }
+      ],
+      "description": "Separar diagrama conceitual de montagem ou serviço implementado.",
+      "dependencies": [
+        "M05"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M07",
+      "title": "Conferir o registro dos ensaios",
+      "category": "monografia",
+      "start": "2027-04-05",
+      "due": "2027-04-30",
+      "owner": "Pesquisa + Equipe técnica",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Procedimento reproduzível",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Arquivos brutos preservados",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Falhas e desvios documentados",
+          "done": false
+        }
+      ],
+      "description": "A monografia precisa permitir rastrear a origem dos resultados.",
+      "dependencies": [
+        "M06"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M08",
+      "title": "Redigir resultados a partir de evidências reais",
+      "category": "monografia",
+      "start": "2027-05-03",
+      "due": "2027-05-28",
+      "owner": "Pesquisa",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Tabelas e gráficos conferidos",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Amostra e período declarados",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Simulações identificadas",
+          "done": false
+        }
+      ],
+      "description": "Não preencher resultados faltantes com dados demonstrativos.",
+      "dependencies": [
+        "M07"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M09",
+      "title": "Discutir resultados e limitações",
+      "category": "monografia",
+      "start": "2027-05-24",
+      "due": "2027-06-11",
+      "owner": "Redação + Orientação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Comparação com objetivos",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Explicações alternativas",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Limites de generalização",
+          "done": false
+        }
+      ],
+      "description": "Resultados negativos e falhas também precisam aparecer quando forem relevantes.",
+      "dependencies": [
+        "M08"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M10",
+      "title": "Escrever conclusão e trabalhos futuros",
+      "category": "monografia",
+      "start": "2027-06-07",
+      "due": "2027-06-18",
+      "owner": "Redação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Objetivos respondidos",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Contribuição delimitada",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Expansões separadas da entrega",
+          "done": false
+        }
+      ],
+      "description": "A conclusão deve corresponder ao resultado observado.",
+      "dependencies": [
+        "M09"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M11",
+      "title": "Preparar resumos e palavras-chave",
+      "category": "monografia",
+      "start": "2027-06-14",
+      "due": "2027-06-25",
+      "owner": "Redação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Resumo em português",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Versão em língua estrangeira",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Palavras-chave consistentes",
+          "done": false
+        }
+      ],
+      "description": "NBR 6028:2021; escrever após consolidar método e resultados.",
+      "dependencies": [
+        "M10"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M12",
+      "title": "Conferir elementos pré e pós-textuais",
+      "category": "monografia",
+      "start": "2027-06-21",
+      "due": "2027-07-02",
+      "owner": "Redação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Capa e folha de rosto",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Aprovação e sumário",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Referências e apêndices pertinentes",
+          "done": false
+        }
+      ],
+      "description": "Adequar elementos e dados ao manual institucional; não inventar aprovação.",
+      "dependencies": [
+        "M11"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M13",
+      "title": "Auditar citações e referências",
+      "category": "monografia",
+      "start": "2027-06-28",
+      "due": "2027-07-09",
+      "owner": "Pesquisa",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Citações com fonte rastreável",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Correspondência com a lista final",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Metadados e links conferidos",
+          "done": false
+        }
+      ],
+      "description": "NBR 10520:2023 e NBR 6023:2025.",
+      "dependencies": [
+        "M12"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M14",
+      "title": "Revisar figuras, tabelas e seções",
+      "category": "monografia",
+      "start": "2027-07-01",
+      "due": "2027-07-09",
+      "owner": "Redação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Numeração coerente",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Título e fonte das figuras",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Sumário atualizado",
+          "done": false
+        }
+      ],
+      "description": "NBR 6024:2012 e NBR 6027:2012, com apresentação conforme NBR 14724:2024.",
+      "dependencies": [
+        "M13"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M15",
+      "title": "Revisar apresentação gráfica da monografia",
+      "category": "monografia",
+      "start": "2027-07-05",
+      "due": "2027-07-16",
+      "owner": "Redação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "A4 e margens revisadas",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Fonte e espaçamentos conferidos",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Paginação e quebras verificadas",
+          "done": false
+        }
+      ],
+      "description": "Anverso: superior/esquerda 3 cm e inferior/direita 2 cm. Corpo usual em tamanho 12 e entrelinha 1,5; exceções e frente/verso conforme norma e manual. A família tipográfica é definida pela instituição.",
+      "dependencies": [
+        "M14"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M16",
+      "title": "Enviar versão integral à orientação",
+      "category": "monografia",
+      "start": "2027-07-12",
+      "due": "2027-07-20",
+      "owner": "Orientação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Texto integral entregue",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Parecer registrado",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Correções priorizadas",
+          "done": false
+        }
+      ],
+      "description": "Reservar tempo para leitura do orientador antes do fechamento.",
+      "dependencies": [
+        "M15"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M17",
+      "title": "Fechar PDF, anexos e versão final",
+      "category": "monografia",
+      "start": "2027-07-20",
+      "due": "2027-07-23",
+      "owner": "Redação + Equipe técnica",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "PDF conferido página a página",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Links e anexos acessíveis",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Versão final identificada",
+          "done": false
+        }
+      ],
+      "description": "A revisão visual deve usar o arquivo que será entregue.",
+      "dependencies": [
+        "M16"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "M18",
+      "title": "Entregar monografia e evidências",
+      "category": "monografia",
+      "start": "2027-07-26",
+      "due": "2027-07-30",
+      "owner": "Coordenação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Arquivos entregues",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Comprovante registrado",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Cópia de segurança",
+          "done": false
+        }
+      ],
+      "description": "Meta interna do projeto, sujeita às regras de depósito da instituição.",
+      "dependencies": [
+        "M17"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "A01",
+      "title": "Conferir edital, modalidade e modelo INIC 2027",
+      "category": "inic",
+      "start": "2027-06-01",
+      "due": "2027-06-04",
+      "owner": "Orientação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Página oficial consultada",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Modalidade e autoria confirmadas",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Prazo oficial registrado quando publicado",
+          "done": false
+        }
+      ],
+      "description": "Não reutilizar datas de 2026. A data deste cartão é de conferência interna, não de submissão.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "A02",
+      "title": "Definir recorte e contribuição do artigo",
+      "category": "inic",
+      "start": "2027-06-01",
+      "due": "2027-06-08",
+      "owner": "Pesquisa",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Pergunta única",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Resultado central escolhido",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Autoria e contribuições acordadas",
+          "done": false
+        }
+      ],
+      "description": "O artigo deriva de resultados do projeto e não é uma cópia integral da monografia.",
+      "dependencies": [
+        "A01"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "A03",
+      "title": "Redigir método do artigo",
+      "category": "inic",
+      "start": "2027-06-07",
+      "due": "2027-06-15",
+      "owner": "Redação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Procedimento resumido",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Conjunto e métricas",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Versões e critérios indicados",
+          "done": false
+        }
+      ],
+      "description": "Usar apenas o método realmente executado.",
+      "dependencies": [
+        "A02"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "A04",
+      "title": "Selecionar resultados, figuras e tabelas",
+      "category": "inic",
+      "start": "2027-06-14",
+      "due": "2027-06-22",
+      "owner": "Pesquisa",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Números rastreáveis",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Figuras legíveis",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Limitações explícitas",
+          "done": false
+        }
+      ],
+      "description": "Conferir a coerência com o conjunto de evidências da monografia.",
+      "dependencies": [
+        "A03"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "A05",
+      "title": "Montar primeira versão integral do artigo",
+      "category": "inic",
+      "start": "2027-06-21",
+      "due": "2027-06-30",
+      "owner": "Redação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Introdução e objetivo",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Resultados e discussão",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Conclusão coerente",
+          "done": false
+        }
+      ],
+      "description": "Primeiro rascunho completo ao fim de junho.",
+      "dependencies": [
+        "A04"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "A06",
+      "title": "Revisar resumo, palavras-chave e referências",
+      "category": "inic",
+      "start": "2027-07-01",
+      "due": "2027-07-07",
+      "owner": "Pesquisa + Redação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Resumo atualizado",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Fontes conferidas",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Termos coerentes",
+          "done": false
+        }
+      ],
+      "description": "Conferir as instruções do modelo específico do evento.",
+      "dependencies": [
+        "A05"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "A07",
+      "title": "Aplicar o modelo vigente do INIC",
+      "category": "inic",
+      "start": "2027-07-05",
+      "due": "2027-07-12",
+      "owner": "Redação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Modelo oficial confirmado",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Formato e extensão verificados",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Metadados completos",
+          "done": false
+        }
+      ],
+      "description": "O modelo do evento pode diferir da apresentação da monografia. Se 2027 ainda não estiver disponível, registrar a pendência para adaptação.",
+      "dependencies": [
+        "A06"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "A08",
+      "title": "Obter revisão dos autores e orientação",
+      "category": "inic",
+      "start": "2027-07-12",
+      "due": "2027-07-20",
+      "owner": "Orientação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Correções revisadas",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Autores aprovam a versão",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Contribuição e limitações claras",
+          "done": false
+        }
+      ],
+      "description": "A revisão científica precede o pacote de submissão.",
+      "dependencies": [
+        "A07"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "A09",
+      "title": "Fechar artigo pronto para submissão",
+      "category": "inic",
+      "start": "2027-07-21",
+      "due": "2027-07-30",
+      "owner": "Pesquisa + Coordenação",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Arquivo final identificado",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Título e autoria conferidos",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Data oficial de envio acompanhada",
+          "done": false
+        }
+      ],
+      "description": "Meta interna de prontidão. Submeter somente no calendário oficial da edição aplicável.",
+      "dependencies": [
+        "A08"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "G01",
+      "title": "Formalizar equipe e calendário escolar",
+      "category": "gestao",
+      "start": "2026-11-02",
+      "due": "2026-11-06",
+      "owner": "Coordenação + Equipe",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Responsáveis por frente",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Disponibilidade real",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Reuniões de acompanhamento",
+          "done": false
+        }
+      ],
+      "description": "Data interna de planejamento; ajustar encontros ao calendário da escola.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "G02",
+      "title": "Revisar recursos, custos e dependências",
+      "category": "gestao",
+      "start": "2026-11-09",
+      "due": "2026-11-27",
+      "owner": "Coordenação + Equipe",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Recursos existentes separados dos propostos",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Estimativa de esforço",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Dependências externas registradas",
+          "done": false
+        }
+      ],
+      "description": "Data interna de planejamento; ajustar encontros ao calendário da escola.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "G03",
+      "title": "Revisar riscos e condições do estudo",
+      "category": "gestao",
+      "start": "2026-11-23",
+      "due": "2026-12-11",
+      "owner": "Coordenação + Equipe",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Riscos e responsáveis",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Autorizações aplicáveis",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Critérios para ajustar escopo",
+          "done": false
+        }
+      ],
+      "description": "Data interna de planejamento; ajustar encontros ao calendário da escola.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "G04",
+      "title": "Revisão integrada da primeira versão",
+      "category": "gestao",
+      "start": "2027-03-22",
+      "due": "2027-03-26",
+      "owner": "Coordenação + Equipe",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Percurso demonstrado",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Evidências registradas",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Pendências priorizadas",
+          "done": false
+        }
+      ],
+      "description": "Data interna de planejamento; ajustar encontros ao calendário da escola.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "G05",
+      "title": "Revisão dos resultados para o artigo",
+      "category": "gestao",
+      "start": "2027-05-24",
+      "due": "2027-05-28",
+      "owner": "Coordenação + Equipe",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Resultados disponíveis",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Limites científicos",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Recorte de junho acordado",
+          "done": false
+        }
+      ],
+      "description": "Data interna de planejamento; ajustar encontros ao calendário da escola.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "G06",
+      "title": "Preparar apresentação e ensaio final",
+      "category": "gestao",
+      "start": "2027-07-12",
+      "due": "2027-07-23",
+      "owner": "Coordenação + Equipe",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Roteiro por área",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Demonstração com contingência",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Tempo de apresentação ensaiado",
+          "done": false
+        }
+      ],
+      "description": "Data interna de planejamento; ajustar encontros ao calendário da escola.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "G07",
+      "title": "Marco: projeto completo em julho",
+      "category": "gestao",
+      "start": "2027-07-26",
+      "due": "2027-07-30",
+      "owner": "Coordenação + Equipe",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Produto e testes entregues",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Monografia final entregue",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Artigo pronto para submissão",
+          "done": false
+        }
+      ],
+      "description": "Data interna de planejamento; ajustar encontros ao calendário da escola.",
+      "dependencies": [
+        "M18",
+        "A09",
+        "P18"
+      ],
+      "status": "todo",
+      "optional": false,
+      "priority": "alta",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "R01",
+      "title": "Reserva: corrigir apontamentos da entrega",
+      "category": "reserva",
+      "start": "2027-08-02",
+      "due": "2027-08-13",
+      "owner": "Coordenação + Equipe",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Correções solicitadas triadas",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Versão corrigida identificada",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Sem adiar o marco principal de julho",
+          "done": false
+        }
+      ],
+      "description": "Janela extra de contingência. Não é prazo oficial de congresso nem substitui a entrega de julho.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": true,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "R02",
+      "title": "Reserva: conferir edital e preparar envio INIC",
+      "category": "reserva",
+      "start": "2027-08-02",
+      "due": "2027-08-27",
+      "owner": "Coordenação + Equipe",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Prazo oficial conferido antes do vencimento",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Arquivo no modelo vigente",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Comprovante guardado quando submetido",
+          "done": false
+        }
+      ],
+      "description": "Janela extra de contingência. Não é prazo oficial de congresso nem substitui a entrega de julho.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": true,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "R03",
+      "title": "Reserva: preparar pôster e apresentação",
+      "category": "reserva",
+      "start": "2027-08-16",
+      "due": "2027-09-10",
+      "owner": "Coordenação + Equipe",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Modalidade do evento confirmada",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Material no modelo vigente",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Apresentação ensaiada",
+          "done": false
+        }
+      ],
+      "description": "Janela extra de contingência. Não é prazo oficial de congresso nem substitui a entrega de julho.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": true,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    },
+    {
+      "id": "R04",
+      "title": "Reserva: revisões externas e arquivamento",
+      "category": "reserva",
+      "start": "2027-09-01",
+      "due": "2027-09-30",
+      "owner": "Coordenação + Equipe",
+      "checklist": [
+        {
+          "id": "c0",
+          "text": "Pareceres tratados se recebidos",
+          "done": false
+        },
+        {
+          "id": "c1",
+          "text": "Histórico de versões",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Pacote final preservado",
+          "done": false
+        }
+      ],
+      "description": "Janela extra de contingência. Não é prazo oficial de congresso nem substitui a entrega de julho.",
+      "dependencies": [],
+      "status": "todo",
+      "optional": true,
+      "priority": "media",
+      "evidence": "",
+      "notes": "",
+      "createdAt": "2026-10-31T16:00:00Z",
+      "updatedAt": "2026-10-31T16:00:00Z"
+    }
+  ]
+}

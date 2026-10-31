@@ -1,135 +1,87 @@
 <div align="center">
 
-![BioGeoLab — briefing técnico](docs/banner.svg)
+![BioGeoLab](docs/banner.svg)
 
-**O laboratório vai com você.**
+# BioGeoLab · Cronograma 2027
 
-HTML independente · 26 telas · 18 blocos tecnológicos · Fontes incorporadas
+**Quadro interativo · Monografia ABNT · Artigo INIC**
 
-[Abrir o HTML](index.html) · [Telas](docs/telas.md) · [Stack](docs/tecnologias.md) · [Arquitetura](docs/arquitetura.md)
+Entrega principal em **30 de julho de 2027** · Reserva até **30 de setembro de 2027**
+
+[Quadro](index.html) · [Briefing](briefing.html) · [Cronograma completo](docs/cronograma.md) · [Monografia e INIC](docs/monografia-inic.md)
 
 </div>
 
-## O projeto
+## O planejamento virou a página inicial
 
-Uma estação para registrar vibrações, preservar dados no microSD, acompanhar aquisições por Wi-Fi e relacionar amostras a estudos de laboratório.
+O `index.html` é um quadro interativo inspirado no fluxo Kanban. O briefing técnico anterior permanece em [`briefing.html`](briefing.html), com sua identidade visual e documentação preservadas.
 
-> Arquitetura documentada: ESP32 + ADXL355 + microSD + RTC + bateria. Meta de 250 Hz ainda exige ensaio. Raman é instrumento externo de laboratório; sensores ambientais adicionais são expansões com integração própria.
+| Frente | Entrega planejada |
+| --- | --- |
+| Produto / engenharia | Construção, integração, validação e versão final até julho |
+| Monografia | Fundamentação, método, resultados, discussão, revisão e depósito |
+| Artigo INIC | Escrita desde junho; texto integral em junho e pacote pronto em julho |
+| Gestão | Recursos, responsáveis, revisões e apresentação |
+| Reserva | Correções e adaptação em agosto e setembro |
 
-Este repositório contém o **briefing técnico navegável e suas demonstrações locais**. As integrações de produção descritas no projeto são o escopo de desenvolvimento, sem servidor compartilhado ou credenciais nesta versão.
+As datas do INIC 2027 são **metas internas de prontidão**, sem inventar prazo oficial de submissão. Consultar a [página do evento](https://www.univap.br/inic/) e o [modelo vigente](https://www.univap.br/inic/submissao_trabalhos.php).
 
-## Experimente agora
+## Interações disponíveis
 
-1. Baixe o repositório em **Code → Download ZIP** ou clone com o comando abaixo.
-2. Abra `index.html` no navegador.
-3. Explore as telas, filtre a stack e teste a simulação identificada.
-4. Use **Imprimir / salvar PDF** para obter a especificação completa, ou exporte o briefing em JSON.
+- 58 cartões com responsável, início, prazo, prioridade, dependências e critérios de conclusão.
+- Colunas por frente ou por estado; arrastar e reordenar no computador.
+- Edição pelo teclado e pelo celular; filtros por mês, responsável, estado e texto.
+- Linha do tempo, calendário de entregas e áreas próprias para monografia e artigo.
+- Checklist, notas, link de evidência, arquivamento reversível e desfazer.
+- Backup JSON, exportação CSV, calendário ICS e impressão completa.
+
+## Abra e continue
+
+Baixe o repositório e abra `index.html`. HTML, CSS, JavaScript e fontes estão incorporados. Nenhuma instalação é necessária para usar o quadro.
 
 ```bash
 git clone https://github.com/perabru/biogeolab-esp32.git
 cd biogeolab-esp32
 ```
 
-O arquivo inclui HTML, CSS, JavaScript, fontes e recursos visuais. Não exige instalação, `npm install`, chave de API ou internet para navegar. Os links da documentação oficial exigem conexão.
+> **Dados locais:** as alterações ficam neste navegador. Não há sincronização automática entre pessoas ou dispositivos. Exporte JSON e importe no mesmo projeto para compartilhar o andamento. Os dados do usuário não são enviados ao GitHub.
 
-## O que está disponível
+[Manual de uso e backup →](docs/uso-do-quadro.md)
 
-| Recurso | Esta versão |
+## Monografia com revisão ABNT
+
+A escrita acompanha a pesquisa. Os cartões cobrem estrutura, método, resultados, revisão e apresentação, com apoio nas NBR 14724:2024, 10520:2023, 6023:2025, 6028:2021, 6024:2012 e 6027:2012. O projeto de pesquisa também considera a NBR 15287:2025 quando aplicável.
+
+O manual institucional e a orientação definem a aplicação final. Este quadro organiza a revisão; não emite certificação automática de conformidade.
+
+[Etapas de escrita, normas e fontes →](docs/monografia-inic.md)
+
+## Identidade preservada
+
+Títulos em **Fraunces**, texto em **DM Sans** e dados em **JetBrains Mono**, com fontes incorporadas e licenças preservadas.
+
+## Arquivos principais
+
+| Arquivo | Função |
 | --- | --- |
-| Inventário de telas | Busca, filtros, objetivo, campos, ações, estados, API e aceite |
-| Tecnologias | Responsabilidade, local de uso, contrato e documentação |
-| Método | Equações e demonstração com dados locais ou sintéticos |
-| Entrega | Responsáveis, testes, pendências e sequência de implementação |
-| Impressão | Anexo completo de telas, mesmo com filtro ativo |
-| Serviço de produção | Especificado; depende de implementação e homologação |
+| [`index.html`](index.html) | Cronograma e quadro interativo |
+| [`briefing.html`](briefing.html) | Briefing técnico anterior |
+| [`plano-inicial.json`](plano-inicial.json) | Cópia do planejamento original |
+| [`docs/cronograma.md`](docs/cronograma.md) | Inventário das entregas |
+| [`docs/monografia-inic.md`](docs/monografia-inic.md) | Escrita acadêmica e fontes |
+| [`docs/uso-do-quadro.md`](docs/uso-do-quadro.md) | Manual e backup |
+| [`README_BRIEFING.md`](README_BRIEFING.md) | Apresentação anterior do projeto |
 
-## Tipografia e identidade
+Os demais documentos de arquitetura, telas e tecnologias permanecem em `docs/`.
 
-| Papel | Família | Intenção |
-| --- | --- | --- |
-| Títulos e marca | **Fraunces** | Títulos de inspiração setentista com corpo limpo e confortável. |
-| Texto e controles | **DM Sans** | Leitura mais confortável em parágrafos, listas e botões. |
-| Código e medidas | **JetBrains Mono** | Alinhamento de valores, rotas e equações. |
+## Verificação
 
-As fontes são incorporadas no HTML em WOFF. Textos, controles e rótulos receberam tamanhos maiores e mais espaço entre linhas. Os avisos SIL OFL acompanham o projeto em [créditos de terceiros](THIRD_PARTY_NOTICES.md).
+```bash
+node tests/cronograma.test.cjs
+```
 
-## Percurso principal
-
-1. **Configurar:** Identificar estação, montagem, relógio e canais.
-2. **Adquirir:** Ler amostras e contar sequência/perdas.
-3. **Preservar:** Gravar no microSD e transmitir sem bloquear.
-4. **Relacionar:** Sessões, pontos e amostras rastreáveis.
-5. **Interpretar:** Processamento, referências e revisão.
-
-## Telas por área
-
-| Área | Telas |
-| --- | ---: |
-| Público | 1 |
-| Engenharia | 3 |
-| Operação | 8 |
-| Análise | 2 |
-| Campo | 3 |
-| Laboratório | 2 |
-| Gestão | 4 |
-| Conta | 3 |
-| **Total** | **26** |
-
-[Consultar todas as telas e critérios de aceite →](docs/telas.md)
-
-## Quem participa
-
-| Área | Responsabilidade |
-| --- | --- |
-| Informática | Firmware, protocolo, sessões, dashboard e exportação. |
-| Eletrônica | Montagem, alimentação, barramentos, fixação e ensaios. |
-| Análises Clínicas | Identificação e integridade de amostras ambientais, encaminhamento e qualidade de registro. |
-| Química | Pergunta analítica, método, referências, espectros e limites de interpretação. |
-| Administração | BOM, orçamento, logística, manutenção e continuidade. |
-| Publicidade | Identidade, materiais e demonstração que distingue proposta e resultado. |
-
-## Critérios do piloto
-
-- [ ] Cartão ausente/cheio mostra erro e contabiliza o que foi preservado.
-- [ ] Wi-Fi interrompido não mascara a situação da gravação.
-- [ ] Reinício abre nova sessão e conserva origem do tempo.
-- [ ] Meta de 250 Hz é medida com gravação e transmissão simultâneas.
-- [ ] Arquivo externo inválido não se vincula silenciosamente à amostra errada.
-
-Os itens descrevem testes da aplicação final. Marcar o checklist do briefing registra leitura local e não comprova a implementação.
-
-## Decisões abertas
-
-- Fechar placas, pinagem, alimentação e orçamento antes da montagem.
-- Medir ruído, banda, consumo, drift, perdas e autonomia no conjunto.
-- Definir instrumento externo disponível e formato de exportação Raman.
-- Selecionar cada expansão por pergunta, método e recursos; não inventar uma lista de sensores já instalada.
-
-## Organização do repositório
-
-| Caminho | Conteúdo |
-| --- | --- |
-| [`index.html`](index.html) | Briefing completo e independente |
-| [`docs/telas.md`](docs/telas.md) | Inventário das telas |
-| [`docs/tecnologias.md`](docs/tecnologias.md) | Stack proposta e fontes |
-| [`docs/arquitetura.md`](docs/arquitetura.md) | Fluxo e dados do domínio |
-| [`docs/banner.svg`](docs/banner.svg) | Identidade aplicada ao README |
-| [`font-licenses/`](font-licenses/) | Licenças das fontes incorporadas |
-| [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) | Créditos e limites de licenciamento |
-
-## Validação desta entrega
-
-- Sintaxe dos scripts e integridade dos recursos incorporados.
-- Referências entre telas e tecnologias.
-- Navegação e tipografia verificadas na prévia do navegador.
-- Preservação das demonstrações e dos critérios do briefing anterior.
+Os testes verificam datas, dependências, importação, conclusão, exportações e limites do plano.
 
 ---
 
-<div align="center">
-
-**BioGeoLab** · Projeto de [Bruno Michel Pera](https://github.com/perabru)
-
-Briefing técnico · Documentação em português · 2026
-
-</div>
+Projeto de [Bruno Michel Pera](https://github.com/perabru) · [Créditos e licenças](THIRD_PARTY_NOTICES.md)
