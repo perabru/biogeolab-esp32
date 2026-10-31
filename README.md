@@ -12,6 +12,8 @@ Início em **1º de fevereiro de 2027** · Entrega principal em **30 de julho de
 
 </div>
 
+![Trilha de estudos e cronograma com início em fevereiro](docs/trilha-publicada.jpg)
+
 ## Aprender para construir
 
 [**Abrir trilha de estudos ↗**](https://perabru.github.io/biogeolab-esp32/#study)
