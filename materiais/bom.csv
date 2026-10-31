@@ -1,0 +1,9 @@
+item,quantidade_planejada,papel,etapa,compatibilidade,modelo_confirmado,preco_cotado_brl,origem_cotacao,data_cotacao
+ESP32 Feather V2 ou placa equivalente validada,1,Controle de aquisição e transmissão,Essencial,O exercício de ADC assume ESP32 clássico. Revalidar pinos em outra placa.,,,,
+"ADXL355 em módulo adequado, referência EVAL-ADXL355-PMDZ",1,Aceleração em três eixos,Sensor principal,Conferir alimentação e interface; montagem rígida e configuração fazem parte da medição.,,,,
+Módulo microSD e cartão,1,Gravação local,Essencial,"32 GB é previsão de projeto, não requisito do exercício.",,,,
+RTC e alimentação compatível,1,Referência temporal em campo,Proposto,"Registrar modelo, sincronização e descontinuidades; comparar com relógio monotônico.",,,,
+BME280 em breakout compatível,1,"Temperatura, pressão e umidade",Expansão,,,,,
+"Base rígida, gabinete e fixadores",1 conjunto,Acoplamento e proteção de montagem,Essencial,,,,,
+"Cabo USB, multímetro e alimentação regulada",1 conjunto,Montagem e ensaios elétricos,Essencial,,,,,
+Espectrômetro comercial e fonte óptica protegida,Conforme protocolo,Aquisição de espectro no laboratório,Laboratório,Começar pelos CSV sintéticos. Montagem óptica e eventual laser exigem o protocolo supervisionado do laboratório.,,,,

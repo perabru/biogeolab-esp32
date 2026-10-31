@@ -1,0 +1,652 @@
+{
+  "title": "Da grandeza física à evidência medida.",
+  "modules": [
+    {
+      "title": "Definir a medição e seu protocolo",
+      "hours": 8,
+      "topics": [
+        "Git",
+        "Grandeza",
+        "Unidade",
+        "Amostragem",
+        "Calibração"
+      ],
+      "practice": "Definir pergunta, faixa, montagem e referência. Distinguir ensaio de aceleração, ambiente e espectroscopia.",
+      "verify": [
+        "Grandeza definida",
+        "Referência citada",
+        "Protocolo versionado"
+      ],
+      "resources": [
+        "git",
+        "adxl",
+        "feather"
+      ],
+      "tasks": [
+        "P01",
+        "P02"
+      ],
+      "files": [
+        "bom.csv",
+        "protocolo_experimento.md"
+      ],
+      "id": "E01",
+      "start": "2027-02-01",
+      "due": "2027-02-07",
+      "level": "Base",
+      "prerequisites": []
+    },
+    {
+      "title": "Programar a placa e ler interfaces",
+      "hours": 12,
+      "topics": [
+        "ESP-IDF",
+        "C e C++",
+        "FreeRTOS",
+        "SPI",
+        "I2C"
+      ],
+      "practice": "Compilar o exercício de relógio e saída serial no ESP32 clássico e depois mapear o driver específico dos sensores reais.",
+      "verify": [
+        "Pinagem conferida",
+        "Leitura identificada",
+        "Falha de sensor tratada"
+      ],
+      "resources": [
+        "espidf",
+        "feather",
+        "bme"
+      ],
+      "tasks": [
+        "P02",
+        "P03",
+        "P05"
+      ],
+      "files": [
+        "firmware/main/main.c",
+        "firmware/README.md"
+      ],
+      "id": "E02",
+      "start": "2027-02-08",
+      "due": "2027-02-21",
+      "level": "Base",
+      "prerequisites": [
+        "E01"
+      ]
+    },
+    {
+      "title": "Registrar aceleração com tempo e unidade",
+      "hours": 12,
+      "topics": [
+        "ADXL355",
+        "ODR",
+        "Fila",
+        "Timestamp",
+        "Perdas"
+      ],
+      "practice": "Usar dados sintéticos para medir taxa efetiva e perdas antes de comparar com aquisição do ADXL355.",
+      "verify": [
+        "Taxa medida",
+        "Unidade declarada",
+        "Perda registrada"
+      ],
+      "resources": [
+        "adxl",
+        "espidf"
+      ],
+      "tasks": [
+        "P05",
+        "P06"
+      ],
+      "files": [
+        "sinais_demo.csv",
+        "analisar_sinal.py"
+      ],
+      "id": "E03",
+      "start": "2027-02-22",
+      "due": "2027-03-07",
+      "level": "Aplicação",
+      "prerequisites": [
+        "E02"
+      ]
+    },
+    {
+      "title": "Gravar sessão em SD e recuperar falhas",
+      "hours": 10,
+      "topics": [
+        "SDSPI",
+        "FATFS",
+        "Blocos",
+        "Cabeçalho",
+        "Integridade"
+      ],
+      "practice": "Desenhar arquivo de sessão e testar ausência de cartão, espaço esgotado e interrupção de energia no protocolo.",
+      "verify": [
+        "Cabeçalho conhecido",
+        "Falha registrada",
+        "Arquivo recuperado"
+      ],
+      "resources": [
+        "sd",
+        "espidf"
+      ],
+      "tasks": [
+        "P06",
+        "P07"
+      ],
+      "files": [
+        "protocolo_experimento.md"
+      ],
+      "id": "E04",
+      "start": "2027-03-08",
+      "due": "2027-03-28",
+      "level": "Aplicação",
+      "prerequisites": [
+        "E03"
+      ]
+    },
+    {
+      "title": "Analisar ruído, RMS e espectro",
+      "hours": 12,
+      "topics": [
+        "Amostragem",
+        "Nyquist",
+        "RMS",
+        "DFT",
+        "Welch"
+      ],
+      "practice": "Calcular a frequência dominante do sinal sintético e repetir a análise com janelas do método de Welch.",
+      "verify": [
+        "Frequência de amostragem",
+        "Unidade do espectro",
+        "Parâmetros registrados"
+      ],
+      "resources": [
+        "numpy",
+        "welch"
+      ],
+      "tasks": [
+        "P09",
+        "P14"
+      ],
+      "files": [
+        "analisar_sinal.py",
+        "sinais_demo.csv"
+      ],
+      "id": "E05",
+      "start": "2027-03-29",
+      "due": "2027-04-18",
+      "level": "Aplicação",
+      "prerequisites": [
+        "E04"
+      ]
+    },
+    {
+      "title": "Integrar ambiente e espectroscopia",
+      "hours": 12,
+      "topics": [
+        "BME280",
+        "Referência",
+        "CSV espectral",
+        "Picos",
+        "Rastreabilidade"
+      ],
+      "practice": "Importar o espectro sintético, calcular o pico e escrever o limite da interpretação sem atribuir diagnóstico.",
+      "verify": [
+        "Origem do espectro",
+        "Comprimento de onda",
+        "Referência de método"
+      ],
+      "resources": [
+        "bme",
+        "numpy"
+      ],
+      "tasks": [
+        "P10",
+        "P11",
+        "P12"
+      ],
+      "files": [
+        "espectro_demo.csv",
+        "analisar_espectro.py"
+      ],
+      "id": "E06",
+      "start": "2027-04-19",
+      "due": "2027-05-16",
+      "level": "Aplicação",
+      "prerequisites": [
+        "E05"
+      ]
+    },
+    {
+      "title": "Conectar painel, gabinete e operação",
+      "hours": 12,
+      "topics": [
+        "API",
+        "Wi-Fi",
+        "Buffer",
+        "CAD",
+        "Energia e custo"
+      ],
+      "practice": "Concluir o percurso aquisição → arquivo → painel e validar a montagem rígida e a sessão com outra pessoa.",
+      "verify": [
+        "Sessão reproduzida",
+        "Reconexão registrada",
+        "BOM revisada"
+      ],
+      "resources": [
+        "fastapi",
+        "react",
+        "freecad",
+        "tests"
+      ],
+      "tasks": [
+        "P04",
+        "P08",
+        "P13",
+        "P16",
+        "P17"
+      ],
+      "files": [
+        "bom.csv",
+        "protocolo_experimento.md"
+      ],
+      "id": "E07",
+      "start": "2027-05-17",
+      "due": "2027-05-30",
+      "level": "Validação",
+      "prerequisites": [
+        "E06"
+      ]
+    },
+    {
+      "title": "Transformar evidências em monografia e artigo",
+      "hours": 10,
+      "topics": [
+        "Busca e fichamento",
+        "Método reproduzível",
+        "Figuras e tabelas",
+        "Citações e referências",
+        "Modelo INIC"
+      ],
+      "practice": "Preencher a matriz de referências, redigir um resultado sustentado pelos dados e fechar o primeiro texto integral do artigo em junho.",
+      "verify": [
+        "Cada número tem origem",
+        "Referências revisadas",
+        "Modelo do evento conferido"
+      ],
+      "resources": [
+        "zotero",
+        "abnt",
+        "inic"
+      ],
+      "tasks": [
+        "M08",
+        "M13",
+        "M15",
+        "A01",
+        "A05",
+        "A09"
+      ],
+      "files": [
+        "matriz_referencias.csv",
+        "protocolo_experimento.md"
+      ],
+      "id": "E08",
+      "start": "2027-06-01",
+      "due": "2027-07-16",
+      "level": "Validação",
+      "prerequisites": [
+        "E07"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "git",
+      "title": "Pro Git em português",
+      "url": "https://git-scm.com/book/pt-br/v2",
+      "source": "Git / autores do Pro Git",
+      "kind": "Livro aberto",
+      "language": "PT-BR",
+      "use": "Commits, branches, revisão e recuperação do trabalho.",
+      "access": "Leitura gratuita",
+      "status": "consultado",
+      "checked": "31/10/2026"
+    },
+    {
+      "id": "adxl",
+      "title": "ADXL355: produto e datasheet",
+      "url": "https://www.analog.com/en/products/adxl355.html",
+      "source": "Analog Devices",
+      "kind": "Datasheet",
+      "language": "EN",
+      "use": "Faixa, ODR, filtro, ruído, SPI e montagem do acelerômetro.",
+      "access": "Leitura gratuita",
+      "status": "consultado",
+      "checked": "31/10/2026"
+    },
+    {
+      "id": "feather",
+      "title": "ESP32 Feather V2: guia da placa",
+      "url": "https://learn.adafruit.com/adafruit-esp32-feather-v2",
+      "source": "Adafruit",
+      "kind": "Guia de hardware",
+      "language": "EN",
+      "use": "Pinagem, alimentação e interfaces da placa de referência.",
+      "access": "Leitura gratuita",
+      "status": "consultado",
+      "checked": "31/10/2026"
+    },
+    {
+      "id": "espidf",
+      "title": "ESP-IDF: guia de programação",
+      "url": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/",
+      "source": "Espressif",
+      "kind": "Documentação",
+      "language": "EN",
+      "use": "Instalação, compilação, FreeRTOS, periféricos e exemplos oficiais.",
+      "access": "Leitura gratuita",
+      "status": "consultado",
+      "checked": "31/10/2026"
+    },
+    {
+      "id": "bme",
+      "title": "BME280: datasheet do fabricante",
+      "url": "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf",
+      "source": "Bosch Sensortec",
+      "kind": "Datasheet / PDF",
+      "language": "EN",
+      "use": "Tensões, registradores, interfaces e limites do sensor.",
+      "access": "Leitura gratuita",
+      "status": "consultado",
+      "checked": "31/10/2026"
+    },
+    {
+      "id": "sd",
+      "title": "ESP-IDF: driver SD SPI",
+      "url": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/peripherals/sdspi_host.html",
+      "source": "Espressif",
+      "kind": "Documentação",
+      "language": "EN",
+      "use": "Gravação em cartão, barramento compartilhado e tratamento de erro.",
+      "access": "Leitura gratuita",
+      "status": "consultado",
+      "checked": "31/10/2026"
+    },
+    {
+      "id": "numpy",
+      "title": "NumPy para começar",
+      "url": "https://numpy.org/doc/stable/user/absolute_beginners.html",
+      "source": "NumPy",
+      "kind": "Documentação",
+      "language": "EN",
+      "use": "Arrays, eixos, máscaras e operações vetorizadas.",
+      "access": "Leitura gratuita",
+      "status": "consultado",
+      "checked": "31/10/2026"
+    },
+    {
+      "id": "welch",
+      "title": "SciPy: espectro pelo método de Welch",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.welch.html",
+      "source": "SciPy",
+      "kind": "Documentação",
+      "language": "EN",
+      "use": "Frequência de amostragem, janelas e densidade espectral de potência.",
+      "access": "Leitura gratuita",
+      "status": "consultado",
+      "checked": "31/10/2026"
+    },
+    {
+      "id": "fastapi",
+      "title": "FastAPI: tutorial guiado",
+      "url": "https://fastapi.tiangolo.com/tutorial/",
+      "source": "FastAPI",
+      "kind": "Documentação",
+      "language": "EN",
+      "use": "Rotas, validação, dependências e respostas de API.",
+      "access": "Leitura gratuita",
+      "status": "consultado",
+      "checked": "31/10/2026"
+    },
+    {
+      "id": "react",
+      "title": "React: primeiros componentes",
+      "url": "https://react.dev/learn",
+      "source": "React",
+      "kind": "Documentação",
+      "language": "EN",
+      "use": "Estado, componentes, eventos e listas.",
+      "access": "Leitura gratuita",
+      "status": "consultado",
+      "checked": "31/10/2026"
+    },
+    {
+      "id": "freecad",
+      "title": "Documentação do FreeCAD",
+      "url": "https://github.com/FreeCAD/FreeCAD-documentation",
+      "source": "FreeCAD",
+      "kind": "Manual / código",
+      "language": "EN",
+      "use": "Modelagem paramétrica, unidades, montagem e exportação.",
+      "access": "Leitura gratuita",
+      "status": "consultado",
+      "checked": "31/10/2026"
+    },
+    {
+      "id": "tests",
+      "title": "Playwright: primeiros testes",
+      "url": "https://playwright.dev/docs/intro",
+      "source": "Playwright / Microsoft",
+      "kind": "Documentação",
+      "language": "EN",
+      "use": "Testes do percurso do usuário e evidências de falha.",
+      "access": "Leitura gratuita",
+      "status": "consultado",
+      "checked": "31/10/2026"
+    },
+    {
+      "id": "zotero",
+      "title": "Zotero: guia inicial",
+      "url": "https://www.zotero.org/support/quick_start_guide",
+      "source": "Zotero",
+      "kind": "Documentação",
+      "language": "EN",
+      "use": "Coleções, metadados, citações e biblioteca compartilhada.",
+      "access": "Leitura gratuita",
+      "status": "consultado",
+      "checked": "31/10/2026"
+    },
+    {
+      "id": "abnt",
+      "title": "Normas e guias de normalização",
+      "url": "https://biblioteca.ufes.br/normalizacao",
+      "source": "Sistema Integrado de Bibliotecas / UFES",
+      "kind": "Guia institucional",
+      "language": "PT-BR",
+      "use": "Conferir normas de apresentação, citações, referências e resumos.",
+      "access": "Leitura gratuita",
+      "status": "consultado",
+      "checked": "31/10/2026"
+    },
+    {
+      "id": "inic",
+      "title": "INIC: modelo e submissão",
+      "url": "https://www.univap.br/inic/submissao_trabalhos.php",
+      "source": "UNIVAP / INIC",
+      "kind": "Modelo institucional",
+      "language": "PT-BR",
+      "use": "Consultar o modelo da edição de 2027 quando divulgado. A consulta atual identifica 2026.",
+      "access": "Leitura gratuita",
+      "status": "consultado",
+      "checked": "31/10/2026"
+    }
+  ],
+  "hardware": [
+    {
+      "name": "ESP32 Feather V2 ou placa equivalente validada",
+      "quantity": 1,
+      "role": "Controle de aquisição e transmissão",
+      "level": "Essencial",
+      "source": "feather",
+      "note": "O exercício de ADC assume ESP32 clássico. Revalidar pinos em outra placa."
+    },
+    {
+      "name": "ADXL355 em módulo adequado, referência EVAL-ADXL355-PMDZ",
+      "quantity": 1,
+      "role": "Aceleração em três eixos",
+      "level": "Sensor principal",
+      "source": "adxl",
+      "note": "Conferir alimentação e interface; montagem rígida e configuração fazem parte da medição."
+    },
+    {
+      "name": "Módulo microSD e cartão",
+      "quantity": 1,
+      "role": "Gravação local",
+      "level": "Essencial",
+      "source": "sd",
+      "note": "32 GB é previsão de projeto, não requisito do exercício."
+    },
+    {
+      "name": "RTC e alimentação compatível",
+      "quantity": 1,
+      "role": "Referência temporal em campo",
+      "level": "Proposto",
+      "source": "",
+      "note": "Registrar modelo, sincronização e descontinuidades; comparar com relógio monotônico."
+    },
+    {
+      "name": "BME280 em breakout compatível",
+      "quantity": 1,
+      "role": "Temperatura, pressão e umidade",
+      "level": "Expansão",
+      "source": "bme",
+      "note": ""
+    },
+    {
+      "name": "Base rígida, gabinete e fixadores",
+      "quantity": "1 conjunto",
+      "role": "Acoplamento e proteção de montagem",
+      "level": "Essencial",
+      "source": "freecad",
+      "note": ""
+    },
+    {
+      "name": "Cabo USB, multímetro e alimentação regulada",
+      "quantity": "1 conjunto",
+      "role": "Montagem e ensaios elétricos",
+      "level": "Essencial",
+      "source": "espidf",
+      "note": ""
+    },
+    {
+      "name": "Espectrômetro comercial e fonte óptica protegida",
+      "quantity": "Conforme protocolo",
+      "role": "Aquisição de espectro no laboratório",
+      "level": "Laboratório",
+      "source": "",
+      "note": "Começar pelos CSV sintéticos. Montagem óptica e eventual laser exigem o protocolo supervisionado do laboratório."
+    }
+  ],
+  "hours": 88,
+  "drive": {
+    "name": "Drive de Pobre",
+    "url": "https://drivedepobre.com/",
+    "status": "Consulta bloqueada por verificação humana",
+    "checked": "31/10/2026",
+    "terms": [
+      "eletrônica",
+      "ESP32",
+      "processamento de sinais",
+      "espectroscopia"
+    ],
+    "note": "O catálogo exigiu verificação humana nesta consulta. Nenhum curso ou arquivo do acervo foi validado ou redistribuído. Use os termos como roteiro de busca e confira autoria e permissão na origem. Os materiais desta trilha estão ligados diretamente às fontes e aos exercícios do projeto."
+  },
+  "files": [
+    {
+      "name": "diario_de_bordo.csv",
+      "path": "materiais/diario_de_bordo.csv",
+      "extension": "CSV",
+      "bytes": 99
+    },
+    {
+      "name": "matriz_referencias.csv",
+      "path": "materiais/matriz_referencias.csv",
+      "extension": "CSV",
+      "bytes": 2068
+    },
+    {
+      "name": "bom.csv",
+      "path": "materiais/bom.csv",
+      "extension": "CSV",
+      "bytes": 1324
+    },
+    {
+      "name": "protocolo_experimento.md",
+      "path": "materiais/protocolo_experimento.md",
+      "extension": "MD",
+      "bytes": 961
+    },
+    {
+      "name": "sinais_demo.csv",
+      "path": "materiais/sinais_demo.csv",
+      "extension": "CSV",
+      "bytes": 10095
+    },
+    {
+      "name": "analisar_sinal.py",
+      "path": "materiais/analisar_sinal.py",
+      "extension": "PY",
+      "bytes": 889
+    },
+    {
+      "name": "espectro_demo.csv",
+      "path": "materiais/espectro_demo.csv",
+      "extension": "CSV",
+      "bytes": 1356
+    },
+    {
+      "name": "analisar_espectro.py",
+      "path": "materiais/analisar_espectro.py",
+      "extension": "PY",
+      "bytes": 605
+    },
+    {
+      "name": "firmware/CMakeLists.txt",
+      "path": "materiais/firmware/CMakeLists.txt",
+      "extension": "TXT",
+      "bytes": 121
+    },
+    {
+      "name": "firmware/main/CMakeLists.txt",
+      "path": "materiais/firmware/main/CMakeLists.txt",
+      "extension": "TXT",
+      "bytes": 74
+    },
+    {
+      "name": "firmware/main/main.c",
+      "path": "materiais/firmware/main/main.c",
+      "extension": "C",
+      "bytes": 437
+    },
+    {
+      "name": "firmware/README.md",
+      "path": "materiais/firmware/README.md",
+      "extension": "MD",
+      "bytes": 539
+    },
+    {
+      "name": "LEIA-ME.md",
+      "path": "materiais/LEIA-ME.md",
+      "extension": "MD",
+      "bytes": 1549
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "path": "materiais/SHA256SUMS.txt",
+      "extension": "TXT",
+      "bytes": 1111
+    }
+  ]
+}
