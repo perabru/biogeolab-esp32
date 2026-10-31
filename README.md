@@ -8,9 +8,11 @@
 
 Entrega principal em **30 de julho de 2027** · Reserva até **30 de setembro de 2027**
 
-[Quadro](index.html) · [Briefing](briefing.html) · [Cronograma completo](docs/cronograma.md) · [Monografia e INIC](docs/monografia-inic.md)
+[Abrir cronograma ↗](https://perabru.github.io/biogeolab-esp32/) · [Briefing](briefing.html) · [Cronograma completo](docs/cronograma.md) · [Monografia e INIC](docs/monografia-inic.md)
 
 </div>
+
+![Quadro publicado no GitHub Pages](docs/quadro-publicado.jpg)
 
 ## O planejamento virou a página inicial
 
