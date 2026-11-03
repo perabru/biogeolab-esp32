@@ -29,6 +29,18 @@ O renderizador principal usa WebGL 2. Quando a aceleração gráfica não está 
 
 Referência proposta: Adafruit ESP32 Feather V2, EVAL-ADXL355-PMDZ, microSD SPI e expansões RTC/BME280. A cena é uma reconstrução didática aproximada; pinagem e tensão devem ser conferidas na revisão adquirida. Espectroscopia usa instrumento externo e protocolo próprio; o ESP32 não realiza identificação química ou clínica sozinho. As formas internas são aproximações educativas documentadas nas fontes de modelagem. Não são CAD oficial de fabricante, projeto certificado, gerber de PCB ou arquivo pronto para impressão/fabricação.
 
+## PCB de aquisição
+
+**BIOGEO-DAQ-A: 210 × 140 × 1,6 mm, FR4, duas camadas.** A placa recebe Feather V2, microSD, DS3231 e BME280 em soquetes e o ADXL355 por um conector PMOD em ângulo. Inclui seis testpoints, seis capacitores propostos, janela sob a antena, 66 vias e quatro furos M3. A fixação rígida do acelerômetro precisa ser avaliada no ensaio real.
+
+- [Vista superior](pcb-top.svg) · [Vista inferior](pcb-bottom.svg) · [Dimensões, componentes e redes](pcb.json).
+- `pcb-spec.js` contém as coordenadas em milímetros usadas por `pcb-kit.js`. A cena usa 10 mm por unidade.
+- Feather V2: SCK = GPIO5, MOSI = GPIO19, MISO = GPIO21; ADXL CS = GPIO27; SD CS = GPIO33; DRDY = GPIO32; SDA = GPIO22; SCL = GPIO20.
+- A alimentação entra apenas pelo USB-C da Feather. Contatos BAT e USB não distribuem energia pela carrier. O espectrômetro continua externo, sem ligação aos GPIO.
+- RoundedBoxGeometry, da biblioteca Three.js, arredonda conectores e corpos. Materiais físicos distinguem máscara, FR4, cerâmica, polímero, estanho e acabamento metálico.
+
+É um estudo de integração: as rotas mostram a topologia, sem ERC/DRC ou arquivos de fabricação. Confirmar footprints, encaixes, desacoplamento e módulo microSD na revisão escolhida. Referências: [Feather V2](https://learn.adafruit.com/adafruit-esp32-feather-v2/pinouts), [variante Arduino](https://raw.githubusercontent.com/espressif/arduino-esp32/master/variants/adafruit_feather_esp32_v2/pins_arduino.h) e [ADXL355-PMDZ](https://analogdevicesinc.github.io/system-level/solutions/reference-designs/adxl355-pmdz/). A lista completa está em `pcb.json`.
+
 ## Atualizar
 
 Mantenha a tabela de conexões, os pontos em `models.js` e o conteúdo em `content.json` coerentes. Ao editar o conteúdo, atualize também o HTML estático. Os IDs de partes são estáveis e ligam o modelo às etapas.

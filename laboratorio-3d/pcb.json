@@ -1,0 +1,4058 @@
+{
+  "schemaVersion": "1.0",
+  "id": "BIOGEO-DAQ-A",
+  "title": "BioGeoLab • aquisição",
+  "revision": "A • estudo",
+  "status": "Estudo de integração: não liberar para fabricação.",
+  "units": "mm",
+  "sceneUnits": "10 mm per world unit",
+  "coordinateSystem": "Origem no centro da placa; X para a direita; Z na direção do observador; Y para cima.",
+  "outline": {
+    "width": 210,
+    "depth": 140,
+    "thickness": 1.6,
+    "cornerRadius": 2.5
+  },
+  "stackup": [
+    {
+      "layer": "F.SilkS",
+      "material": "Epóxi de serigrafia branca",
+      "nominalThicknessMm": 0.01
+    },
+    {
+      "layer": "F.Mask",
+      "material": "Máscara de solda",
+      "nominalThicknessMm": 0.02
+    },
+    {
+      "layer": "F.Cu",
+      "material": "Cobre",
+      "nominalThicknessMm": 0.035
+    },
+    {
+      "layer": "Core",
+      "material": "FR4",
+      "nominalThicknessMm": 1.49
+    },
+    {
+      "layer": "B.Cu",
+      "material": "Cobre",
+      "nominalThicknessMm": 0.035
+    },
+    {
+      "layer": "B.Mask",
+      "material": "Máscara de solda",
+      "nominalThicknessMm": 0.02
+    }
+  ],
+  "finish": "ENIG ilustrativo nos pads; estanho nas juntas e contatos.",
+  "colors": {
+    "mask": "#392245",
+    "maskBottom": "#392245",
+    "trace": "#7b6688",
+    "traceBottom": "#5b3f69",
+    "silkscreen": "#eeeade"
+  },
+  "mounts": [
+    {
+      "x": -95,
+      "z": -60,
+      "diameter": 3.2,
+      "fastener": "M3",
+      "copperKeepoutDiameter": 6.6
+    },
+    {
+      "x": -95,
+      "z": 60,
+      "diameter": 3.2,
+      "fastener": "M3",
+      "copperKeepoutDiameter": 6.6
+    },
+    {
+      "x": 95,
+      "z": -60,
+      "diameter": 3.2,
+      "fastener": "M3",
+      "copperKeepoutDiameter": 6.6
+    },
+    {
+      "x": 95,
+      "z": 60,
+      "diameter": 3.2,
+      "fastener": "M3",
+      "copperKeepoutDiameter": 6.6
+    }
+  ],
+  "cutouts": [
+    {
+      "x": -50,
+      "z": 19,
+      "width": 18,
+      "depth": 12,
+      "cornerRadius": 1,
+      "purpose": "Janela de afastamento sob a antena da Feather; conferir módulo e gabinete reais."
+    }
+  ],
+  "pads": [
+    {
+      "number": 1,
+      "x": -60.2,
+      "z": -21.0,
+      "net": "RST",
+      "endpoint": "J1.1",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 2,
+      "x": -60.2,
+      "z": -18.46,
+      "net": "3V3",
+      "endpoint": "J1.2",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 3,
+      "x": -60.2,
+      "z": -15.92,
+      "net": "NC",
+      "endpoint": "J1.3",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 4,
+      "x": -60.2,
+      "z": -13.38,
+      "net": "GND",
+      "endpoint": "J1.4",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 5,
+      "x": -60.2,
+      "z": -10.84,
+      "net": "A0",
+      "endpoint": "J1.5",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 6,
+      "x": -60.2,
+      "z": -8.3,
+      "net": "A1",
+      "endpoint": "J1.6",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 7,
+      "x": -60.2,
+      "z": -5.76,
+      "net": "A2",
+      "endpoint": "J1.7",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 8,
+      "x": -60.2,
+      "z": -3.22,
+      "net": "A3",
+      "endpoint": "J1.8",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 9,
+      "x": -60.2,
+      "z": -0.68,
+      "net": "A4",
+      "endpoint": "J1.9",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 10,
+      "x": -60.2,
+      "z": 1.86,
+      "net": "A5",
+      "endpoint": "J1.10",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 11,
+      "x": -60.2,
+      "z": 4.4,
+      "net": "SCK_GPIO5",
+      "endpoint": "J1.11",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 12,
+      "x": -60.2,
+      "z": 6.94,
+      "net": "MOSI_GPIO19",
+      "endpoint": "J1.12",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 13,
+      "x": -60.2,
+      "z": 9.48,
+      "net": "MISO_GPIO21",
+      "endpoint": "J1.13",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 14,
+      "x": -60.2,
+      "z": 12.02,
+      "net": "RX",
+      "endpoint": "J1.14",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 15,
+      "x": -60.2,
+      "z": 14.56,
+      "net": "TX",
+      "endpoint": "J1.15",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 16,
+      "x": -60.2,
+      "z": 17.1,
+      "net": "GPIO37",
+      "endpoint": "J1.16",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 1,
+      "x": -39.8,
+      "z": -10.8,
+      "net": "BAT_NC",
+      "endpoint": "J2.1",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 2,
+      "x": -39.8,
+      "z": -8.26,
+      "net": "EN",
+      "endpoint": "J2.2",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 3,
+      "x": -39.8,
+      "z": -5.72,
+      "net": "USB_NC",
+      "endpoint": "J2.3",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 4,
+      "x": -39.8,
+      "z": -3.18,
+      "net": "GPIO13",
+      "endpoint": "J2.4",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 5,
+      "x": -39.8,
+      "z": -0.64,
+      "net": "GPIO12",
+      "endpoint": "J2.5",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 6,
+      "x": -39.8,
+      "z": 1.9,
+      "net": "ADXL_CS_GPIO27",
+      "endpoint": "J2.6",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 7,
+      "x": -39.8,
+      "z": 4.44,
+      "net": "SD_CS_GPIO33",
+      "endpoint": "J2.7",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 8,
+      "x": -39.8,
+      "z": 6.98,
+      "net": "GPIO15",
+      "endpoint": "J2.8",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 9,
+      "x": -39.8,
+      "z": 9.52,
+      "net": "DRDY_GPIO32",
+      "endpoint": "J2.9",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 10,
+      "x": -39.8,
+      "z": 12.06,
+      "net": "GPIO14",
+      "endpoint": "J2.10",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 11,
+      "x": -39.8,
+      "z": 14.6,
+      "net": "SCL_GPIO20",
+      "endpoint": "J2.11",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 12,
+      "x": -39.8,
+      "z": 17.14,
+      "net": "SDA_GPIO22",
+      "endpoint": "J2.12",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 1,
+      "x": 31.65,
+      "z": -49.0,
+      "net": "ADXL_CS_GPIO27",
+      "endpoint": "J3.1",
+      "diameter": 1.65,
+      "drill": 0.85
+    },
+    {
+      "number": 2,
+      "x": 34.19,
+      "z": -49.0,
+      "net": "MOSI_GPIO19",
+      "endpoint": "J3.2",
+      "diameter": 1.65,
+      "drill": 0.85
+    },
+    {
+      "number": 3,
+      "x": 36.73,
+      "z": -49.0,
+      "net": "MISO_GPIO21",
+      "endpoint": "J3.3",
+      "diameter": 1.65,
+      "drill": 0.85
+    },
+    {
+      "number": 4,
+      "x": 39.27,
+      "z": -49.0,
+      "net": "SCK_GPIO5",
+      "endpoint": "J3.4",
+      "diameter": 1.65,
+      "drill": 0.85
+    },
+    {
+      "number": 5,
+      "x": 41.81,
+      "z": -49.0,
+      "net": "GND",
+      "endpoint": "J3.5",
+      "diameter": 1.65,
+      "drill": 0.85
+    },
+    {
+      "number": 6,
+      "x": 44.35,
+      "z": -49.0,
+      "net": "3V3",
+      "endpoint": "J3.6",
+      "diameter": 1.65,
+      "drill": 0.85
+    },
+    {
+      "number": 7,
+      "x": 31.65,
+      "z": -51.54,
+      "net": "NC",
+      "endpoint": "J3.7",
+      "diameter": 1.65,
+      "drill": 0.85
+    },
+    {
+      "number": 8,
+      "x": 34.19,
+      "z": -51.54,
+      "net": "NC",
+      "endpoint": "J3.8",
+      "diameter": 1.65,
+      "drill": 0.85
+    },
+    {
+      "number": 9,
+      "x": 36.73,
+      "z": -51.54,
+      "net": "NC",
+      "endpoint": "J3.9",
+      "diameter": 1.65,
+      "drill": 0.85
+    },
+    {
+      "number": 10,
+      "x": 39.27,
+      "z": -51.54,
+      "net": "DRDY_GPIO32",
+      "endpoint": "J3.10",
+      "diameter": 1.65,
+      "drill": 0.85
+    },
+    {
+      "number": 11,
+      "x": 41.81,
+      "z": -51.54,
+      "net": "NC",
+      "endpoint": "J3.11",
+      "diameter": 1.65,
+      "drill": 0.85
+    },
+    {
+      "number": 12,
+      "x": 44.35,
+      "z": -51.54,
+      "net": "NC",
+      "endpoint": "J3.12",
+      "diameter": 1.65,
+      "drill": 0.85
+    },
+    {
+      "number": 1,
+      "x": -12.35,
+      "z": 17,
+      "net": "3V3",
+      "endpoint": "J4.1",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 2,
+      "x": -9.81,
+      "z": 17,
+      "net": "GND",
+      "endpoint": "J4.2",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 3,
+      "x": -7.27,
+      "z": 17,
+      "net": "SCK_GPIO5",
+      "endpoint": "J4.3",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 4,
+      "x": -4.73,
+      "z": 17,
+      "net": "MISO_GPIO21",
+      "endpoint": "J4.4",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 5,
+      "x": -2.19,
+      "z": 17,
+      "net": "MOSI_GPIO19",
+      "endpoint": "J4.5",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 6,
+      "x": 0.35,
+      "z": 17,
+      "net": "SD_CS_GPIO33",
+      "endpoint": "J4.6",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 1,
+      "x": 58.65,
+      "z": 33.8,
+      "net": "3V3",
+      "endpoint": "J5.1",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 2,
+      "x": 61.19,
+      "z": 33.8,
+      "net": "GND",
+      "endpoint": "J5.2",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 3,
+      "x": 63.73,
+      "z": 33.8,
+      "net": "SCL_GPIO20",
+      "endpoint": "J5.3",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 4,
+      "x": 66.27,
+      "z": 33.8,
+      "net": "SDA_GPIO22",
+      "endpoint": "J5.4",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 5,
+      "x": 68.81,
+      "z": 33.8,
+      "net": "NC",
+      "endpoint": "J5.5",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 6,
+      "x": 71.35,
+      "z": 33.8,
+      "net": "NC",
+      "endpoint": "J5.6",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 1,
+      "x": 58.5,
+      "z": 56.5,
+      "net": "3V3",
+      "endpoint": "J6.1",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 2,
+      "x": 61.04,
+      "z": 56.5,
+      "net": "NC",
+      "endpoint": "J6.2",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 3,
+      "x": 63.58,
+      "z": 56.5,
+      "net": "GND",
+      "endpoint": "J6.3",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 4,
+      "x": 66.12,
+      "z": 56.5,
+      "net": "SCL_GPIO20",
+      "endpoint": "J6.4",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 5,
+      "x": 68.66,
+      "z": 56.5,
+      "net": "NC",
+      "endpoint": "J6.5",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "number": 6,
+      "x": 71.2,
+      "z": 56.5,
+      "net": "SDA_GPIO22",
+      "endpoint": "J6.6",
+      "drill": 0.85,
+      "diameter": 1.65
+    },
+    {
+      "ref": "TP1",
+      "net": "3V3",
+      "x": -22,
+      "z": -20,
+      "endpoint": "TP1.1",
+      "diameter": 2.0,
+      "drill": 0
+    },
+    {
+      "ref": "TP2",
+      "net": "GND",
+      "x": -12,
+      "z": -20,
+      "endpoint": "TP2.1",
+      "diameter": 2.0,
+      "drill": 0
+    },
+    {
+      "ref": "TP3",
+      "net": "SCK_GPIO5",
+      "x": -2,
+      "z": -20,
+      "endpoint": "TP3.1",
+      "diameter": 2.0,
+      "drill": 0
+    },
+    {
+      "ref": "TP4",
+      "net": "MOSI_GPIO19",
+      "x": 8,
+      "z": -20,
+      "endpoint": "TP4.1",
+      "diameter": 2.0,
+      "drill": 0
+    },
+    {
+      "ref": "TP5",
+      "net": "MISO_GPIO21",
+      "x": 18,
+      "z": -20,
+      "endpoint": "TP5.1",
+      "diameter": 2.0,
+      "drill": 0
+    },
+    {
+      "ref": "TP6",
+      "net": "DRDY_GPIO32",
+      "x": 28,
+      "z": -20,
+      "endpoint": "TP6.1",
+      "diameter": 2.0,
+      "drill": 0
+    },
+    {
+      "ref": "C1",
+      "number": 1,
+      "endpoint": "C1.1",
+      "net": "3V3",
+      "x": -68.73,
+      "z": -14,
+      "diameter": 0.8,
+      "drill": 0
+    },
+    {
+      "ref": "C1",
+      "number": 2,
+      "endpoint": "C1.2",
+      "net": "GND",
+      "x": -67.27,
+      "z": -14,
+      "diameter": 0.8,
+      "drill": 0
+    },
+    {
+      "ref": "C2",
+      "number": 1,
+      "endpoint": "C2.1",
+      "net": "3V3",
+      "x": 48.27,
+      "z": -35,
+      "diameter": 0.8,
+      "drill": 0
+    },
+    {
+      "ref": "C2",
+      "number": 2,
+      "endpoint": "C2.2",
+      "net": "GND",
+      "x": 49.73,
+      "z": -35,
+      "diameter": 0.8,
+      "drill": 0
+    },
+    {
+      "ref": "C3",
+      "number": 1,
+      "endpoint": "C3.1",
+      "net": "3V3",
+      "x": -18.73,
+      "z": 21,
+      "diameter": 0.8,
+      "drill": 0
+    },
+    {
+      "ref": "C3",
+      "number": 2,
+      "endpoint": "C3.2",
+      "net": "GND",
+      "x": -17.27,
+      "z": 21,
+      "diameter": 0.8,
+      "drill": 0
+    },
+    {
+      "ref": "C4",
+      "number": 1,
+      "endpoint": "C4.1",
+      "net": "3V3",
+      "x": 77.27,
+      "z": 32,
+      "diameter": 0.8,
+      "drill": 0
+    },
+    {
+      "ref": "C4",
+      "number": 2,
+      "endpoint": "C4.2",
+      "net": "GND",
+      "x": 78.73,
+      "z": 32,
+      "diameter": 0.8,
+      "drill": 0
+    },
+    {
+      "ref": "C5",
+      "number": 1,
+      "endpoint": "C5.1",
+      "net": "3V3",
+      "x": 79.27,
+      "z": 50,
+      "diameter": 0.8,
+      "drill": 0
+    },
+    {
+      "ref": "C5",
+      "number": 2,
+      "endpoint": "C5.2",
+      "net": "GND",
+      "x": 80.73,
+      "z": 50,
+      "diameter": 0.8,
+      "drill": 0
+    },
+    {
+      "ref": "C6",
+      "number": 1,
+      "endpoint": "C6.1",
+      "net": "3V3",
+      "x": -21.73,
+      "z": 24,
+      "diameter": 0.8,
+      "drill": 0
+    },
+    {
+      "ref": "C6",
+      "number": 2,
+      "endpoint": "C6.2",
+      "net": "GND",
+      "x": -20.27,
+      "z": 24,
+      "diameter": 0.8,
+      "drill": 0
+    }
+  ],
+  "vias": [
+    {
+      "ref": "V1",
+      "endpoint": "V1",
+      "net": "GND",
+      "x": -98,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V2",
+      "endpoint": "V2",
+      "net": "GND",
+      "x": -98,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V3",
+      "endpoint": "V3",
+      "net": "GND",
+      "x": -88,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V4",
+      "endpoint": "V4",
+      "net": "GND",
+      "x": -88,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V5",
+      "endpoint": "V5",
+      "net": "GND",
+      "x": -78,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V6",
+      "endpoint": "V6",
+      "net": "GND",
+      "x": -78,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V7",
+      "endpoint": "V7",
+      "net": "GND",
+      "x": -68,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V8",
+      "endpoint": "V8",
+      "net": "GND",
+      "x": -68,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V9",
+      "endpoint": "V9",
+      "net": "GND",
+      "x": -58,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V10",
+      "endpoint": "V10",
+      "net": "GND",
+      "x": -58,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V11",
+      "endpoint": "V11",
+      "net": "GND",
+      "x": -48,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V12",
+      "endpoint": "V12",
+      "net": "GND",
+      "x": -48,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V13",
+      "endpoint": "V13",
+      "net": "GND",
+      "x": -38,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V14",
+      "endpoint": "V14",
+      "net": "GND",
+      "x": -38,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V15",
+      "endpoint": "V15",
+      "net": "GND",
+      "x": -28,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V16",
+      "endpoint": "V16",
+      "net": "GND",
+      "x": -28,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V17",
+      "endpoint": "V17",
+      "net": "GND",
+      "x": -18,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V18",
+      "endpoint": "V18",
+      "net": "GND",
+      "x": -18,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V19",
+      "endpoint": "V19",
+      "net": "GND",
+      "x": -8,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V20",
+      "endpoint": "V20",
+      "net": "GND",
+      "x": -8,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V21",
+      "endpoint": "V21",
+      "net": "GND",
+      "x": 2,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V22",
+      "endpoint": "V22",
+      "net": "GND",
+      "x": 2,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V23",
+      "endpoint": "V23",
+      "net": "GND",
+      "x": 12,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V24",
+      "endpoint": "V24",
+      "net": "GND",
+      "x": 12,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V25",
+      "endpoint": "V25",
+      "net": "GND",
+      "x": 22,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V26",
+      "endpoint": "V26",
+      "net": "GND",
+      "x": 22,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V27",
+      "endpoint": "V27",
+      "net": "GND",
+      "x": 32,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V28",
+      "endpoint": "V28",
+      "net": "GND",
+      "x": 32,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V29",
+      "endpoint": "V29",
+      "net": "GND",
+      "x": 42,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V30",
+      "endpoint": "V30",
+      "net": "GND",
+      "x": 42,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V31",
+      "endpoint": "V31",
+      "net": "GND",
+      "x": 52,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V32",
+      "endpoint": "V32",
+      "net": "GND",
+      "x": 52,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V33",
+      "endpoint": "V33",
+      "net": "GND",
+      "x": 62,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V34",
+      "endpoint": "V34",
+      "net": "GND",
+      "x": 62,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V35",
+      "endpoint": "V35",
+      "net": "GND",
+      "x": 72,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V36",
+      "endpoint": "V36",
+      "net": "GND",
+      "x": 72,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V37",
+      "endpoint": "V37",
+      "net": "GND",
+      "x": 82,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V38",
+      "endpoint": "V38",
+      "net": "GND",
+      "x": 82,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V39",
+      "endpoint": "V39",
+      "net": "GND",
+      "x": 92,
+      "z": -67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V40",
+      "endpoint": "V40",
+      "net": "GND",
+      "x": 92,
+      "z": 67.0,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V41",
+      "endpoint": "V41",
+      "net": "GND",
+      "x": -102.0,
+      "z": -62,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V42",
+      "endpoint": "V42",
+      "net": "GND",
+      "x": 102.0,
+      "z": -62,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V43",
+      "endpoint": "V43",
+      "net": "GND",
+      "x": -102.0,
+      "z": -52,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V44",
+      "endpoint": "V44",
+      "net": "GND",
+      "x": 102.0,
+      "z": -52,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V45",
+      "endpoint": "V45",
+      "net": "GND",
+      "x": -102.0,
+      "z": -42,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V46",
+      "endpoint": "V46",
+      "net": "GND",
+      "x": 102.0,
+      "z": -42,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V47",
+      "endpoint": "V47",
+      "net": "GND",
+      "x": -102.0,
+      "z": -32,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V48",
+      "endpoint": "V48",
+      "net": "GND",
+      "x": 102.0,
+      "z": -32,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V49",
+      "endpoint": "V49",
+      "net": "GND",
+      "x": -102.0,
+      "z": -22,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V50",
+      "endpoint": "V50",
+      "net": "GND",
+      "x": 102.0,
+      "z": -22,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V51",
+      "endpoint": "V51",
+      "net": "GND",
+      "x": -102.0,
+      "z": -12,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V52",
+      "endpoint": "V52",
+      "net": "GND",
+      "x": 102.0,
+      "z": -12,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V53",
+      "endpoint": "V53",
+      "net": "GND",
+      "x": -102.0,
+      "z": -2,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V54",
+      "endpoint": "V54",
+      "net": "GND",
+      "x": 102.0,
+      "z": -2,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V55",
+      "endpoint": "V55",
+      "net": "GND",
+      "x": -102.0,
+      "z": 8,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V56",
+      "endpoint": "V56",
+      "net": "GND",
+      "x": 102.0,
+      "z": 8,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V57",
+      "endpoint": "V57",
+      "net": "GND",
+      "x": -102.0,
+      "z": 18,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V58",
+      "endpoint": "V58",
+      "net": "GND",
+      "x": 102.0,
+      "z": 18,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V59",
+      "endpoint": "V59",
+      "net": "GND",
+      "x": -102.0,
+      "z": 28,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V60",
+      "endpoint": "V60",
+      "net": "GND",
+      "x": 102.0,
+      "z": 28,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V61",
+      "endpoint": "V61",
+      "net": "GND",
+      "x": -102.0,
+      "z": 38,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V62",
+      "endpoint": "V62",
+      "net": "GND",
+      "x": 102.0,
+      "z": 38,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V63",
+      "endpoint": "V63",
+      "net": "GND",
+      "x": -102.0,
+      "z": 48,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V64",
+      "endpoint": "V64",
+      "net": "GND",
+      "x": 102.0,
+      "z": 48,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V65",
+      "endpoint": "V65",
+      "net": "GND",
+      "x": -102.0,
+      "z": 58,
+      "diameter": 0.9,
+      "drill": 0.4
+    },
+    {
+      "ref": "V66",
+      "endpoint": "V66",
+      "net": "GND",
+      "x": 102.0,
+      "z": 58,
+      "diameter": 0.9,
+      "drill": 0.4
+    }
+  ],
+  "connectors": [
+    {
+      "ref": "J1",
+      "type": "socket",
+      "axis": "z",
+      "pins": [
+        {
+          "number": 1,
+          "x": -60.2,
+          "z": -21.0,
+          "net": "RST",
+          "endpoint": "J1.1"
+        },
+        {
+          "number": 2,
+          "x": -60.2,
+          "z": -18.46,
+          "net": "3V3",
+          "endpoint": "J1.2"
+        },
+        {
+          "number": 3,
+          "x": -60.2,
+          "z": -15.92,
+          "net": "NC",
+          "endpoint": "J1.3"
+        },
+        {
+          "number": 4,
+          "x": -60.2,
+          "z": -13.38,
+          "net": "GND",
+          "endpoint": "J1.4"
+        },
+        {
+          "number": 5,
+          "x": -60.2,
+          "z": -10.84,
+          "net": "A0",
+          "endpoint": "J1.5"
+        },
+        {
+          "number": 6,
+          "x": -60.2,
+          "z": -8.3,
+          "net": "A1",
+          "endpoint": "J1.6"
+        },
+        {
+          "number": 7,
+          "x": -60.2,
+          "z": -5.76,
+          "net": "A2",
+          "endpoint": "J1.7"
+        },
+        {
+          "number": 8,
+          "x": -60.2,
+          "z": -3.22,
+          "net": "A3",
+          "endpoint": "J1.8"
+        },
+        {
+          "number": 9,
+          "x": -60.2,
+          "z": -0.68,
+          "net": "A4",
+          "endpoint": "J1.9"
+        },
+        {
+          "number": 10,
+          "x": -60.2,
+          "z": 1.86,
+          "net": "A5",
+          "endpoint": "J1.10"
+        },
+        {
+          "number": 11,
+          "x": -60.2,
+          "z": 4.4,
+          "net": "SCK_GPIO5",
+          "endpoint": "J1.11"
+        },
+        {
+          "number": 12,
+          "x": -60.2,
+          "z": 6.94,
+          "net": "MOSI_GPIO19",
+          "endpoint": "J1.12"
+        },
+        {
+          "number": 13,
+          "x": -60.2,
+          "z": 9.48,
+          "net": "MISO_GPIO21",
+          "endpoint": "J1.13"
+        },
+        {
+          "number": 14,
+          "x": -60.2,
+          "z": 12.02,
+          "net": "RX",
+          "endpoint": "J1.14"
+        },
+        {
+          "number": 15,
+          "x": -60.2,
+          "z": 14.56,
+          "net": "TX",
+          "endpoint": "J1.15"
+        },
+        {
+          "number": 16,
+          "x": -60.2,
+          "z": 17.1,
+          "net": "GPIO37",
+          "endpoint": "J1.16"
+        }
+      ],
+      "pitch": 2.54,
+      "height": 2.6,
+      "description": "Soquete esquerdo Feather ESP32 V2, 16 posições."
+    },
+    {
+      "ref": "J2",
+      "type": "socket",
+      "axis": "z",
+      "pins": [
+        {
+          "number": 1,
+          "x": -39.8,
+          "z": -10.8,
+          "net": "BAT_NC",
+          "endpoint": "J2.1"
+        },
+        {
+          "number": 2,
+          "x": -39.8,
+          "z": -8.26,
+          "net": "EN",
+          "endpoint": "J2.2"
+        },
+        {
+          "number": 3,
+          "x": -39.8,
+          "z": -5.72,
+          "net": "USB_NC",
+          "endpoint": "J2.3"
+        },
+        {
+          "number": 4,
+          "x": -39.8,
+          "z": -3.18,
+          "net": "GPIO13",
+          "endpoint": "J2.4"
+        },
+        {
+          "number": 5,
+          "x": -39.8,
+          "z": -0.64,
+          "net": "GPIO12",
+          "endpoint": "J2.5"
+        },
+        {
+          "number": 6,
+          "x": -39.8,
+          "z": 1.9,
+          "net": "ADXL_CS_GPIO27",
+          "endpoint": "J2.6"
+        },
+        {
+          "number": 7,
+          "x": -39.8,
+          "z": 4.44,
+          "net": "SD_CS_GPIO33",
+          "endpoint": "J2.7"
+        },
+        {
+          "number": 8,
+          "x": -39.8,
+          "z": 6.98,
+          "net": "GPIO15",
+          "endpoint": "J2.8"
+        },
+        {
+          "number": 9,
+          "x": -39.8,
+          "z": 9.52,
+          "net": "DRDY_GPIO32",
+          "endpoint": "J2.9"
+        },
+        {
+          "number": 10,
+          "x": -39.8,
+          "z": 12.06,
+          "net": "GPIO14",
+          "endpoint": "J2.10"
+        },
+        {
+          "number": 11,
+          "x": -39.8,
+          "z": 14.6,
+          "net": "SCL_GPIO20",
+          "endpoint": "J2.11"
+        },
+        {
+          "number": 12,
+          "x": -39.8,
+          "z": 17.14,
+          "net": "SDA_GPIO22",
+          "endpoint": "J2.12"
+        }
+      ],
+      "pitch": 2.54,
+      "height": 2.6,
+      "description": "Soquete direito Feather ESP32 V2, 12 posições. BAT e USB não distribuem energia nesta carrier."
+    },
+    {
+      "ref": "J3",
+      "type": "pmod-socket",
+      "pins": [
+        {
+          "number": 1,
+          "x": 31.65,
+          "z": -49.0,
+          "net": "ADXL_CS_GPIO27",
+          "endpoint": "J3.1"
+        },
+        {
+          "number": 2,
+          "x": 34.19,
+          "z": -49.0,
+          "net": "MOSI_GPIO19",
+          "endpoint": "J3.2"
+        },
+        {
+          "number": 3,
+          "x": 36.73,
+          "z": -49.0,
+          "net": "MISO_GPIO21",
+          "endpoint": "J3.3"
+        },
+        {
+          "number": 4,
+          "x": 39.27,
+          "z": -49.0,
+          "net": "SCK_GPIO5",
+          "endpoint": "J3.4"
+        },
+        {
+          "number": 5,
+          "x": 41.81,
+          "z": -49.0,
+          "net": "GND",
+          "endpoint": "J3.5"
+        },
+        {
+          "number": 6,
+          "x": 44.35,
+          "z": -49.0,
+          "net": "3V3",
+          "endpoint": "J3.6"
+        },
+        {
+          "number": 7,
+          "x": 31.65,
+          "z": -51.54,
+          "net": "NC",
+          "endpoint": "J3.7"
+        },
+        {
+          "number": 8,
+          "x": 34.19,
+          "z": -51.54,
+          "net": "NC",
+          "endpoint": "J3.8"
+        },
+        {
+          "number": 9,
+          "x": 36.73,
+          "z": -51.54,
+          "net": "NC",
+          "endpoint": "J3.9"
+        },
+        {
+          "number": 10,
+          "x": 39.27,
+          "z": -51.54,
+          "net": "DRDY_GPIO32",
+          "endpoint": "J3.10"
+        },
+        {
+          "number": 11,
+          "x": 41.81,
+          "z": -51.54,
+          "net": "NC",
+          "endpoint": "J3.11"
+        },
+        {
+          "number": 12,
+          "x": 44.35,
+          "z": -51.54,
+          "net": "NC",
+          "endpoint": "J3.12"
+        }
+      ],
+      "x": 38,
+      "frontZ": -42.5,
+      "contactCenterY": 7.97,
+      "description": "Soquete PMOD 2 × 6 em ângulo; altura proposta para o conector P1 do ADXL355-PMDZ. Conferir footprint e altura antes de montar."
+    },
+    {
+      "ref": "J4",
+      "type": "socket",
+      "axis": "x",
+      "pins": [
+        {
+          "number": 1,
+          "x": -12.35,
+          "z": 17,
+          "net": "3V3",
+          "endpoint": "J4.1"
+        },
+        {
+          "number": 2,
+          "x": -9.81,
+          "z": 17,
+          "net": "GND",
+          "endpoint": "J4.2"
+        },
+        {
+          "number": 3,
+          "x": -7.27,
+          "z": 17,
+          "net": "SCK_GPIO5",
+          "endpoint": "J4.3"
+        },
+        {
+          "number": 4,
+          "x": -4.73,
+          "z": 17,
+          "net": "MISO_GPIO21",
+          "endpoint": "J4.4"
+        },
+        {
+          "number": 5,
+          "x": -2.19,
+          "z": 17,
+          "net": "MOSI_GPIO19",
+          "endpoint": "J4.5"
+        },
+        {
+          "number": 6,
+          "x": 0.35,
+          "z": 17,
+          "net": "SD_CS_GPIO33",
+          "endpoint": "J4.6"
+        }
+      ],
+      "pitch": 2.54,
+      "height": 2.6,
+      "description": "Breakout microSD de lógica 3,3 V, seis vias. Ordem proposta VCC/GND/CLK/DO/DI/CS; validar o módulo selecionado."
+    },
+    {
+      "ref": "J5",
+      "type": "socket",
+      "axis": "x",
+      "pins": [
+        {
+          "number": 1,
+          "x": 58.65,
+          "z": 33.8,
+          "net": "3V3",
+          "endpoint": "J5.1"
+        },
+        {
+          "number": 2,
+          "x": 61.19,
+          "z": 33.8,
+          "net": "GND",
+          "endpoint": "J5.2"
+        },
+        {
+          "number": 3,
+          "x": 63.73,
+          "z": 33.8,
+          "net": "SCL_GPIO20",
+          "endpoint": "J5.3"
+        },
+        {
+          "number": 4,
+          "x": 66.27,
+          "z": 33.8,
+          "net": "SDA_GPIO22",
+          "endpoint": "J5.4"
+        },
+        {
+          "number": 5,
+          "x": 68.81,
+          "z": 33.8,
+          "net": "NC",
+          "endpoint": "J5.5"
+        },
+        {
+          "number": 6,
+          "x": 71.35,
+          "z": 33.8,
+          "net": "NC",
+          "endpoint": "J5.6"
+        }
+      ],
+      "pitch": 2.54,
+      "height": 2.6,
+      "description": "DS3231 #3013. Quatro sinais usados; saídas adicionais não conectadas."
+    },
+    {
+      "ref": "J6",
+      "type": "socket",
+      "axis": "x",
+      "pins": [
+        {
+          "number": 1,
+          "x": 58.5,
+          "z": 56.5,
+          "net": "3V3",
+          "endpoint": "J6.1"
+        },
+        {
+          "number": 2,
+          "x": 61.04,
+          "z": 56.5,
+          "net": "NC",
+          "endpoint": "J6.2"
+        },
+        {
+          "number": 3,
+          "x": 63.58,
+          "z": 56.5,
+          "net": "GND",
+          "endpoint": "J6.3"
+        },
+        {
+          "number": 4,
+          "x": 66.12,
+          "z": 56.5,
+          "net": "SCL_GPIO20",
+          "endpoint": "J6.4"
+        },
+        {
+          "number": 5,
+          "x": 68.66,
+          "z": 56.5,
+          "net": "NC",
+          "endpoint": "J6.5"
+        },
+        {
+          "number": 6,
+          "x": 71.2,
+          "z": 56.5,
+          "net": "SDA_GPIO22",
+          "endpoint": "J6.6"
+        }
+      ],
+      "pitch": 2.54,
+      "height": 2.6,
+      "description": "BME280 #2652. 3Vo e SDO não conectados nesta proposta I²C."
+    }
+  ],
+  "passives": [
+    {
+      "ref": "C1",
+      "kind": "capacitor",
+      "value": "100 nF",
+      "package": "0603",
+      "x": -68,
+      "z": -14,
+      "pins": [
+        {
+          "number": 1,
+          "net": "3V3"
+        },
+        {
+          "number": 2,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "C2",
+      "kind": "capacitor",
+      "value": "100 nF",
+      "package": "0603",
+      "x": 49,
+      "z": -35,
+      "pins": [
+        {
+          "number": 1,
+          "net": "3V3"
+        },
+        {
+          "number": 2,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "C3",
+      "kind": "capacitor",
+      "value": "100 nF",
+      "package": "0603",
+      "x": -18,
+      "z": 21,
+      "pins": [
+        {
+          "number": 1,
+          "net": "3V3"
+        },
+        {
+          "number": 2,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "C4",
+      "kind": "capacitor",
+      "value": "100 nF",
+      "package": "0603",
+      "x": 78,
+      "z": 32,
+      "pins": [
+        {
+          "number": 1,
+          "net": "3V3"
+        },
+        {
+          "number": 2,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "C5",
+      "kind": "capacitor",
+      "value": "100 nF",
+      "package": "0603",
+      "x": 80,
+      "z": 50,
+      "pins": [
+        {
+          "number": 1,
+          "net": "3V3"
+        },
+        {
+          "number": 2,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "C6",
+      "kind": "capacitor",
+      "value": "4,7 µF",
+      "package": "0603",
+      "x": -21,
+      "z": 24,
+      "pins": [
+        {
+          "number": 1,
+          "net": "3V3"
+        },
+        {
+          "number": 2,
+          "net": "GND"
+        }
+      ]
+    }
+  ],
+  "testpoints": [
+    {
+      "ref": "TP1",
+      "net": "3V3",
+      "x": -22,
+      "z": -20
+    },
+    {
+      "ref": "TP2",
+      "net": "GND",
+      "x": -12,
+      "z": -20
+    },
+    {
+      "ref": "TP3",
+      "net": "SCK_GPIO5",
+      "x": -2,
+      "z": -20
+    },
+    {
+      "ref": "TP4",
+      "net": "MOSI_GPIO19",
+      "x": 8,
+      "z": -20
+    },
+    {
+      "ref": "TP5",
+      "net": "MISO_GPIO21",
+      "x": 18,
+      "z": -20
+    },
+    {
+      "ref": "TP6",
+      "net": "DRDY_GPIO32",
+      "x": 28,
+      "z": -20
+    }
+  ],
+  "routes": [
+    {
+      "net": "SCK_GPIO5",
+      "layer": "F.Cu",
+      "width": 0.38,
+      "points": [
+        [
+          -60.2,
+          4.4
+        ],
+        [
+          -65,
+          4.4
+        ],
+        [
+          -65,
+          -43
+        ],
+        [
+          27,
+          -43
+        ],
+        [
+          29,
+          -45
+        ],
+        [
+          39.27,
+          -45
+        ],
+        [
+          39.27,
+          -49
+        ]
+      ]
+    },
+    {
+      "net": "MOSI_GPIO19",
+      "layer": "F.Cu",
+      "width": 0.38,
+      "points": [
+        [
+          -60.2,
+          6.94
+        ],
+        [
+          -69,
+          6.94
+        ],
+        [
+          -69,
+          -46
+        ],
+        [
+          26,
+          -46
+        ],
+        [
+          27,
+          -47
+        ],
+        [
+          34.19,
+          -47
+        ],
+        [
+          34.19,
+          -49
+        ]
+      ]
+    },
+    {
+      "net": "MISO_GPIO21",
+      "layer": "F.Cu",
+      "width": 0.38,
+      "points": [
+        [
+          -60.2,
+          9.48
+        ],
+        [
+          -73,
+          9.48
+        ],
+        [
+          -73,
+          -55
+        ],
+        [
+          36.73,
+          -55
+        ],
+        [
+          36.73,
+          -49
+        ]
+      ]
+    },
+    {
+      "net": "ADXL_CS_GPIO27",
+      "layer": "B.Cu",
+      "width": 0.38,
+      "points": [
+        [
+          -39.8,
+          1.9
+        ],
+        [
+          -31,
+          1.9
+        ],
+        [
+          -31,
+          -32
+        ],
+        [
+          23,
+          -32
+        ],
+        [
+          23,
+          -47
+        ],
+        [
+          31.65,
+          -47
+        ],
+        [
+          31.65,
+          -49
+        ]
+      ]
+    },
+    {
+      "net": "DRDY_GPIO32",
+      "layer": "B.Cu",
+      "width": 0.38,
+      "points": [
+        [
+          -39.8,
+          9.52
+        ],
+        [
+          -28,
+          9.52
+        ],
+        [
+          -28,
+          -29
+        ],
+        [
+          28,
+          -29
+        ],
+        [
+          46,
+          -47
+        ],
+        [
+          46,
+          -55
+        ],
+        [
+          39.27,
+          -55
+        ],
+        [
+          39.27,
+          -51.54
+        ]
+      ]
+    },
+    {
+      "net": "SD_CS_GPIO33",
+      "layer": "F.Cu",
+      "width": 0.38,
+      "points": [
+        [
+          -39.8,
+          4.44
+        ],
+        [
+          -27,
+          4.44
+        ],
+        [
+          -21,
+          10.44
+        ],
+        [
+          -21,
+          13
+        ],
+        [
+          0.35,
+          13
+        ],
+        [
+          0.35,
+          17
+        ]
+      ]
+    },
+    {
+      "net": "SCK_GPIO5",
+      "layer": "B.Cu",
+      "width": 0.38,
+      "points": [
+        [
+          -60.2,
+          4.4
+        ],
+        [
+          -62.5,
+          6.7
+        ],
+        [
+          -62.5,
+          35
+        ],
+        [
+          -23,
+          35
+        ],
+        [
+          -23,
+          19
+        ],
+        [
+          -21,
+          17
+        ],
+        [
+          -7.27,
+          17
+        ]
+      ]
+    },
+    {
+      "net": "MOSI_GPIO19",
+      "layer": "B.Cu",
+      "width": 0.38,
+      "points": [
+        [
+          -60.2,
+          6.94
+        ],
+        [
+          -63.5,
+          10.24
+        ],
+        [
+          -63.5,
+          38
+        ],
+        [
+          -18,
+          38
+        ],
+        [
+          -18,
+          20
+        ],
+        [
+          -15,
+          17
+        ],
+        [
+          -2.19,
+          17
+        ]
+      ]
+    },
+    {
+      "net": "MISO_GPIO21",
+      "layer": "B.Cu",
+      "width": 0.38,
+      "points": [
+        [
+          -60.2,
+          9.48
+        ],
+        [
+          -64.5,
+          13.78
+        ],
+        [
+          -64.5,
+          41
+        ],
+        [
+          -13,
+          41
+        ],
+        [
+          -13,
+          21
+        ],
+        [
+          -9,
+          17
+        ],
+        [
+          -4.73,
+          17
+        ]
+      ]
+    },
+    {
+      "net": "SCL_GPIO20",
+      "layer": "F.Cu",
+      "width": 0.38,
+      "points": [
+        [
+          -39.8,
+          17.14
+        ],
+        [
+          -30,
+          17.14
+        ],
+        [
+          -25,
+          22.14
+        ],
+        [
+          29,
+          22.14
+        ],
+        [
+          34,
+          27.14
+        ],
+        [
+          63.73,
+          27.14
+        ],
+        [
+          63.73,
+          33.8
+        ]
+      ]
+    },
+    {
+      "net": "SDA_GPIO22",
+      "layer": "F.Cu",
+      "width": 0.38,
+      "points": [
+        [
+          -39.8,
+          19.68
+        ],
+        [
+          -31,
+          19.68
+        ],
+        [
+          -26,
+          24.68
+        ],
+        [
+          28,
+          24.68
+        ],
+        [
+          35,
+          31.68
+        ],
+        [
+          66.27,
+          31.68
+        ],
+        [
+          66.27,
+          33.8
+        ]
+      ]
+    },
+    {
+      "net": "SCL_GPIO20",
+      "layer": "B.Cu",
+      "width": 0.38,
+      "points": [
+        [
+          63.73,
+          33.8
+        ],
+        [
+          54,
+          33.8
+        ],
+        [
+          54,
+          61
+        ],
+        [
+          66.12,
+          61
+        ],
+        [
+          66.12,
+          56.5
+        ]
+      ]
+    },
+    {
+      "net": "SDA_GPIO22",
+      "layer": "B.Cu",
+      "width": 0.38,
+      "points": [
+        [
+          66.27,
+          33.8
+        ],
+        [
+          75,
+          33.8
+        ],
+        [
+          75,
+          61
+        ],
+        [
+          71.2,
+          61
+        ],
+        [
+          71.2,
+          56.5
+        ]
+      ]
+    },
+    {
+      "net": "3V3",
+      "layer": "B.Cu",
+      "width": 0.8,
+      "points": [
+        [
+          -60.2,
+          -18.46
+        ],
+        [
+          -78,
+          -18.46
+        ],
+        [
+          -78,
+          -60
+        ],
+        [
+          51,
+          -60
+        ],
+        [
+          51,
+          -49
+        ],
+        [
+          44.35,
+          -49
+        ]
+      ]
+    },
+    {
+      "net": "3V3",
+      "layer": "F.Cu",
+      "width": 0.7,
+      "points": [
+        [
+          -60.2,
+          -18.46
+        ],
+        [
+          -79,
+          -18.46
+        ],
+        [
+          -79,
+          48
+        ],
+        [
+          -12.35,
+          48
+        ],
+        [
+          -12.35,
+          17
+        ]
+      ]
+    },
+    {
+      "net": "3V3",
+      "layer": "F.Cu",
+      "width": 0.7,
+      "points": [
+        [
+          -12.35,
+          48
+        ],
+        [
+          51,
+          48
+        ],
+        [
+          51,
+          37.65
+        ],
+        [
+          58.65,
+          33.8
+        ]
+      ]
+    },
+    {
+      "net": "3V3",
+      "layer": "F.Cu",
+      "width": 0.7,
+      "points": [
+        [
+          51,
+          48
+        ],
+        [
+          51,
+          56.5
+        ],
+        [
+          58.5,
+          56.5
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": "B.Cu",
+      "width": 0.9,
+      "points": [
+        [
+          -60.2,
+          -13.38
+        ],
+        [
+          -83,
+          -13.38
+        ],
+        [
+          -83,
+          -64
+        ],
+        [
+          56,
+          -64
+        ],
+        [
+          56,
+          -49
+        ],
+        [
+          41.81,
+          -49
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": "B.Cu",
+      "width": 0.9,
+      "points": [
+        [
+          -60.2,
+          -13.38
+        ],
+        [
+          -85,
+          -13.38
+        ],
+        [
+          -85,
+          53
+        ],
+        [
+          -9.81,
+          53
+        ],
+        [
+          -9.81,
+          17
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": "B.Cu",
+      "width": 0.9,
+      "points": [
+        [
+          -9.81,
+          53
+        ],
+        [
+          82,
+          53
+        ],
+        [
+          82,
+          33.8
+        ],
+        [
+          61.19,
+          33.8
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": "B.Cu",
+      "width": 0.9,
+      "points": [
+        [
+          82,
+          53
+        ],
+        [
+          82,
+          64
+        ],
+        [
+          63.58,
+          64
+        ],
+        [
+          63.58,
+          56.5
+        ]
+      ]
+    },
+    {
+      "net": "3V3",
+      "layer": "B.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          -60.2,
+          -18.46
+        ],
+        [
+          -22,
+          -24
+        ],
+        [
+          -22,
+          -20
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": "B.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          -60.2,
+          -13.38
+        ],
+        [
+          -12,
+          -24
+        ],
+        [
+          -12,
+          -20
+        ]
+      ]
+    },
+    {
+      "net": "SCK_GPIO5",
+      "layer": "B.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          39.27,
+          -49
+        ],
+        [
+          -2,
+          -24
+        ],
+        [
+          -2,
+          -20
+        ]
+      ]
+    },
+    {
+      "net": "MOSI_GPIO19",
+      "layer": "B.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          34.19,
+          -49
+        ],
+        [
+          8,
+          -24
+        ],
+        [
+          8,
+          -20
+        ]
+      ]
+    },
+    {
+      "net": "MISO_GPIO21",
+      "layer": "B.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          36.73,
+          -49
+        ],
+        [
+          18,
+          -24
+        ],
+        [
+          18,
+          -20
+        ]
+      ]
+    },
+    {
+      "net": "DRDY_GPIO32",
+      "layer": "B.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          39.27,
+          -51.54
+        ],
+        [
+          28,
+          -24
+        ],
+        [
+          28,
+          -20
+        ]
+      ]
+    },
+    {
+      "net": "3V3",
+      "layer": "B.Cu",
+      "width": 0.55,
+      "points": [
+        [
+          -60.2,
+          -18.46
+        ],
+        [
+          -68.73,
+          -18.46
+        ],
+        [
+          -68.73,
+          -14
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": "B.Cu",
+      "width": 0.65,
+      "points": [
+        [
+          -60.2,
+          -13.38
+        ],
+        [
+          -67.27,
+          -13.38
+        ],
+        [
+          -67.27,
+          -14
+        ]
+      ]
+    },
+    {
+      "net": "3V3",
+      "layer": "B.Cu",
+      "width": 0.55,
+      "points": [
+        [
+          44.35,
+          -49
+        ],
+        [
+          48.27,
+          -49
+        ],
+        [
+          48.27,
+          -35
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": "B.Cu",
+      "width": 0.65,
+      "points": [
+        [
+          41.81,
+          -49
+        ],
+        [
+          49.73,
+          -49
+        ],
+        [
+          49.73,
+          -35
+        ]
+      ]
+    },
+    {
+      "net": "3V3",
+      "layer": "B.Cu",
+      "width": 0.55,
+      "points": [
+        [
+          -12.35,
+          17
+        ],
+        [
+          -18.73,
+          17
+        ],
+        [
+          -18.73,
+          21
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": "B.Cu",
+      "width": 0.65,
+      "points": [
+        [
+          -9.81,
+          17
+        ],
+        [
+          -17.27,
+          17
+        ],
+        [
+          -17.27,
+          21
+        ]
+      ]
+    },
+    {
+      "net": "3V3",
+      "layer": "B.Cu",
+      "width": 0.55,
+      "points": [
+        [
+          58.65,
+          33.8
+        ],
+        [
+          77.27,
+          33.8
+        ],
+        [
+          77.27,
+          32
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": "B.Cu",
+      "width": 0.65,
+      "points": [
+        [
+          61.19,
+          33.8
+        ],
+        [
+          78.73,
+          33.8
+        ],
+        [
+          78.73,
+          32
+        ]
+      ]
+    },
+    {
+      "net": "3V3",
+      "layer": "B.Cu",
+      "width": 0.55,
+      "points": [
+        [
+          58.5,
+          56.5
+        ],
+        [
+          79.27,
+          56.5
+        ],
+        [
+          79.27,
+          50
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": "B.Cu",
+      "width": 0.65,
+      "points": [
+        [
+          63.58,
+          56.5
+        ],
+        [
+          80.73,
+          56.5
+        ],
+        [
+          80.73,
+          50
+        ]
+      ]
+    },
+    {
+      "net": "3V3",
+      "layer": "B.Cu",
+      "width": 0.55,
+      "points": [
+        [
+          -12.35,
+          17
+        ],
+        [
+          -21.73,
+          17
+        ],
+        [
+          -21.73,
+          24
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": "B.Cu",
+      "width": 0.65,
+      "points": [
+        [
+          -9.81,
+          17
+        ],
+        [
+          -20.27,
+          17
+        ],
+        [
+          -20.27,
+          24
+        ]
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "BioGeoLab",
+      "x": -42,
+      "z": 56,
+      "width": 82,
+      "depth": 8,
+      "size": 125
+    },
+    {
+      "text": "AQUISIÇÃO / REV A",
+      "x": -42,
+      "z": 63.4,
+      "width": 72,
+      "depth": 3.0,
+      "size": 53
+    },
+    {
+      "text": "J1 / J2 · FEATHER V2",
+      "x": -50,
+      "z": -30,
+      "width": 41,
+      "depth": 2.6,
+      "size": 44
+    },
+    {
+      "text": "J3 · ADXL355 / PMOD",
+      "x": 38,
+      "z": -58.8,
+      "width": 48,
+      "depth": 2.6,
+      "size": 44
+    },
+    {
+      "text": "J4 · MICROSD",
+      "x": -6,
+      "z": 11.5,
+      "width": 28,
+      "depth": 2.4,
+      "size": 44
+    },
+    {
+      "text": "J5 · RTC",
+      "x": 65,
+      "z": 20,
+      "width": 23,
+      "depth": 2.4,
+      "size": 44
+    },
+    {
+      "text": "J6 · BME280",
+      "x": 66,
+      "z": 43,
+      "width": 27,
+      "depth": 2.4,
+      "size": 44
+    },
+    {
+      "text": "SPI  ·  CS27 / CS33  ·  DRDY32",
+      "x": 8,
+      "z": -9,
+      "width": 71,
+      "depth": 3.0,
+      "size": 52
+    },
+    {
+      "text": "I²C  ·  SDA22 / SCL20",
+      "x": 56,
+      "z": 8,
+      "width": 60,
+      "depth": 2.8,
+      "size": 49
+    },
+    {
+      "text": "3V3 LOGIC / USB NA FEATHER",
+      "x": -44,
+      "z": -61,
+      "width": 69,
+      "depth": 2.7,
+      "size": 46
+    },
+    {
+      "text": "ESTUDO DE INTEGRAÇÃO",
+      "x": 49,
+      "z": 65.8,
+      "width": 62,
+      "depth": 2.3,
+      "size": 42
+    },
+    {
+      "text": "FIXAÇÃO RÍGIDA DO SENSOR",
+      "x": 41,
+      "z": -6,
+      "width": 43,
+      "depth": 2.0,
+      "size": 38
+    },
+    {
+      "text": "SEM COBRE / ANTENA",
+      "x": -50,
+      "z": 27,
+      "width": 22,
+      "depth": 1.7,
+      "size": 34
+    }
+  ],
+  "components": [
+    {
+      "ref": "J1",
+      "kind": "socket",
+      "description": "Soquete esquerdo Feather ESP32 V2, 16 posições.",
+      "pins": [
+        {
+          "number": 1,
+          "x": -60.2,
+          "z": -21.0,
+          "net": "RST",
+          "endpoint": "J1.1"
+        },
+        {
+          "number": 2,
+          "x": -60.2,
+          "z": -18.46,
+          "net": "3V3",
+          "endpoint": "J1.2"
+        },
+        {
+          "number": 3,
+          "x": -60.2,
+          "z": -15.92,
+          "net": "NC",
+          "endpoint": "J1.3"
+        },
+        {
+          "number": 4,
+          "x": -60.2,
+          "z": -13.38,
+          "net": "GND",
+          "endpoint": "J1.4"
+        },
+        {
+          "number": 5,
+          "x": -60.2,
+          "z": -10.84,
+          "net": "A0",
+          "endpoint": "J1.5"
+        },
+        {
+          "number": 6,
+          "x": -60.2,
+          "z": -8.3,
+          "net": "A1",
+          "endpoint": "J1.6"
+        },
+        {
+          "number": 7,
+          "x": -60.2,
+          "z": -5.76,
+          "net": "A2",
+          "endpoint": "J1.7"
+        },
+        {
+          "number": 8,
+          "x": -60.2,
+          "z": -3.22,
+          "net": "A3",
+          "endpoint": "J1.8"
+        },
+        {
+          "number": 9,
+          "x": -60.2,
+          "z": -0.68,
+          "net": "A4",
+          "endpoint": "J1.9"
+        },
+        {
+          "number": 10,
+          "x": -60.2,
+          "z": 1.86,
+          "net": "A5",
+          "endpoint": "J1.10"
+        },
+        {
+          "number": 11,
+          "x": -60.2,
+          "z": 4.4,
+          "net": "SCK_GPIO5",
+          "endpoint": "J1.11"
+        },
+        {
+          "number": 12,
+          "x": -60.2,
+          "z": 6.94,
+          "net": "MOSI_GPIO19",
+          "endpoint": "J1.12"
+        },
+        {
+          "number": 13,
+          "x": -60.2,
+          "z": 9.48,
+          "net": "MISO_GPIO21",
+          "endpoint": "J1.13"
+        },
+        {
+          "number": 14,
+          "x": -60.2,
+          "z": 12.02,
+          "net": "RX",
+          "endpoint": "J1.14"
+        },
+        {
+          "number": 15,
+          "x": -60.2,
+          "z": 14.56,
+          "net": "TX",
+          "endpoint": "J1.15"
+        },
+        {
+          "number": 16,
+          "x": -60.2,
+          "z": 17.1,
+          "net": "GPIO37",
+          "endpoint": "J1.16"
+        }
+      ],
+      "footprintStatus": "Verificar contra o conector comprado."
+    },
+    {
+      "ref": "J2",
+      "kind": "socket",
+      "description": "Soquete direito Feather ESP32 V2, 12 posições. BAT e USB não distribuem energia nesta carrier.",
+      "pins": [
+        {
+          "number": 1,
+          "x": -39.8,
+          "z": -10.8,
+          "net": "BAT_NC",
+          "endpoint": "J2.1"
+        },
+        {
+          "number": 2,
+          "x": -39.8,
+          "z": -8.26,
+          "net": "EN",
+          "endpoint": "J2.2"
+        },
+        {
+          "number": 3,
+          "x": -39.8,
+          "z": -5.72,
+          "net": "USB_NC",
+          "endpoint": "J2.3"
+        },
+        {
+          "number": 4,
+          "x": -39.8,
+          "z": -3.18,
+          "net": "GPIO13",
+          "endpoint": "J2.4"
+        },
+        {
+          "number": 5,
+          "x": -39.8,
+          "z": -0.64,
+          "net": "GPIO12",
+          "endpoint": "J2.5"
+        },
+        {
+          "number": 6,
+          "x": -39.8,
+          "z": 1.9,
+          "net": "ADXL_CS_GPIO27",
+          "endpoint": "J2.6"
+        },
+        {
+          "number": 7,
+          "x": -39.8,
+          "z": 4.44,
+          "net": "SD_CS_GPIO33",
+          "endpoint": "J2.7"
+        },
+        {
+          "number": 8,
+          "x": -39.8,
+          "z": 6.98,
+          "net": "GPIO15",
+          "endpoint": "J2.8"
+        },
+        {
+          "number": 9,
+          "x": -39.8,
+          "z": 9.52,
+          "net": "DRDY_GPIO32",
+          "endpoint": "J2.9"
+        },
+        {
+          "number": 10,
+          "x": -39.8,
+          "z": 12.06,
+          "net": "GPIO14",
+          "endpoint": "J2.10"
+        },
+        {
+          "number": 11,
+          "x": -39.8,
+          "z": 14.6,
+          "net": "SCL_GPIO20",
+          "endpoint": "J2.11"
+        },
+        {
+          "number": 12,
+          "x": -39.8,
+          "z": 17.14,
+          "net": "SDA_GPIO22",
+          "endpoint": "J2.12"
+        }
+      ],
+      "footprintStatus": "Verificar contra o conector comprado."
+    },
+    {
+      "ref": "J3",
+      "kind": "pmod-socket",
+      "description": "Soquete PMOD 2 × 6 em ângulo; altura proposta para o conector P1 do ADXL355-PMDZ. Conferir footprint e altura antes de montar.",
+      "pins": [
+        {
+          "number": 1,
+          "x": 31.65,
+          "z": -49.0,
+          "net": "ADXL_CS_GPIO27",
+          "endpoint": "J3.1"
+        },
+        {
+          "number": 2,
+          "x": 34.19,
+          "z": -49.0,
+          "net": "MOSI_GPIO19",
+          "endpoint": "J3.2"
+        },
+        {
+          "number": 3,
+          "x": 36.73,
+          "z": -49.0,
+          "net": "MISO_GPIO21",
+          "endpoint": "J3.3"
+        },
+        {
+          "number": 4,
+          "x": 39.27,
+          "z": -49.0,
+          "net": "SCK_GPIO5",
+          "endpoint": "J3.4"
+        },
+        {
+          "number": 5,
+          "x": 41.81,
+          "z": -49.0,
+          "net": "GND",
+          "endpoint": "J3.5"
+        },
+        {
+          "number": 6,
+          "x": 44.35,
+          "z": -49.0,
+          "net": "3V3",
+          "endpoint": "J3.6"
+        },
+        {
+          "number": 7,
+          "x": 31.65,
+          "z": -51.54,
+          "net": "NC",
+          "endpoint": "J3.7"
+        },
+        {
+          "number": 8,
+          "x": 34.19,
+          "z": -51.54,
+          "net": "NC",
+          "endpoint": "J3.8"
+        },
+        {
+          "number": 9,
+          "x": 36.73,
+          "z": -51.54,
+          "net": "NC",
+          "endpoint": "J3.9"
+        },
+        {
+          "number": 10,
+          "x": 39.27,
+          "z": -51.54,
+          "net": "DRDY_GPIO32",
+          "endpoint": "J3.10"
+        },
+        {
+          "number": 11,
+          "x": 41.81,
+          "z": -51.54,
+          "net": "NC",
+          "endpoint": "J3.11"
+        },
+        {
+          "number": 12,
+          "x": 44.35,
+          "z": -51.54,
+          "net": "NC",
+          "endpoint": "J3.12"
+        }
+      ],
+      "footprintStatus": "Verificar contra o conector comprado."
+    },
+    {
+      "ref": "J4",
+      "kind": "socket",
+      "description": "Breakout microSD de lógica 3,3 V, seis vias. Ordem proposta VCC/GND/CLK/DO/DI/CS; validar o módulo selecionado.",
+      "pins": [
+        {
+          "number": 1,
+          "x": -12.35,
+          "z": 17,
+          "net": "3V3",
+          "endpoint": "J4.1"
+        },
+        {
+          "number": 2,
+          "x": -9.81,
+          "z": 17,
+          "net": "GND",
+          "endpoint": "J4.2"
+        },
+        {
+          "number": 3,
+          "x": -7.27,
+          "z": 17,
+          "net": "SCK_GPIO5",
+          "endpoint": "J4.3"
+        },
+        {
+          "number": 4,
+          "x": -4.73,
+          "z": 17,
+          "net": "MISO_GPIO21",
+          "endpoint": "J4.4"
+        },
+        {
+          "number": 5,
+          "x": -2.19,
+          "z": 17,
+          "net": "MOSI_GPIO19",
+          "endpoint": "J4.5"
+        },
+        {
+          "number": 6,
+          "x": 0.35,
+          "z": 17,
+          "net": "SD_CS_GPIO33",
+          "endpoint": "J4.6"
+        }
+      ],
+      "footprintStatus": "Verificar contra o conector comprado."
+    },
+    {
+      "ref": "J5",
+      "kind": "socket",
+      "description": "DS3231 #3013. Quatro sinais usados; saídas adicionais não conectadas.",
+      "pins": [
+        {
+          "number": 1,
+          "x": 58.65,
+          "z": 33.8,
+          "net": "3V3",
+          "endpoint": "J5.1"
+        },
+        {
+          "number": 2,
+          "x": 61.19,
+          "z": 33.8,
+          "net": "GND",
+          "endpoint": "J5.2"
+        },
+        {
+          "number": 3,
+          "x": 63.73,
+          "z": 33.8,
+          "net": "SCL_GPIO20",
+          "endpoint": "J5.3"
+        },
+        {
+          "number": 4,
+          "x": 66.27,
+          "z": 33.8,
+          "net": "SDA_GPIO22",
+          "endpoint": "J5.4"
+        },
+        {
+          "number": 5,
+          "x": 68.81,
+          "z": 33.8,
+          "net": "NC",
+          "endpoint": "J5.5"
+        },
+        {
+          "number": 6,
+          "x": 71.35,
+          "z": 33.8,
+          "net": "NC",
+          "endpoint": "J5.6"
+        }
+      ],
+      "footprintStatus": "Verificar contra o conector comprado."
+    },
+    {
+      "ref": "J6",
+      "kind": "socket",
+      "description": "BME280 #2652. 3Vo e SDO não conectados nesta proposta I²C.",
+      "pins": [
+        {
+          "number": 1,
+          "x": 58.5,
+          "z": 56.5,
+          "net": "3V3",
+          "endpoint": "J6.1"
+        },
+        {
+          "number": 2,
+          "x": 61.04,
+          "z": 56.5,
+          "net": "NC",
+          "endpoint": "J6.2"
+        },
+        {
+          "number": 3,
+          "x": 63.58,
+          "z": 56.5,
+          "net": "GND",
+          "endpoint": "J6.3"
+        },
+        {
+          "number": 4,
+          "x": 66.12,
+          "z": 56.5,
+          "net": "SCL_GPIO20",
+          "endpoint": "J6.4"
+        },
+        {
+          "number": 5,
+          "x": 68.66,
+          "z": 56.5,
+          "net": "NC",
+          "endpoint": "J6.5"
+        },
+        {
+          "number": 6,
+          "x": 71.2,
+          "z": 56.5,
+          "net": "SDA_GPIO22",
+          "endpoint": "J6.6"
+        }
+      ],
+      "footprintStatus": "Verificar contra o conector comprado."
+    },
+    {
+      "ref": "C1",
+      "kind": "capacitor",
+      "value": "100 nF",
+      "package": "0603",
+      "x": -68,
+      "z": -14,
+      "pins": [
+        {
+          "number": 1,
+          "net": "3V3"
+        },
+        {
+          "number": 2,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "C2",
+      "kind": "capacitor",
+      "value": "100 nF",
+      "package": "0603",
+      "x": 49,
+      "z": -35,
+      "pins": [
+        {
+          "number": 1,
+          "net": "3V3"
+        },
+        {
+          "number": 2,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "C3",
+      "kind": "capacitor",
+      "value": "100 nF",
+      "package": "0603",
+      "x": -18,
+      "z": 21,
+      "pins": [
+        {
+          "number": 1,
+          "net": "3V3"
+        },
+        {
+          "number": 2,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "C4",
+      "kind": "capacitor",
+      "value": "100 nF",
+      "package": "0603",
+      "x": 78,
+      "z": 32,
+      "pins": [
+        {
+          "number": 1,
+          "net": "3V3"
+        },
+        {
+          "number": 2,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "C5",
+      "kind": "capacitor",
+      "value": "100 nF",
+      "package": "0603",
+      "x": 80,
+      "z": 50,
+      "pins": [
+        {
+          "number": 1,
+          "net": "3V3"
+        },
+        {
+          "number": 2,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "C6",
+      "kind": "capacitor",
+      "value": "4,7 µF",
+      "package": "0603",
+      "x": -21,
+      "z": 24,
+      "pins": [
+        {
+          "number": 1,
+          "net": "3V3"
+        },
+        {
+          "number": 2,
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "TP1",
+      "kind": "testpoint",
+      "x": -22,
+      "z": -20,
+      "net": "3V3"
+    },
+    {
+      "ref": "TP2",
+      "kind": "testpoint",
+      "x": -12,
+      "z": -20,
+      "net": "GND"
+    },
+    {
+      "ref": "TP3",
+      "kind": "testpoint",
+      "x": -2,
+      "z": -20,
+      "net": "SCK_GPIO5"
+    },
+    {
+      "ref": "TP4",
+      "kind": "testpoint",
+      "x": 8,
+      "z": -20,
+      "net": "MOSI_GPIO19"
+    },
+    {
+      "ref": "TP5",
+      "kind": "testpoint",
+      "x": 18,
+      "z": -20,
+      "net": "MISO_GPIO21"
+    },
+    {
+      "ref": "TP6",
+      "kind": "testpoint",
+      "x": 28,
+      "z": -20,
+      "net": "DRDY_GPIO32"
+    }
+  ],
+  "nets": [
+    {
+      "name": "RST",
+      "endpoints": [
+        "J1.1"
+      ]
+    },
+    {
+      "name": "3V3",
+      "endpoints": [
+        "J1.2",
+        "J3.6",
+        "J4.1",
+        "J5.1",
+        "J6.1",
+        "TP1.1",
+        "C1.1",
+        "C2.1",
+        "C3.1",
+        "C4.1",
+        "C5.1",
+        "C6.1"
+      ]
+    },
+    {
+      "name": "GND",
+      "endpoints": [
+        "J1.4",
+        "J3.5",
+        "J4.2",
+        "J5.2",
+        "J6.3",
+        "TP2.1",
+        "C1.2",
+        "C2.2",
+        "C3.2",
+        "C4.2",
+        "C5.2",
+        "C6.2",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10",
+        "V11",
+        "V12",
+        "V13",
+        "V14",
+        "V15",
+        "V16",
+        "V17",
+        "V18",
+        "V19",
+        "V20",
+        "V21",
+        "V22",
+        "V23",
+        "V24",
+        "V25",
+        "V26",
+        "V27",
+        "V28",
+        "V29",
+        "V30",
+        "V31",
+        "V32",
+        "V33",
+        "V34",
+        "V35",
+        "V36",
+        "V37",
+        "V38",
+        "V39",
+        "V40",
+        "V41",
+        "V42",
+        "V43",
+        "V44",
+        "V45",
+        "V46",
+        "V47",
+        "V48",
+        "V49",
+        "V50",
+        "V51",
+        "V52",
+        "V53",
+        "V54",
+        "V55",
+        "V56",
+        "V57",
+        "V58",
+        "V59",
+        "V60",
+        "V61",
+        "V62",
+        "V63",
+        "V64",
+        "V65",
+        "V66"
+      ]
+    },
+    {
+      "name": "A0",
+      "endpoints": [
+        "J1.5"
+      ]
+    },
+    {
+      "name": "A1",
+      "endpoints": [
+        "J1.6"
+      ]
+    },
+    {
+      "name": "A2",
+      "endpoints": [
+        "J1.7"
+      ]
+    },
+    {
+      "name": "A3",
+      "endpoints": [
+        "J1.8"
+      ]
+    },
+    {
+      "name": "A4",
+      "endpoints": [
+        "J1.9"
+      ]
+    },
+    {
+      "name": "A5",
+      "endpoints": [
+        "J1.10"
+      ]
+    },
+    {
+      "name": "SCK_GPIO5",
+      "endpoints": [
+        "J1.11",
+        "J3.4",
+        "J4.3",
+        "TP3.1"
+      ]
+    },
+    {
+      "name": "MOSI_GPIO19",
+      "endpoints": [
+        "J1.12",
+        "J3.2",
+        "J4.5",
+        "TP4.1"
+      ]
+    },
+    {
+      "name": "MISO_GPIO21",
+      "endpoints": [
+        "J1.13",
+        "J3.3",
+        "J4.4",
+        "TP5.1"
+      ]
+    },
+    {
+      "name": "RX",
+      "endpoints": [
+        "J1.14"
+      ]
+    },
+    {
+      "name": "TX",
+      "endpoints": [
+        "J1.15"
+      ]
+    },
+    {
+      "name": "GPIO37",
+      "endpoints": [
+        "J1.16"
+      ]
+    },
+    {
+      "name": "BAT_NC",
+      "endpoints": [
+        "J2.1"
+      ]
+    },
+    {
+      "name": "EN",
+      "endpoints": [
+        "J2.2"
+      ]
+    },
+    {
+      "name": "USB_NC",
+      "endpoints": [
+        "J2.3"
+      ]
+    },
+    {
+      "name": "GPIO13",
+      "endpoints": [
+        "J2.4"
+      ]
+    },
+    {
+      "name": "GPIO12",
+      "endpoints": [
+        "J2.5"
+      ]
+    },
+    {
+      "name": "ADXL_CS_GPIO27",
+      "endpoints": [
+        "J2.6",
+        "J3.1"
+      ]
+    },
+    {
+      "name": "SD_CS_GPIO33",
+      "endpoints": [
+        "J2.7",
+        "J4.6"
+      ]
+    },
+    {
+      "name": "GPIO15",
+      "endpoints": [
+        "J2.8"
+      ]
+    },
+    {
+      "name": "DRDY_GPIO32",
+      "endpoints": [
+        "J2.9",
+        "J3.10",
+        "TP6.1"
+      ]
+    },
+    {
+      "name": "GPIO14",
+      "endpoints": [
+        "J2.10"
+      ]
+    },
+    {
+      "name": "SCL_GPIO20",
+      "endpoints": [
+        "J2.11",
+        "J5.3",
+        "J6.4"
+      ]
+    },
+    {
+      "name": "SDA_GPIO22",
+      "endpoints": [
+        "J2.12",
+        "J5.4",
+        "J6.6"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "Feather ESP32 V2 pinout",
+      "url": "https://learn.adafruit.com/adafruit-esp32-feather-v2/pinouts"
+    },
+    {
+      "title": "Feather #5400",
+      "url": "https://www.adafruit.com/product/5400"
+    },
+    {
+      "title": "Arduino variant Feather V2",
+      "url": "https://raw.githubusercontent.com/espressif/arduino-esp32/master/variants/adafruit_feather_esp32_v2/pins_arduino.h"
+    },
+    {
+      "title": "Adafruit Feather V2 schematic",
+      "url": "https://raw.githubusercontent.com/adafruit/Adafruit-ESP32-Feather-V2-PCB/main/Adafruit%20ESP32%20Feather%20V2.sch"
+    },
+    {
+      "title": "ADXL355-PMDZ",
+      "url": "https://analogdevicesinc.github.io/system-level/solutions/reference-designs/adxl355-pmdz/"
+    },
+    {
+      "title": "DS3231 #3013",
+      "url": "https://www.adafruit.com/product/3013"
+    },
+    {
+      "title": "BME280 #2652",
+      "url": "https://www.adafruit.com/product/2652"
+    }
+  ],
+  "limits": [
+    "Dimensões e encaixes são uma proposta visual. Conferir os footprints dos conectores e a revisão dos módulos antes de construir.",
+    "Trilhas ilustram redes lógicas. Não há análise ERC/DRC, arquivos Gerber nem validação elétrica, térmica, mecânica ou de integridade de sinal.",
+    "Valores dos capacitores são uma proposta de desacoplamento; verificar com o circuito e a BOM finais.",
+    "Alimentação exclusiva pelo USB do controlador. Esta placa não inclui circuito de carga, bateria ou regulador adicional.",
+    "O ADXL355 precisa de acoplamento rígido e caracterização do conjunto; esta disposição não define o desempenho de um sismógrafo.",
+    "O espectrômetro Ocean ST é externo. Não há ligação aos GPIO, laser ou controlador óptico nesta PCB.",
+    "BAT_NC e USB_NC são contatos físicos da Feather, mantidos sem distribuição pela carrier."
+  ],
+  "ruler": {
+    "x": 15,
+    "z": 48,
+    "length": 20
+  },
+  "modulePlacements": [
+    {
+      "partId": "esp32",
+      "model": "Feather ESP32 V2",
+      "centerX": -50,
+      "centerZ": -2,
+      "boardHeightAboveCarrier": 4.3
+    },
+    {
+      "partId": "adxl355",
+      "model": "EVAL-ADXL355-PMDZ",
+      "centerX": 38,
+      "centerZ": -26,
+      "boardHeightAboveCarrier": 5
+    },
+    {
+      "partId": "sd",
+      "model": "Breakout microSD 3V3 a selecionar",
+      "centerX": -6,
+      "centerZ": 30,
+      "boardHeightAboveCarrier": 4.3
+    },
+    {
+      "partId": "rtc",
+      "model": "DS3231 #3013",
+      "centerX": 65,
+      "centerZ": 27,
+      "boardHeightAboveCarrier": 4.3
+    },
+    {
+      "partId": "bme280",
+      "model": "BME280 #2652",
+      "centerX": 65,
+      "centerZ": 50,
+      "boardHeightAboveCarrier": 4.3
+    }
+  ],
+  "manufacturingFilesProvided": false,
+  "routingStatus": "Topologia didática; rotas não verificadas por DRC.",
+  "counts": {
+    "connectors": 6,
+    "components": 18,
+    "pads": 76,
+    "vias": 66,
+    "mountingHoles": 4,
+    "routes": 39,
+    "nets": 27
+  }
+}

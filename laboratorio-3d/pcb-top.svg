@@ -1,0 +1,348 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" viewBox="-115.0 -92.0 230 180" role="img" aria-labelledby="title desc">
+<title id="title">BioGeoLab • aquisição — vista superior</title><desc id="desc">Especificação visual em milímetros; estudo de integração sem validação para fabricação.</desc>
+<rect x="-115.0" y="-92.0" width="230" height="180" fill="#f1eee4"/>
+<text x="-105.0" y="-82.0" fill="#24252d" font-family="sans-serif" font-weight="700" font-size="4">BioGeoLab • aquisição</text>
+<text x="-105.0" y="-76.0" fill="#555460" font-family="sans-serif" font-size="2.5">210 × 140 × 1,6 mm · FR4 · 2 camadas · estudo de integração</text>
+<rect x="-105.0" y="-70.0" width="210" height="140" rx="2.5" fill="#392245" stroke="#8b794b" stroke-width=".6"/>
+<polyline points="-60.2,4.4 -65,4.4 -65,-43 27,-43 29,-45 39.27,-45 39.27,-49" fill="none" stroke="#7b6688" stroke-width="0.38" stroke-linecap="round" stroke-linejoin="round"><title>SCK_GPIO5 — F.Cu</title></polyline>
+<polyline points="-60.2,6.94 -69,6.94 -69,-46 26,-46 27,-47 34.19,-47 34.19,-49" fill="none" stroke="#7b6688" stroke-width="0.38" stroke-linecap="round" stroke-linejoin="round"><title>MOSI_GPIO19 — F.Cu</title></polyline>
+<polyline points="-60.2,9.48 -73,9.48 -73,-55 36.73,-55 36.73,-49" fill="none" stroke="#7b6688" stroke-width="0.38" stroke-linecap="round" stroke-linejoin="round"><title>MISO_GPIO21 — F.Cu</title></polyline>
+<polyline points="-39.8,1.9 -31,1.9 -31,-32 23,-32 23,-47 31.65,-47 31.65,-49" fill="none" stroke="#7b6688" stroke-width="0.38" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>ADXL_CS_GPIO27 — B.Cu</title></polyline>
+<polyline points="-39.8,9.52 -28,9.52 -28,-29 28,-29 46,-47 46,-55 39.27,-55 39.27,-51.54" fill="none" stroke="#7b6688" stroke-width="0.38" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>DRDY_GPIO32 — B.Cu</title></polyline>
+<polyline points="-39.8,4.44 -27,4.44 -21,10.44 -21,13 0.35,13 0.35,17" fill="none" stroke="#7b6688" stroke-width="0.38" stroke-linecap="round" stroke-linejoin="round"><title>SD_CS_GPIO33 — F.Cu</title></polyline>
+<polyline points="-60.2,4.4 -62.5,6.7 -62.5,35 -23,35 -23,19 -21,17 -7.27,17" fill="none" stroke="#7b6688" stroke-width="0.38" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>SCK_GPIO5 — B.Cu</title></polyline>
+<polyline points="-60.2,6.94 -63.5,10.24 -63.5,38 -18,38 -18,20 -15,17 -2.19,17" fill="none" stroke="#7b6688" stroke-width="0.38" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>MOSI_GPIO19 — B.Cu</title></polyline>
+<polyline points="-60.2,9.48 -64.5,13.78 -64.5,41 -13,41 -13,21 -9,17 -4.73,17" fill="none" stroke="#7b6688" stroke-width="0.38" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>MISO_GPIO21 — B.Cu</title></polyline>
+<polyline points="-39.8,17.14 -30,17.14 -25,22.14 29,22.14 34,27.14 63.73,27.14 63.73,33.8" fill="none" stroke="#7b6688" stroke-width="0.38" stroke-linecap="round" stroke-linejoin="round"><title>SCL_GPIO20 — F.Cu</title></polyline>
+<polyline points="-39.8,19.68 -31,19.68 -26,24.68 28,24.68 35,31.68 66.27,31.68 66.27,33.8" fill="none" stroke="#7b6688" stroke-width="0.38" stroke-linecap="round" stroke-linejoin="round"><title>SDA_GPIO22 — F.Cu</title></polyline>
+<polyline points="63.73,33.8 54,33.8 54,61 66.12,61 66.12,56.5" fill="none" stroke="#7b6688" stroke-width="0.38" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>SCL_GPIO20 — B.Cu</title></polyline>
+<polyline points="66.27,33.8 75,33.8 75,61 71.2,61 71.2,56.5" fill="none" stroke="#7b6688" stroke-width="0.38" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>SDA_GPIO22 — B.Cu</title></polyline>
+<polyline points="-60.2,-18.46 -78,-18.46 -78,-60 51,-60 51,-49 44.35,-49" fill="none" stroke="#7b6688" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>3V3 — B.Cu</title></polyline>
+<polyline points="-60.2,-18.46 -79,-18.46 -79,48 -12.35,48 -12.35,17" fill="none" stroke="#7b6688" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><title>3V3 — F.Cu</title></polyline>
+<polyline points="-12.35,48 51,48 51,37.65 58.65,33.8" fill="none" stroke="#7b6688" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><title>3V3 — F.Cu</title></polyline>
+<polyline points="51,48 51,56.5 58.5,56.5" fill="none" stroke="#7b6688" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><title>3V3 — F.Cu</title></polyline>
+<polyline points="-60.2,-13.38 -83,-13.38 -83,-64 56,-64 56,-49 41.81,-49" fill="none" stroke="#7b6688" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>GND — B.Cu</title></polyline>
+<polyline points="-60.2,-13.38 -85,-13.38 -85,53 -9.81,53 -9.81,17" fill="none" stroke="#7b6688" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>GND — B.Cu</title></polyline>
+<polyline points="-9.81,53 82,53 82,33.8 61.19,33.8" fill="none" stroke="#7b6688" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>GND — B.Cu</title></polyline>
+<polyline points="82,53 82,64 63.58,64 63.58,56.5" fill="none" stroke="#7b6688" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>GND — B.Cu</title></polyline>
+<polyline points="-60.2,-18.46 -22,-24 -22,-20" fill="none" stroke="#7b6688" stroke-width="0.35" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>3V3 — B.Cu</title></polyline>
+<polyline points="-60.2,-13.38 -12,-24 -12,-20" fill="none" stroke="#7b6688" stroke-width="0.35" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>GND — B.Cu</title></polyline>
+<polyline points="39.27,-49 -2,-24 -2,-20" fill="none" stroke="#7b6688" stroke-width="0.35" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>SCK_GPIO5 — B.Cu</title></polyline>
+<polyline points="34.19,-49 8,-24 8,-20" fill="none" stroke="#7b6688" stroke-width="0.35" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>MOSI_GPIO19 — B.Cu</title></polyline>
+<polyline points="36.73,-49 18,-24 18,-20" fill="none" stroke="#7b6688" stroke-width="0.35" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>MISO_GPIO21 — B.Cu</title></polyline>
+<polyline points="39.27,-51.54 28,-24 28,-20" fill="none" stroke="#7b6688" stroke-width="0.35" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>DRDY_GPIO32 — B.Cu</title></polyline>
+<polyline points="-60.2,-18.46 -68.73,-18.46 -68.73,-14" fill="none" stroke="#7b6688" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>3V3 — B.Cu</title></polyline>
+<polyline points="-60.2,-13.38 -67.27,-13.38 -67.27,-14" fill="none" stroke="#7b6688" stroke-width="0.65" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>GND — B.Cu</title></polyline>
+<polyline points="44.35,-49 48.27,-49 48.27,-35" fill="none" stroke="#7b6688" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>3V3 — B.Cu</title></polyline>
+<polyline points="41.81,-49 49.73,-49 49.73,-35" fill="none" stroke="#7b6688" stroke-width="0.65" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>GND — B.Cu</title></polyline>
+<polyline points="-12.35,17 -18.73,17 -18.73,21" fill="none" stroke="#7b6688" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>3V3 — B.Cu</title></polyline>
+<polyline points="-9.81,17 -17.27,17 -17.27,21" fill="none" stroke="#7b6688" stroke-width="0.65" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>GND — B.Cu</title></polyline>
+<polyline points="58.65,33.8 77.27,33.8 77.27,32" fill="none" stroke="#7b6688" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>3V3 — B.Cu</title></polyline>
+<polyline points="61.19,33.8 78.73,33.8 78.73,32" fill="none" stroke="#7b6688" stroke-width="0.65" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>GND — B.Cu</title></polyline>
+<polyline points="58.5,56.5 79.27,56.5 79.27,50" fill="none" stroke="#7b6688" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>3V3 — B.Cu</title></polyline>
+<polyline points="63.58,56.5 80.73,56.5 80.73,50" fill="none" stroke="#7b6688" stroke-width="0.65" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>GND — B.Cu</title></polyline>
+<polyline points="-12.35,17 -21.73,17 -21.73,24" fill="none" stroke="#7b6688" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>3V3 — B.Cu</title></polyline>
+<polyline points="-9.81,17 -20.27,17 -20.27,24" fill="none" stroke="#7b6688" stroke-width="0.65" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 .8" opacity=".45"><title>GND — B.Cu</title></polyline>
+<rect x="-59.0" y="13.0" width="18" height="12" rx="1" fill="#f1eee4"/>
+<circle cx="-60.2" cy="-21.0" r="0.825" fill="#caa45c"><title>J1.1 RST</title></circle>
+<circle cx="-60.2" cy="-21.0" r="0.425" fill="#f1eee4"/>
+<circle cx="-60.2" cy="-18.46" r="0.825" fill="#caa45c"><title>J1.2 3V3</title></circle>
+<circle cx="-60.2" cy="-18.46" r="0.425" fill="#f1eee4"/>
+<circle cx="-60.2" cy="-15.92" r="0.825" fill="#caa45c"><title>J1.3 NC</title></circle>
+<circle cx="-60.2" cy="-15.92" r="0.425" fill="#f1eee4"/>
+<circle cx="-60.2" cy="-13.38" r="0.825" fill="#caa45c"><title>J1.4 GND</title></circle>
+<circle cx="-60.2" cy="-13.38" r="0.425" fill="#f1eee4"/>
+<circle cx="-60.2" cy="-10.84" r="0.825" fill="#caa45c"><title>J1.5 A0</title></circle>
+<circle cx="-60.2" cy="-10.84" r="0.425" fill="#f1eee4"/>
+<circle cx="-60.2" cy="-8.3" r="0.825" fill="#caa45c"><title>J1.6 A1</title></circle>
+<circle cx="-60.2" cy="-8.3" r="0.425" fill="#f1eee4"/>
+<circle cx="-60.2" cy="-5.76" r="0.825" fill="#caa45c"><title>J1.7 A2</title></circle>
+<circle cx="-60.2" cy="-5.76" r="0.425" fill="#f1eee4"/>
+<circle cx="-60.2" cy="-3.22" r="0.825" fill="#caa45c"><title>J1.8 A3</title></circle>
+<circle cx="-60.2" cy="-3.22" r="0.425" fill="#f1eee4"/>
+<circle cx="-60.2" cy="-0.68" r="0.825" fill="#caa45c"><title>J1.9 A4</title></circle>
+<circle cx="-60.2" cy="-0.68" r="0.425" fill="#f1eee4"/>
+<circle cx="-60.2" cy="1.86" r="0.825" fill="#caa45c"><title>J1.10 A5</title></circle>
+<circle cx="-60.2" cy="1.86" r="0.425" fill="#f1eee4"/>
+<circle cx="-60.2" cy="4.4" r="0.825" fill="#caa45c"><title>J1.11 SCK_GPIO5</title></circle>
+<circle cx="-60.2" cy="4.4" r="0.425" fill="#f1eee4"/>
+<circle cx="-60.2" cy="6.94" r="0.825" fill="#caa45c"><title>J1.12 MOSI_GPIO19</title></circle>
+<circle cx="-60.2" cy="6.94" r="0.425" fill="#f1eee4"/>
+<circle cx="-60.2" cy="9.48" r="0.825" fill="#caa45c"><title>J1.13 MISO_GPIO21</title></circle>
+<circle cx="-60.2" cy="9.48" r="0.425" fill="#f1eee4"/>
+<circle cx="-60.2" cy="12.02" r="0.825" fill="#caa45c"><title>J1.14 RX</title></circle>
+<circle cx="-60.2" cy="12.02" r="0.425" fill="#f1eee4"/>
+<circle cx="-60.2" cy="14.56" r="0.825" fill="#caa45c"><title>J1.15 TX</title></circle>
+<circle cx="-60.2" cy="14.56" r="0.425" fill="#f1eee4"/>
+<circle cx="-60.2" cy="17.1" r="0.825" fill="#caa45c"><title>J1.16 GPIO37</title></circle>
+<circle cx="-60.2" cy="17.1" r="0.425" fill="#f1eee4"/>
+<circle cx="-39.8" cy="-10.8" r="0.825" fill="#caa45c"><title>J2.1 BAT_NC</title></circle>
+<circle cx="-39.8" cy="-10.8" r="0.425" fill="#f1eee4"/>
+<circle cx="-39.8" cy="-8.26" r="0.825" fill="#caa45c"><title>J2.2 EN</title></circle>
+<circle cx="-39.8" cy="-8.26" r="0.425" fill="#f1eee4"/>
+<circle cx="-39.8" cy="-5.72" r="0.825" fill="#caa45c"><title>J2.3 USB_NC</title></circle>
+<circle cx="-39.8" cy="-5.72" r="0.425" fill="#f1eee4"/>
+<circle cx="-39.8" cy="-3.18" r="0.825" fill="#caa45c"><title>J2.4 GPIO13</title></circle>
+<circle cx="-39.8" cy="-3.18" r="0.425" fill="#f1eee4"/>
+<circle cx="-39.8" cy="-0.64" r="0.825" fill="#caa45c"><title>J2.5 GPIO12</title></circle>
+<circle cx="-39.8" cy="-0.64" r="0.425" fill="#f1eee4"/>
+<circle cx="-39.8" cy="1.9" r="0.825" fill="#caa45c"><title>J2.6 ADXL_CS_GPIO27</title></circle>
+<circle cx="-39.8" cy="1.9" r="0.425" fill="#f1eee4"/>
+<circle cx="-39.8" cy="4.44" r="0.825" fill="#caa45c"><title>J2.7 SD_CS_GPIO33</title></circle>
+<circle cx="-39.8" cy="4.44" r="0.425" fill="#f1eee4"/>
+<circle cx="-39.8" cy="6.98" r="0.825" fill="#caa45c"><title>J2.8 GPIO15</title></circle>
+<circle cx="-39.8" cy="6.98" r="0.425" fill="#f1eee4"/>
+<circle cx="-39.8" cy="9.52" r="0.825" fill="#caa45c"><title>J2.9 DRDY_GPIO32</title></circle>
+<circle cx="-39.8" cy="9.52" r="0.425" fill="#f1eee4"/>
+<circle cx="-39.8" cy="12.06" r="0.825" fill="#caa45c"><title>J2.10 GPIO14</title></circle>
+<circle cx="-39.8" cy="12.06" r="0.425" fill="#f1eee4"/>
+<circle cx="-39.8" cy="14.6" r="0.825" fill="#caa45c"><title>J2.11 SCL_GPIO20</title></circle>
+<circle cx="-39.8" cy="14.6" r="0.425" fill="#f1eee4"/>
+<circle cx="-39.8" cy="17.14" r="0.825" fill="#caa45c"><title>J2.12 SDA_GPIO22</title></circle>
+<circle cx="-39.8" cy="17.14" r="0.425" fill="#f1eee4"/>
+<circle cx="31.65" cy="-49.0" r="0.825" fill="#caa45c"><title>J3.1 ADXL_CS_GPIO27</title></circle>
+<circle cx="31.65" cy="-49.0" r="0.425" fill="#f1eee4"/>
+<circle cx="34.19" cy="-49.0" r="0.825" fill="#caa45c"><title>J3.2 MOSI_GPIO19</title></circle>
+<circle cx="34.19" cy="-49.0" r="0.425" fill="#f1eee4"/>
+<circle cx="36.73" cy="-49.0" r="0.825" fill="#caa45c"><title>J3.3 MISO_GPIO21</title></circle>
+<circle cx="36.73" cy="-49.0" r="0.425" fill="#f1eee4"/>
+<circle cx="39.27" cy="-49.0" r="0.825" fill="#caa45c"><title>J3.4 SCK_GPIO5</title></circle>
+<circle cx="39.27" cy="-49.0" r="0.425" fill="#f1eee4"/>
+<circle cx="41.81" cy="-49.0" r="0.825" fill="#caa45c"><title>J3.5 GND</title></circle>
+<circle cx="41.81" cy="-49.0" r="0.425" fill="#f1eee4"/>
+<circle cx="44.35" cy="-49.0" r="0.825" fill="#caa45c"><title>J3.6 3V3</title></circle>
+<circle cx="44.35" cy="-49.0" r="0.425" fill="#f1eee4"/>
+<circle cx="31.65" cy="-51.54" r="0.825" fill="#caa45c"><title>J3.7 NC</title></circle>
+<circle cx="31.65" cy="-51.54" r="0.425" fill="#f1eee4"/>
+<circle cx="34.19" cy="-51.54" r="0.825" fill="#caa45c"><title>J3.8 NC</title></circle>
+<circle cx="34.19" cy="-51.54" r="0.425" fill="#f1eee4"/>
+<circle cx="36.73" cy="-51.54" r="0.825" fill="#caa45c"><title>J3.9 NC</title></circle>
+<circle cx="36.73" cy="-51.54" r="0.425" fill="#f1eee4"/>
+<circle cx="39.27" cy="-51.54" r="0.825" fill="#caa45c"><title>J3.10 DRDY_GPIO32</title></circle>
+<circle cx="39.27" cy="-51.54" r="0.425" fill="#f1eee4"/>
+<circle cx="41.81" cy="-51.54" r="0.825" fill="#caa45c"><title>J3.11 NC</title></circle>
+<circle cx="41.81" cy="-51.54" r="0.425" fill="#f1eee4"/>
+<circle cx="44.35" cy="-51.54" r="0.825" fill="#caa45c"><title>J3.12 NC</title></circle>
+<circle cx="44.35" cy="-51.54" r="0.425" fill="#f1eee4"/>
+<circle cx="-12.35" cy="17" r="0.825" fill="#caa45c"><title>J4.1 3V3</title></circle>
+<circle cx="-12.35" cy="17" r="0.425" fill="#f1eee4"/>
+<circle cx="-9.81" cy="17" r="0.825" fill="#caa45c"><title>J4.2 GND</title></circle>
+<circle cx="-9.81" cy="17" r="0.425" fill="#f1eee4"/>
+<circle cx="-7.27" cy="17" r="0.825" fill="#caa45c"><title>J4.3 SCK_GPIO5</title></circle>
+<circle cx="-7.27" cy="17" r="0.425" fill="#f1eee4"/>
+<circle cx="-4.73" cy="17" r="0.825" fill="#caa45c"><title>J4.4 MISO_GPIO21</title></circle>
+<circle cx="-4.73" cy="17" r="0.425" fill="#f1eee4"/>
+<circle cx="-2.19" cy="17" r="0.825" fill="#caa45c"><title>J4.5 MOSI_GPIO19</title></circle>
+<circle cx="-2.19" cy="17" r="0.425" fill="#f1eee4"/>
+<circle cx="0.35" cy="17" r="0.825" fill="#caa45c"><title>J4.6 SD_CS_GPIO33</title></circle>
+<circle cx="0.35" cy="17" r="0.425" fill="#f1eee4"/>
+<circle cx="58.65" cy="33.8" r="0.825" fill="#caa45c"><title>J5.1 3V3</title></circle>
+<circle cx="58.65" cy="33.8" r="0.425" fill="#f1eee4"/>
+<circle cx="61.19" cy="33.8" r="0.825" fill="#caa45c"><title>J5.2 GND</title></circle>
+<circle cx="61.19" cy="33.8" r="0.425" fill="#f1eee4"/>
+<circle cx="63.73" cy="33.8" r="0.825" fill="#caa45c"><title>J5.3 SCL_GPIO20</title></circle>
+<circle cx="63.73" cy="33.8" r="0.425" fill="#f1eee4"/>
+<circle cx="66.27" cy="33.8" r="0.825" fill="#caa45c"><title>J5.4 SDA_GPIO22</title></circle>
+<circle cx="66.27" cy="33.8" r="0.425" fill="#f1eee4"/>
+<circle cx="68.81" cy="33.8" r="0.825" fill="#caa45c"><title>J5.5 NC</title></circle>
+<circle cx="68.81" cy="33.8" r="0.425" fill="#f1eee4"/>
+<circle cx="71.35" cy="33.8" r="0.825" fill="#caa45c"><title>J5.6 NC</title></circle>
+<circle cx="71.35" cy="33.8" r="0.425" fill="#f1eee4"/>
+<circle cx="58.5" cy="56.5" r="0.825" fill="#caa45c"><title>J6.1 3V3</title></circle>
+<circle cx="58.5" cy="56.5" r="0.425" fill="#f1eee4"/>
+<circle cx="61.04" cy="56.5" r="0.825" fill="#caa45c"><title>J6.2 NC</title></circle>
+<circle cx="61.04" cy="56.5" r="0.425" fill="#f1eee4"/>
+<circle cx="63.58" cy="56.5" r="0.825" fill="#caa45c"><title>J6.3 GND</title></circle>
+<circle cx="63.58" cy="56.5" r="0.425" fill="#f1eee4"/>
+<circle cx="66.12" cy="56.5" r="0.825" fill="#caa45c"><title>J6.4 SCL_GPIO20</title></circle>
+<circle cx="66.12" cy="56.5" r="0.425" fill="#f1eee4"/>
+<circle cx="68.66" cy="56.5" r="0.825" fill="#caa45c"><title>J6.5 NC</title></circle>
+<circle cx="68.66" cy="56.5" r="0.425" fill="#f1eee4"/>
+<circle cx="71.2" cy="56.5" r="0.825" fill="#caa45c"><title>J6.6 SDA_GPIO22</title></circle>
+<circle cx="71.2" cy="56.5" r="0.425" fill="#f1eee4"/>
+<circle cx="-22" cy="-20" r="1.0" fill="#caa45c"><title>TP1.1 3V3</title></circle>
+<circle cx="-12" cy="-20" r="1.0" fill="#caa45c"><title>TP2.1 GND</title></circle>
+<circle cx="-2" cy="-20" r="1.0" fill="#caa45c"><title>TP3.1 SCK_GPIO5</title></circle>
+<circle cx="8" cy="-20" r="1.0" fill="#caa45c"><title>TP4.1 MOSI_GPIO19</title></circle>
+<circle cx="18" cy="-20" r="1.0" fill="#caa45c"><title>TP5.1 MISO_GPIO21</title></circle>
+<circle cx="28" cy="-20" r="1.0" fill="#caa45c"><title>TP6.1 DRDY_GPIO32</title></circle>
+<circle cx="-68.73" cy="-14" r="0.4" fill="#caa45c"><title>C1.1 3V3</title></circle>
+<circle cx="-67.27" cy="-14" r="0.4" fill="#caa45c"><title>C1.2 GND</title></circle>
+<circle cx="48.27" cy="-35" r="0.4" fill="#caa45c"><title>C2.1 3V3</title></circle>
+<circle cx="49.73" cy="-35" r="0.4" fill="#caa45c"><title>C2.2 GND</title></circle>
+<circle cx="-18.73" cy="21" r="0.4" fill="#caa45c"><title>C3.1 3V3</title></circle>
+<circle cx="-17.27" cy="21" r="0.4" fill="#caa45c"><title>C3.2 GND</title></circle>
+<circle cx="77.27" cy="32" r="0.4" fill="#caa45c"><title>C4.1 3V3</title></circle>
+<circle cx="78.73" cy="32" r="0.4" fill="#caa45c"><title>C4.2 GND</title></circle>
+<circle cx="79.27" cy="50" r="0.4" fill="#caa45c"><title>C5.1 3V3</title></circle>
+<circle cx="80.73" cy="50" r="0.4" fill="#caa45c"><title>C5.2 GND</title></circle>
+<circle cx="-21.73" cy="24" r="0.4" fill="#caa45c"><title>C6.1 3V3</title></circle>
+<circle cx="-20.27" cy="24" r="0.4" fill="#caa45c"><title>C6.2 GND</title></circle>
+<circle cx="-98" cy="-67.0" r="0.45" fill="#caa45c"><title>V1 GND</title></circle>
+<circle cx="-98" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-98" cy="67.0" r="0.45" fill="#caa45c"><title>V2 GND</title></circle>
+<circle cx="-98" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-88" cy="-67.0" r="0.45" fill="#caa45c"><title>V3 GND</title></circle>
+<circle cx="-88" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-88" cy="67.0" r="0.45" fill="#caa45c"><title>V4 GND</title></circle>
+<circle cx="-88" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-78" cy="-67.0" r="0.45" fill="#caa45c"><title>V5 GND</title></circle>
+<circle cx="-78" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-78" cy="67.0" r="0.45" fill="#caa45c"><title>V6 GND</title></circle>
+<circle cx="-78" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-68" cy="-67.0" r="0.45" fill="#caa45c"><title>V7 GND</title></circle>
+<circle cx="-68" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-68" cy="67.0" r="0.45" fill="#caa45c"><title>V8 GND</title></circle>
+<circle cx="-68" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-58" cy="-67.0" r="0.45" fill="#caa45c"><title>V9 GND</title></circle>
+<circle cx="-58" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-58" cy="67.0" r="0.45" fill="#caa45c"><title>V10 GND</title></circle>
+<circle cx="-58" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-48" cy="-67.0" r="0.45" fill="#caa45c"><title>V11 GND</title></circle>
+<circle cx="-48" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-48" cy="67.0" r="0.45" fill="#caa45c"><title>V12 GND</title></circle>
+<circle cx="-48" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-38" cy="-67.0" r="0.45" fill="#caa45c"><title>V13 GND</title></circle>
+<circle cx="-38" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-38" cy="67.0" r="0.45" fill="#caa45c"><title>V14 GND</title></circle>
+<circle cx="-38" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-28" cy="-67.0" r="0.45" fill="#caa45c"><title>V15 GND</title></circle>
+<circle cx="-28" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-28" cy="67.0" r="0.45" fill="#caa45c"><title>V16 GND</title></circle>
+<circle cx="-28" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-18" cy="-67.0" r="0.45" fill="#caa45c"><title>V17 GND</title></circle>
+<circle cx="-18" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-18" cy="67.0" r="0.45" fill="#caa45c"><title>V18 GND</title></circle>
+<circle cx="-18" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-8" cy="-67.0" r="0.45" fill="#caa45c"><title>V19 GND</title></circle>
+<circle cx="-8" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-8" cy="67.0" r="0.45" fill="#caa45c"><title>V20 GND</title></circle>
+<circle cx="-8" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="2" cy="-67.0" r="0.45" fill="#caa45c"><title>V21 GND</title></circle>
+<circle cx="2" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="2" cy="67.0" r="0.45" fill="#caa45c"><title>V22 GND</title></circle>
+<circle cx="2" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="12" cy="-67.0" r="0.45" fill="#caa45c"><title>V23 GND</title></circle>
+<circle cx="12" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="12" cy="67.0" r="0.45" fill="#caa45c"><title>V24 GND</title></circle>
+<circle cx="12" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="22" cy="-67.0" r="0.45" fill="#caa45c"><title>V25 GND</title></circle>
+<circle cx="22" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="22" cy="67.0" r="0.45" fill="#caa45c"><title>V26 GND</title></circle>
+<circle cx="22" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="32" cy="-67.0" r="0.45" fill="#caa45c"><title>V27 GND</title></circle>
+<circle cx="32" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="32" cy="67.0" r="0.45" fill="#caa45c"><title>V28 GND</title></circle>
+<circle cx="32" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="42" cy="-67.0" r="0.45" fill="#caa45c"><title>V29 GND</title></circle>
+<circle cx="42" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="42" cy="67.0" r="0.45" fill="#caa45c"><title>V30 GND</title></circle>
+<circle cx="42" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="52" cy="-67.0" r="0.45" fill="#caa45c"><title>V31 GND</title></circle>
+<circle cx="52" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="52" cy="67.0" r="0.45" fill="#caa45c"><title>V32 GND</title></circle>
+<circle cx="52" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="62" cy="-67.0" r="0.45" fill="#caa45c"><title>V33 GND</title></circle>
+<circle cx="62" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="62" cy="67.0" r="0.45" fill="#caa45c"><title>V34 GND</title></circle>
+<circle cx="62" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="72" cy="-67.0" r="0.45" fill="#caa45c"><title>V35 GND</title></circle>
+<circle cx="72" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="72" cy="67.0" r="0.45" fill="#caa45c"><title>V36 GND</title></circle>
+<circle cx="72" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="82" cy="-67.0" r="0.45" fill="#caa45c"><title>V37 GND</title></circle>
+<circle cx="82" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="82" cy="67.0" r="0.45" fill="#caa45c"><title>V38 GND</title></circle>
+<circle cx="82" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="92" cy="-67.0" r="0.45" fill="#caa45c"><title>V39 GND</title></circle>
+<circle cx="92" cy="-67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="92" cy="67.0" r="0.45" fill="#caa45c"><title>V40 GND</title></circle>
+<circle cx="92" cy="67.0" r="0.2" fill="#f1eee4"/>
+<circle cx="-102.0" cy="-62" r="0.45" fill="#caa45c"><title>V41 GND</title></circle>
+<circle cx="-102.0" cy="-62" r="0.2" fill="#f1eee4"/>
+<circle cx="102.0" cy="-62" r="0.45" fill="#caa45c"><title>V42 GND</title></circle>
+<circle cx="102.0" cy="-62" r="0.2" fill="#f1eee4"/>
+<circle cx="-102.0" cy="-52" r="0.45" fill="#caa45c"><title>V43 GND</title></circle>
+<circle cx="-102.0" cy="-52" r="0.2" fill="#f1eee4"/>
+<circle cx="102.0" cy="-52" r="0.45" fill="#caa45c"><title>V44 GND</title></circle>
+<circle cx="102.0" cy="-52" r="0.2" fill="#f1eee4"/>
+<circle cx="-102.0" cy="-42" r="0.45" fill="#caa45c"><title>V45 GND</title></circle>
+<circle cx="-102.0" cy="-42" r="0.2" fill="#f1eee4"/>
+<circle cx="102.0" cy="-42" r="0.45" fill="#caa45c"><title>V46 GND</title></circle>
+<circle cx="102.0" cy="-42" r="0.2" fill="#f1eee4"/>
+<circle cx="-102.0" cy="-32" r="0.45" fill="#caa45c"><title>V47 GND</title></circle>
+<circle cx="-102.0" cy="-32" r="0.2" fill="#f1eee4"/>
+<circle cx="102.0" cy="-32" r="0.45" fill="#caa45c"><title>V48 GND</title></circle>
+<circle cx="102.0" cy="-32" r="0.2" fill="#f1eee4"/>
+<circle cx="-102.0" cy="-22" r="0.45" fill="#caa45c"><title>V49 GND</title></circle>
+<circle cx="-102.0" cy="-22" r="0.2" fill="#f1eee4"/>
+<circle cx="102.0" cy="-22" r="0.45" fill="#caa45c"><title>V50 GND</title></circle>
+<circle cx="102.0" cy="-22" r="0.2" fill="#f1eee4"/>
+<circle cx="-102.0" cy="-12" r="0.45" fill="#caa45c"><title>V51 GND</title></circle>
+<circle cx="-102.0" cy="-12" r="0.2" fill="#f1eee4"/>
+<circle cx="102.0" cy="-12" r="0.45" fill="#caa45c"><title>V52 GND</title></circle>
+<circle cx="102.0" cy="-12" r="0.2" fill="#f1eee4"/>
+<circle cx="-102.0" cy="-2" r="0.45" fill="#caa45c"><title>V53 GND</title></circle>
+<circle cx="-102.0" cy="-2" r="0.2" fill="#f1eee4"/>
+<circle cx="102.0" cy="-2" r="0.45" fill="#caa45c"><title>V54 GND</title></circle>
+<circle cx="102.0" cy="-2" r="0.2" fill="#f1eee4"/>
+<circle cx="-102.0" cy="8" r="0.45" fill="#caa45c"><title>V55 GND</title></circle>
+<circle cx="-102.0" cy="8" r="0.2" fill="#f1eee4"/>
+<circle cx="102.0" cy="8" r="0.45" fill="#caa45c"><title>V56 GND</title></circle>
+<circle cx="102.0" cy="8" r="0.2" fill="#f1eee4"/>
+<circle cx="-102.0" cy="18" r="0.45" fill="#caa45c"><title>V57 GND</title></circle>
+<circle cx="-102.0" cy="18" r="0.2" fill="#f1eee4"/>
+<circle cx="102.0" cy="18" r="0.45" fill="#caa45c"><title>V58 GND</title></circle>
+<circle cx="102.0" cy="18" r="0.2" fill="#f1eee4"/>
+<circle cx="-102.0" cy="28" r="0.45" fill="#caa45c"><title>V59 GND</title></circle>
+<circle cx="-102.0" cy="28" r="0.2" fill="#f1eee4"/>
+<circle cx="102.0" cy="28" r="0.45" fill="#caa45c"><title>V60 GND</title></circle>
+<circle cx="102.0" cy="28" r="0.2" fill="#f1eee4"/>
+<circle cx="-102.0" cy="38" r="0.45" fill="#caa45c"><title>V61 GND</title></circle>
+<circle cx="-102.0" cy="38" r="0.2" fill="#f1eee4"/>
+<circle cx="102.0" cy="38" r="0.45" fill="#caa45c"><title>V62 GND</title></circle>
+<circle cx="102.0" cy="38" r="0.2" fill="#f1eee4"/>
+<circle cx="-102.0" cy="48" r="0.45" fill="#caa45c"><title>V63 GND</title></circle>
+<circle cx="-102.0" cy="48" r="0.2" fill="#f1eee4"/>
+<circle cx="102.0" cy="48" r="0.45" fill="#caa45c"><title>V64 GND</title></circle>
+<circle cx="102.0" cy="48" r="0.2" fill="#f1eee4"/>
+<circle cx="-102.0" cy="58" r="0.45" fill="#caa45c"><title>V65 GND</title></circle>
+<circle cx="-102.0" cy="58" r="0.2" fill="#f1eee4"/>
+<circle cx="102.0" cy="58" r="0.45" fill="#caa45c"><title>V66 GND</title></circle>
+<circle cx="102.0" cy="58" r="0.2" fill="#f1eee4"/>
+<circle cx="-95" cy="-60" r="3.3" fill="none" stroke="#dce3d9" stroke-width=".17"/><circle cx="-95" cy="-60" r="1.6" fill="#f1eee4"/>
+<circle cx="-95" cy="60" r="3.3" fill="none" stroke="#dce3d9" stroke-width=".17"/><circle cx="-95" cy="60" r="1.6" fill="#f1eee4"/>
+<circle cx="95" cy="-60" r="3.3" fill="none" stroke="#dce3d9" stroke-width=".17"/><circle cx="95" cy="-60" r="1.6" fill="#f1eee4"/>
+<circle cx="95" cy="60" r="3.3" fill="none" stroke="#dce3d9" stroke-width=".17"/><circle cx="95" cy="60" r="1.6" fill="#f1eee4"/>
+<rect x="-61.5" y="-22.3" width="2.6" height="40.7" rx=".35" fill="none" stroke="#ece8d9" stroke-width=".18"/>
+<rect x="-41.099999999999994" y="-12.100000000000001" width="2.6" height="30.540000000000003" rx=".35" fill="none" stroke="#ece8d9" stroke-width=".18"/>
+<rect x="30.349999999999998" y="-52.839999999999996" width="15.300000000000002" height="5.139999999999999" rx=".35" fill="none" stroke="#ece8d9" stroke-width=".18"/>
+<rect x="-13.65" y="15.7" width="15.299999999999999" height="2.6" rx=".35" fill="none" stroke="#ece8d9" stroke-width=".18"/>
+<rect x="57.35" y="32.5" width="15.299999999999995" height="2.6" rx=".35" fill="none" stroke="#ece8d9" stroke-width=".18"/>
+<rect x="57.2" y="55.2" width="15.300000000000002" height="2.6" rx=".35" fill="none" stroke="#ece8d9" stroke-width=".18"/>
+<rect x="-68.8" y="-14.4" width="1.6" height=".8" rx=".12" fill="#c0b190"/><text x="-68" y="-15.3" text-anchor="middle" fill="#ece8d9" font-family="monospace" font-size="1.2">C1</text>
+<rect x="48.2" y="-35.4" width="1.6" height=".8" rx=".12" fill="#c0b190"/><text x="49" y="-36.3" text-anchor="middle" fill="#ece8d9" font-family="monospace" font-size="1.2">C2</text>
+<rect x="-18.8" y="20.6" width="1.6" height=".8" rx=".12" fill="#c0b190"/><text x="-18" y="19.7" text-anchor="middle" fill="#ece8d9" font-family="monospace" font-size="1.2">C3</text>
+<rect x="77.2" y="31.6" width="1.6" height=".8" rx=".12" fill="#c0b190"/><text x="78" y="30.7" text-anchor="middle" fill="#ece8d9" font-family="monospace" font-size="1.2">C4</text>
+<rect x="79.2" y="49.6" width="1.6" height=".8" rx=".12" fill="#c0b190"/><text x="80" y="48.7" text-anchor="middle" fill="#ece8d9" font-family="monospace" font-size="1.2">C5</text>
+<rect x="-21.8" y="23.6" width="1.6" height=".8" rx=".12" fill="#c0b190"/><text x="-21" y="22.7" text-anchor="middle" fill="#ece8d9" font-family="monospace" font-size="1.2">C6</text>
+<text x="-42" y="56" text-anchor="middle" dominant-baseline="middle" fill="#ece8d9" font-family="monospace" font-weight="600" font-size="5.76" textLength="82" lengthAdjust="spacingAndGlyphs">BioGeoLab</text>
+<text x="-42" y="63.4" text-anchor="middle" dominant-baseline="middle" fill="#ece8d9" font-family="monospace" font-weight="600" font-size="2.16" textLength="72" lengthAdjust="spacingAndGlyphs">AQUISIÇÃO / REV A</text>
+<text x="-50" y="-30" text-anchor="middle" dominant-baseline="middle" fill="#ece8d9" font-family="monospace" font-weight="600" font-size="1.8719999999999999" textLength="41" lengthAdjust="spacingAndGlyphs">J1 / J2 · FEATHER V2</text>
+<text x="38" y="-58.8" text-anchor="middle" dominant-baseline="middle" fill="#ece8d9" font-family="monospace" font-weight="600" font-size="1.8719999999999999" textLength="48" lengthAdjust="spacingAndGlyphs">J3 · ADXL355 / PMOD</text>
+<text x="-6" y="11.5" text-anchor="middle" dominant-baseline="middle" fill="#ece8d9" font-family="monospace" font-weight="600" font-size="1.728" textLength="28" lengthAdjust="spacingAndGlyphs">J4 · MICROSD</text>
+<text x="65" y="20" text-anchor="middle" dominant-baseline="middle" fill="#ece8d9" font-family="monospace" font-weight="600" font-size="1.728" textLength="23" lengthAdjust="spacingAndGlyphs">J5 · RTC</text>
+<text x="66" y="43" text-anchor="middle" dominant-baseline="middle" fill="#ece8d9" font-family="monospace" font-weight="600" font-size="1.728" textLength="27" lengthAdjust="spacingAndGlyphs">J6 · BME280</text>
+<text x="8" y="-9" text-anchor="middle" dominant-baseline="middle" fill="#ece8d9" font-family="monospace" font-weight="600" font-size="2.16" textLength="71" lengthAdjust="spacingAndGlyphs">SPI  ·  CS27 / CS33  ·  DRDY32</text>
+<text x="56" y="8" text-anchor="middle" dominant-baseline="middle" fill="#ece8d9" font-family="monospace" font-weight="600" font-size="2.016" textLength="60" lengthAdjust="spacingAndGlyphs">I²C  ·  SDA22 / SCL20</text>
+<text x="-44" y="-61" text-anchor="middle" dominant-baseline="middle" fill="#ece8d9" font-family="monospace" font-weight="600" font-size="1.944" textLength="69" lengthAdjust="spacingAndGlyphs">3V3 LOGIC / USB NA FEATHER</text>
+<text x="49" y="65.8" text-anchor="middle" dominant-baseline="middle" fill="#ece8d9" font-family="monospace" font-weight="600" font-size="1.656" textLength="62" lengthAdjust="spacingAndGlyphs">ESTUDO DE INTEGRAÇÃO</text>
+<text x="41" y="-6" text-anchor="middle" dominant-baseline="middle" fill="#ece8d9" font-family="monospace" font-weight="600" font-size="1.44" textLength="43" lengthAdjust="spacingAndGlyphs">FIXAÇÃO RÍGIDA DO SENSOR</text>
+<text x="-50" y="27" text-anchor="middle" dominant-baseline="middle" fill="#ece8d9" font-family="monospace" font-weight="600" font-size="1.224" textLength="22" lengthAdjust="spacingAndGlyphs">SEM COBRE / ANTENA</text>
+<text x="-22" y="-22.1" text-anchor="middle" fill="#ece8d9" font-family="monospace" font-size="1.2">TP1</text>
+<text x="-12" y="-22.1" text-anchor="middle" fill="#ece8d9" font-family="monospace" font-size="1.2">TP2</text>
+<text x="-2" y="-22.1" text-anchor="middle" fill="#ece8d9" font-family="monospace" font-size="1.2">TP3</text>
+<text x="8" y="-22.1" text-anchor="middle" fill="#ece8d9" font-family="monospace" font-size="1.2">TP4</text>
+<text x="18" y="-22.1" text-anchor="middle" fill="#ece8d9" font-family="monospace" font-size="1.2">TP5</text>
+<text x="28" y="-22.1" text-anchor="middle" fill="#ece8d9" font-family="monospace" font-size="1.2">TP6</text>
+<text x="-105.0" y="76.0" fill="#555460" font-family="sans-serif" font-size="2.0">Trilhas nomeadas: ilustração de topologia. Footprints e rotas precisam de revisão ERC/DRC.</text></svg>

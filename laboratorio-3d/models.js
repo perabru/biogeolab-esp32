@@ -1,9 +1,12 @@
+import { RoundedBoxGeometry } from './vendor/RoundedBoxGeometry.js';
+import { makeCarrier } from './pcb-kit.js';
+import { boardSpec } from './pcb-spec.js';
 // Original procedural educational models. Dimensions and layouts are approximate.
 function makeKit(T){
   const mats=new Map();
-  const mat=(color,metal=.0,rough=.55)=>{const key=color+'|'+metal+'|'+rough;if(!mats.has(key))mats.set(key,new T.MeshStandardMaterial({color,metalness:metal,roughness:rough}));return mats.get(key);};
+  const mat=(color,metal=.0,rough=.55)=>{const key=color+'|'+metal+'|'+rough;if(!mats.has(key))mats.set(key,new T.MeshPhysicalMaterial({color,metalness:metal,roughness:rough,clearcoat:metal<.3?.12:0,clearcoatRoughness:.4}));return mats.get(key);};
   const mesh=(g,geo,m,x=0,y=0,z=0)=>{const o=new T.Mesh(geo,typeof m==='string'?mat(m):m);o.position.set(x,y,z);o.castShadow=true;o.receiveShadow=true;g.add(o);return o;};
-  const box=(g,w,h,d,c,x=0,y=0,z=0)=>mesh(g,new T.BoxGeometry(w,h,d),c,x,y,z);
+  const box=(g,w,h,d,c,x=0,y=0,z=0)=>mesh(g,Math.min(w,h,d)>.085?new RoundedBoxGeometry(w,h,d,1,Math.min(.035,w/5,h/5,d/5)):new T.BoxGeometry(w,h,d),c,x,y,z);
   const cyl=(g,r,h,c,x=0,y=0,z=0,n=32)=>mesh(g,new T.CylinderGeometry(r,r,h,n),c,x,y,z);
   function outline(w,d,r){const s=new T.Shape(),x=-w/2,z=-d/2;s.moveTo(x+r,z);s.lineTo(x+w-r,z);s.quadraticCurveTo(x+w,z,x+w,z+r);s.lineTo(x+w,z+d-r);s.quadraticCurveTo(x+w,z+d,x+w-r,z+d);s.lineTo(x+r,z+d);s.quadraticCurveTo(x,z+d,x,z+d-r);s.lineTo(x,z+r);s.quadraticCurveTo(x,z,x+r,z);return s;}
   function slab(g,w,d,h,r,c,x=0,y=0,z=0,holes=[]){const s=outline(w,d,r);for(const q of holes){const p=new T.Path();p.absarc(q[0],q[1],q[2],0,Math.PI*2,true);s.holes.push(p);}const geo=new T.ExtrudeGeometry(s,{depth:h,steps:1,bevelEnabled:true,bevelSize:Math.min(.025,h/5),bevelThickness:Math.min(.02,h/5),bevelSegments:2,curveSegments:8});geo.rotateX(-Math.PI/2);geo.translate(0,-h/2,0);return mesh(g,geo,c,x,y,z);}
@@ -17,11 +20,11 @@ function makeKit(T){
   function cable(g,points,c='#272c35',r=.08){const curve=new T.CatmullRomCurve3(points.map(p=>new T.Vector3(...p)));return mesh(g,new T.TubeGeometry(curve,36,r,8,false),mat(c,.05,.65));}
   function chip(g,w,d,x,z,txt='IC',h=.13,y=.15){slab(g,w,d,h,.035,'#20262d',x,y+h/2,z);const pts=[];for(let i=0;i<6;i++){pts.push([x-w/2-.04,y+.02,z-d*.38+i*d*.152],[x+w/2+.04,y+.02,z-d*.38+i*d*.152]);}instance(g,new T.BoxGeometry(.13,.055,.055),mat('#b9c1c3',.75,.3),pts);label(g,txt,w*.86,d*.7,x,y+h+.006,z,{size:40,fg:'#a5acaa'});}
   function pcb(g,w,d,c='#15453d',hole=true){const holes=hole?[[-w/2+.2,-d/2+.2,.095],[w/2-.2,-d/2+.2,.095],[-w/2+.2,d/2-.2,.095],[w/2-.2,d/2-.2,.095]]:[];slab(g,w,d,.13,.16,mat(c,.15,.62),0,0,0,holes);holes.forEach(p=>ring(g,p[2]+.025,'#bf9c3f',p[0],.076,-p[1],.018));return g;}
-  function headers(g,x,z,n,{dz=.254,y=.15,vertical=true}={}){const pts=[],pads=[];for(let i=0;i<n;i++){pts.push([x,y+.11,z+i*dz]);pads.push([x,.08,z+i*dz]);}box(g,.23,.18,n*dz+.02,'#161b23',x,y,z+(n-1)*dz/2);instance(g,new T.BoxGeometry(.06,.48,.06),mat('#c9ab53',.8,.32),pts);const ringGeo=new T.TorusGeometry(.075,.016,6,12);ringGeo.rotateX(-Math.PI/2);instance(g,ringGeo,mat('#d5b564',.75,.3),pads);}
+  function headers(g,x,z,n,{dz=.254,y=.15,vertical=true}={}){const pts=[],pads=[];for(let i=0;i<n;i++){pts.push([x,y+.11,z+i*dz]);pads.push([x,.08,z+i*dz]);}box(g,.23,.18,n*dz+.02,'#161b23',x,y,z+(n-1)*dz/2);instance(g,new T.BoxGeometry(.06,.48,.06),mat('#c9ab53',.8,.32),pts);instance(g,new T.BoxGeometry(.055,.30,.055),mat('#c1c6c9',.85,.3),pts.map(p=>[p[0],-.10,p[2]]));const ringGeo=new T.TorusGeometry(.075,.016,6,12);ringGeo.rotateX(-Math.PI/2);instance(g,ringGeo,mat('#d5b564',.75,.3),pads);}
   function smd(g,x0,z0,n=12){const caps=[],ends=[];for(let i=0;i<n;i++){const x=x0+(i%4)*.21,z=z0+Math.floor(i/4)*.23;caps.push([x,.13,z]);ends.push([x-.065,.13,z],[x+.065,.13,z]);}instance(g,new T.BoxGeometry(.105,.07,.065),'#b49c72',caps);instance(g,new T.BoxGeometry(.035,.075,.07),mat('#a9afb3',.65,.3),ends);}
   function usb(g,x,y,z,type='C'){const w=type==='C'?.9:.8;slab(g,w,.7,.32,.1,mat('#c3cbd0',.85,.25),x,y,z);box(g,w*.8,.18,.035,'#1b2026',x,y,z-.365);box(g,w*.6,.045,.04,'#55606c',x,y,z-.39);for(let i=0;i<5;i++)box(g,.035,.025,.055,mat('#d9b15a',.7,.3),x-w*.2+i*w*.1,y,z-.41);}
   function led(g,x,z,color='#8ee294'){cyl(g,.055,.055,new T.MeshStandardMaterial({color,emissive:color,emissiveIntensity:.8,roughness:.3}),x,.16,z,12);}
-  function bme(){const g=new T.Group();pcb(g,2.52,1.8,'#136a83');slab(g,.34,.34,.10,.04,mat('#d1ced1',.85,.28),0,.15,0);cyl(g,.025,.01,'#1f2832',0,.21,0,10);chip(g,.25,.30,-.65,-.08,'U2',.08,.08);smd(g,.35,-.2,4);headers(g,0,-.65,1);for(let i=0;i<6;i++){cyl(g,.07,.02,mat('#d1b055',.75,.3),-.65+i*.254,.09,.65,12);cyl(g,.032,.025,'#152735',-.65+i*.254,.105,.65,12);}for(const x of [-1.08,1.08]){box(g,.30,.25,.47,'#eeeade',x,.19,0);box(g,.035,.12,.30,'#34343a',x+Math.sign(x)*.17,.18,0);}label(g,'BME280',1.25,.22,0,.085,-.52,{size:46});label(g,'VIN 3V GND SCK SDO SDI',1.9,.20,0,.085,.40,{size:32});for(let i=0;i<4;i++)trace(g,[[-.70+i*.36,.079,.6],[-.7+i*.36,.079,.35],[-.25+i*.13,.079,.10]]);return g;}
+  function bme(){const g=new T.Group();pcb(g,2.52,1.8,'#136a83');slab(g,.34,.34,.10,.04,mat('#d1ced1',.85,.28),0,.15,0);cyl(g,.025,.01,'#1f2832',0,.21,0,10);chip(g,.25,.30,-.65,-.08,'U2',.08,.08);smd(g,.35,-.2,4);for(let i=0;i<6;i++){cyl(g,.07,.02,mat('#d1b055',.75,.3),-.65+i*.254,.09,.65,12);cyl(g,.032,.025,'#152735',-.65+i*.254,.105,.65,12);}for(let i=0;i<6;i++)box(g,.055,.36,.055,mat('#c3c7c9',.84,.3),-.65+i*.254,-.10,.65);for(const x of [-1.08,1.08]){box(g,.30,.25,.47,'#eeeade',x,.19,0);box(g,.035,.12,.30,'#34343a',x+Math.sign(x)*.17,.18,0);}label(g,'BME280',1.25,.22,0,.085,-.52,{size:46});label(g,'VIN 3V GND SCK SDO SDI',1.9,.20,0,.085,.40,{size:32});for(let i=0;i<4;i++)trace(g,[[-.70+i*.36,.079,.6],[-.7+i*.36,.079,.35],[-.25+i*.13,.079,.10]]);return g;}
   return {mat,mesh,box,cyl,slab,frame,instance,ring,screw,standoff,label,trace,cable,chip,pcb,headers,smd,usb,led,bme};
 }
 
@@ -48,12 +51,8 @@ export function buildProject(THREE,palette={}){
  label(lid,'BIOGEOLAB  •  FIELD / LAB',12,.65,0,.32,7.85,{fg:lime,size:72});
  for(const x of [-7.4,7.4])box(lid,1.5,.5,.55,mat('#baacc4',.5,.35),x,-.25,8.5);
  part('lid','Tampa com janela de inspeção',lid,[0,5.8,0],[0,11.5,-1.5],'A janela transparente e a tampa removível permitem acompanhar a organização interna. Vedações e resistência à água dependem do gabinete real selecionado.','Tampa autoral de inspeção','Proposta: 240 × 170 mm; fechamento a validar.','Estrutura');
- const plate=new T.Group();slab(plate,21,14,.25,.35,aluminum,0,0,0,[[-9.5,-6,.17],[9.5,-6,.17],[-9.5,6,.17],[9.5,6,.17]]);
- for(const x of [-9.5,9.5])for(const z of [-6,6])standoff(plate,x,-.5,z,.7);
- for(let i=0;i<9;i++)box(plate,.05,.012,11,'#89989f',-8+i*2,.14,0);
- label(plate,'AQUISIÇÃO  /  ARMAZENAMENTO  /  TEMPO',17,.55,0,.15,5.8,{fg:deep,size:57});
- label(plate,'3.3 V LOGIC  ·  USB INPUT  ·  RIGID SENSOR MOUNT',16,.35,0,.15,-5.8,{fg:deep,size:40});
- part('plate','Base rígida e espaçadores',plate,[0,2,0],[0,2.1,0],'Chassi interno que organiza os módulos. Fixe o ADXL355 rigidamente e registre a orientação; não o deixe suspenso nos fios durante a aquisição.','Placa de montagem e espaçadores','Área proposta: 210 × 140 mm.','Montagem');
+ const plate=makeCarrier(T,K,boardSpec);
+ part('plate','PCB BioGeo · aquisição',plate,[0,2,0],[0,2.1,0],'Integra Feather V2, ADXL355, microSD, RTC e BME280. Seis testpoints, conectores e desacoplamento proposto. Fixe o acelerômetro rigidamente. Estudo de integração; requer revisão elétrica e mecânica.','BIOGEO-DAQ-A · FR4 / 2 camadas','210 × 140 × 1,6 mm · furos M3.','PCB');
  const feather=new T.Group();pcb(feather,2.28,5.23,'#20272b');headers(feather,-1.02,-1.9,16);headers(feather,1.02,-.88,12);
  slab(feather,1.8,1.9,.18,.05,'#364248',0,.13,1.2);slab(feather,1.5,1.27,.19,.05,mat('#c6c9cc',.85,.25),0,.31,1.0);
  label(feather,'ESP32\nPICO MINI 02',1.3,1.03,0,.415,1.0,{fg:'#343c46',size:64});
@@ -81,11 +80,11 @@ export function buildProject(THREE,palette={}){
  for(const x of [-.68,.68])box(sd,.08,.10,1.5,mat('#8b979d',.8,.3),x,.36,.25);
  const card=new T.Group();slab(card,1.05,1.5,.08,.05,'#1e252d');label(card,'microSD\n32 GB',.92,1.05,0,.05,0,{size:72,fg:'#eee9de'});card.position.set(0,.2,1.3);sd.add(card);chip(sd,.35,.48,-.7,-.55,'U1',.10,.10);smd(sd,.0,-.8,4);
  for(let i=0;i<6;i++){cyl(sd,.065,.018,mat('#cfad53',.75,.3),-.635+i*.254,.08,-1.3,12);cyl(sd,.03,.02,'#132938',-.635+i*.254,.095,-1.3,10);}
- label(sd,'3V GND CLK DO DI CS',2.2,.24,0,.085,-1.03,{size:32});
+ for(let i=0;i<6;i++)box(sd,.055,.36,.055,mat('#c3c7c9',.84,.3),-.635+i*.254,-.10,-1.3); label(sd,'3V GND CLK DO DI CS',2.2,.24,0,.085,-1.03,{size:32});
  part('sd','Módulo microSD e cartão',sd,[-.6,2.43,3.0],[0,7.5,4.6],'Armazena blocos de amostras mesmo sem rede. O barramento SPI pode ser compartilhado com o sensor desde que cada dispositivo tenha seu próprio CS e transações coordenadas.','Breakout microSD SPI compatível com 3,3 V','Forma representativa; selecionar e conferir a revisão real.','Armazenamento');
  const rtc=new T.Group();pcb(rtc,2.3,1.76,'#267a91');chip(rtc,.90,.76,.0,-.1,'DS3231',.23,.08);cyl(rtc,.60,.20,mat('#b8c4c7',.8,.25),0,-.18,.08);label(rtc,'CR1220',.8,.4,0,-.29,.10,{size:50});
  smd(rtc,-.85,-.15,3);for(let i=0;i<6;i++){cyl(rtc,.06,.02,mat('#c6a64e',.75,.3),-.635+i*.254,.08,.68,12);cyl(rtc,.028,.023,'#1b363f',-.635+i*.254,.095,.68,10);}
- label(rtc,'DS3231 RTC',1.75,.24,0,.085,-.63,{size:43});label(rtc,'VIN GND SCL SDA',1.65,.17,0,.085,.46,{size:31});
+ for(let i=0;i<6;i++)box(rtc,.055,.36,.055,mat('#c3c7c9',.84,.3),-.635+i*.254,-.10,.68); label(rtc,'DS3231 RTC',1.75,.24,0,.085,-.63,{size:43});label(rtc,'VIN GND SCL SDA',1.65,.17,0,.085,.46,{size:31});
  part('rtc','Relógio DS3231',rtc,[6.5,2.43,2.7],[5.0,5.0,3.5],'Referência de data e hora por I²C. Registre sincronização, origem do tempo e interrupções; o RTC não substitui a contagem monotônica das amostras.','Adafruit DS3231 Precision RTC #3013, proposta','23 × 17,6 × 7,2 mm (referência do fabricante).','Tempo');
  const env=bme();part('bme280','Sensor ambiental BME280',env,[6.5,2.43,5.0],[7.0,7.5,5.0],'Expansão para temperatura, pressão e umidade. Deve ficar em região ventilada e longe do calor do controlador para reduzir influência da montagem.','Adafruit BME280 #2652, expansão proposta','25,2 × 18,0 × 4,6 mm (referência do fabricante).','Sensor');
  const power=new T.Group();slab(power,5.8,8.7,1.45,.65,mat('#e2ddc5',.15,.43));slab(power,5.55,8.45,.035,.6,'#eeebd5',0,.75,0);label(power,'USB\nREGULADO',4,2.4,0,.78,0,{fg:deep,size:88});label(power,'5 V  ·  FONTE EXTERNA',4.6,.6,0,.78,3.1,{fg:deep,size:43});
