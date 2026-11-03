@@ -1,0 +1,52 @@
+{
+  "modeling": "Original procedural educational representation. No manufacturer CAD redistributed. Shapes, component placements and enclosure dimensions are approximate; not manufacturing drawings.",
+  "scale": "Approximately 1 world unit = 10 mm. Scale differs from visual CSS sizing.",
+  "checked": "2026-11-03",
+  "references": [
+    {
+      "title": "ESP32 Feather V2 — pinagem oficial",
+      "url": "https://learn.adafruit.com/adafruit-esp32-feather-v2/pinouts",
+      "use": "USB-C, conectores, referências de energia, I2C e SPI."
+    },
+    {
+      "title": "ESP32 Feather V2 — dimensões",
+      "url": "https://www.adafruit.com/product/5400",
+      "use": "Envelope: 52,3×22,8×7,2mm."
+    },
+    {
+      "title": "Feather V2 — variante Arduino",
+      "url": "https://github.com/espressif/arduino-esp32/blob/master/variants/adafruit_feather_esp32_v2/pins_arduino.h",
+      "use": "Confirma SDA22, SCL20, SCK5, MOSI19, MISO21, CS33; específicos desta placa."
+    },
+    {
+      "title": "Feather V2 — esquema da placa",
+      "url": "https://github.com/adafruit/Adafruit-ESP32-Feather-V2-PCB/blob/main/Adafruit%20ESP32%20Feather%20V2.sch",
+      "use": "SCL ligado a IO20 e SDA a IO22 no ESP32-PICO-MINI-02."
+    },
+    {
+      "title": "EVAL-ADXL355-PMDZ — documentação oficial",
+      "url": "https://analogdevicesinc.github.io/system-level/solutions/reference-designs/adxl355-pmdz/",
+      "use": "Módulo aproximadamente 25×25mm, conexão PMOD SPI e alimentação 3,3V."
+    },
+    {
+      "title": "DS3231 — breakout de referência",
+      "url": "https://www.adafruit.com/product/3013",
+      "use": "Dimensões: 23×17,6×7,2mm; aparência aproximada."
+    },
+    {
+      "title": "Ocean ST — ficha do fabricante",
+      "url": "https://www.oceanoptics.com/wp-content/uploads/2024/05/Ocean_ST_Product-Sheet.pdf",
+      "use": "Espectrômetro externo; envelope: 42,1×40,3×26,6mm e interfaces."
+    },
+    {
+      "title": "BME280 — breakout de referência e dimensões",
+      "url": "https://www.adafruit.com/product/2652",
+      "use": "Aparência geral, interfaces e dimensões do breakout; detalhes 3D autorais aproximados."
+    },
+    {
+      "title": "BME280 — documentação do sensor",
+      "url": "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf",
+      "use": "Interface elétrica e limites do sensor."
+    }
+  ]
+}

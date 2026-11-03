@@ -1,0 +1,455 @@
+{
+  "eyebrow": "BioGeoLab · bancada portátil",
+  "headline": "Monte. Meça. Investigue.",
+  "intro": "Organize aquisição, armazenamento e análise em uma maleta de estudos com ESP32. Abra o conjunto em 3D para entender a fixação do acelerômetro, os barramentos e o caminho de cada arquivo até o laboratório.",
+  "scope": "Referência proposta: Adafruit ESP32 Feather V2, EVAL-ADXL355-PMDZ, microSD SPI e expansões RTC/BME280. A cena é uma reconstrução didática aproximada; pinagem e tensão devem ser conferidas na revisão adquirida. Espectroscopia usa instrumento externo e protocolo próprio; o ESP32 não realiza identificação química ou clínica sozinho.",
+  "stats": [
+    {
+      "value": "8",
+      "label": "etapas práticas"
+    },
+    {
+      "value": "SPI",
+      "label": "aceleração e microSD"
+    },
+    {
+      "value": "3 eixos",
+      "label": "registro do movimento"
+    }
+  ],
+  "steps": [
+    {
+      "id": "etapa-1",
+      "title": "Escolha o primeiro experimento",
+      "kicker": "Delimitar",
+      "body": "Comece com aquisição de aceleração em uma base rígida, arquivo local e análise no computador. Adicione ambiente e espectroscopia depois que esse caminho funcionar.",
+      "actions": [
+        "Defina grandeza, unidade, orientação dos eixos, faixa e taxa desejada. O objetivo inicial é estudar o sinal da montagem, não declarar detecção de terremotos.",
+        "Preencha a BOM com a Feather V2 e o módulo ADXL355 exatos. Registre firmware, revisão mecânica e identificação da estação.",
+        "Escolha um ensaio repetível, como uma condição de repouso seguida de uma excitação controlada e documentada.",
+        "Defina antes da medição o que será contado: amostras, lacunas, saturação, duração e condição da alimentação."
+      ],
+      "check": "Há um protocolo que liga a pergunta do estudo à montagem, aos canais e às evidências esperadas.",
+      "parts": [
+        "case",
+        "plate",
+        "esp32",
+        "adxl355"
+      ]
+    },
+    {
+      "id": "etapa-2",
+      "title": "Monte a base e fixe o acelerômetro",
+      "kicker": "Montagem mecânica",
+      "body": "O sensor precisa acompanhar o movimento da base. Espumas soltas, cabos tensionados e peças vibrando mudam a resposta que será medida.",
+      "actions": [
+        "Fixe a placa do acelerômetro rigidamente na base com os furos e suportes adequados ao módulo real. Documente a orientação X/Y/Z em foto.",
+        "Posicione a Feather e o cartão em suportes isolantes, com acesso ao USB, à tecla de reset e ao microSD.",
+        "Organize os fios com folga para manutenção, evitando esforço sobre os conectores. Confira se a tampa não pressiona placas nem cabos.",
+        "Meça as peças antes de fabricar a maleta. O modelo 3D representa a organização; não substitui o desenho mecânico com tolerâncias."
+      ],
+      "check": "Sensor, base e orientação permanecem iguais entre repetições do mesmo ensaio.",
+      "parts": [
+        "case",
+        "lid",
+        "plate",
+        "adxl355",
+        "esp32"
+      ]
+    },
+    {
+      "id": "etapa-3",
+      "title": "Ligue um módulo por vez",
+      "kicker": "Montagem elétrica",
+      "body": "Use a pinagem da Feather ESP32 V2, que difere da de outras placas ESP32. Comece pelo ADXL355 e valide o barramento antes de acrescentar o cartão.",
+      "actions": [
+        "Com alimentação desligada, conecte 3V e GND da Feather aos pinos VDD e DGND do PMDZ. O módulo de referência recebe 3,3 V.",
+        "Ligue SCK/GPIO5 ao P1-4, MO/GPIO19 ao P1-2 e MI/GPIO21 ao P1-3. Use GPIO27 no P1-1 como CS do acelerômetro.",
+        "Reserve GPIO32 para DRDY do P1-10. INT1 e INT2 são expansões; P1-8 é NC e fica sem conexão.",
+        "Depois do teste individual, acrescente microSD com sinais SPI compartilhados e CS próprio em GPIO33. Ambos os CS devem ficar inativos antes de iniciar transações; confirme se o módulo SD libera MISO quando não selecionado."
+      ],
+      "check": "O ADXL355 responde ao driver sozinho; adicionar o SD não altera a comunicação do sensor.",
+      "parts": [
+        "esp32",
+        "adxl355",
+        "sd"
+      ]
+    },
+    {
+      "id": "etapa-4",
+      "title": "Separe aquisição de gravação",
+      "kicker": "Firmware",
+      "body": "Faça leitura, armazenamento e comunicação como tarefas coordenadas. Escrever no cartão ou esperar uma rede não deve bloquear a aquisição sem que isso seja registrado.",
+      "actions": [
+        "Parta de um driver ADXL355 versionado e confira identidade do componente, faixa, taxa, filtros e interpretação dos valores assinados no datasheet.",
+        "Registre seq, tempo monotônico, X/Y/Z, unidade, configuração e flags. Use buffers para passar blocos da aquisição à tarefa de gravação.",
+        "Se o buffer lotar ou houver atraso, conte a perda. Não repita o último valor para esconder uma amostra ausente.",
+        "O firmware de estudo já incluído apenas demonstra relógio e serial com valores sintéticos. Ele não contém driver ADXL355 nem garante uma taxa de aquisição real; a integração do sensor é uma etapa do TCC."
+      ],
+      "check": "A taxa observada, as lacunas e o tempo de gravação são medidos com o sensor real.",
+      "parts": [
+        "esp32",
+        "adxl355",
+        "sd"
+      ],
+      "code": {
+        "language": "bash",
+        "text": "cd materiais/firmware\nidf.py set-target esp32\nidf.py build\n# Selecione a porta real da sua placa:\nidf.py -p PORTA_DA_PLACA flash monitor\n# Este exemplo é de relógio/serial com valores sintéticos."
+      }
+    },
+    {
+      "id": "etapa-5",
+      "title": "Acrescente relógio e ambiente",
+      "kicker": "Expandir",
+      "body": "Um relógio civil facilita relacionar campanhas; o tempo monotônico continua necessário para os intervalos entre amostras.",
+      "actions": [
+        "Use RTC DS3231 compatível e breakout BME280 como expansões. Alimente os dois em 3,3 V e una seus terras à Feather.",
+        "Conecte SDA ao pino SDA da Feather V2 e SCL ao SCL. No pacote oficial dessa placa, os aliases correspondem a GPIO22 e GPIO20; não reutilize automaticamente 21/22 de um DevKitC.",
+        "No Arduino, selecione Adafruit Feather ESP32 V2 e use Wire.begin() com a variante correta. O conector STEMMA QT também depende da habilitação de sua alimentação conforme o guia da placa.",
+        "Registre ajuste do RTC, perda de referência e novo sincronismo como eventos. Leia o BME280 em uma cadência própria, sem exigir que acompanhe a amostragem do acelerômetro."
+      ],
+      "check": "Os arquivos relacionam relógio monotônico e referência UTC; cada canal mantém sua taxa e unidade.",
+      "parts": [
+        "esp32",
+        "rtc",
+        "bme280"
+      ]
+    },
+    {
+      "id": "etapa-6",
+      "title": "Preserve arquivos e sincronize",
+      "kicker": "Armazenar",
+      "body": "O cartão guarda o original da sessão. A transmissão cria uma cópia verificável no computador ou servidor.",
+      "actions": [
+        "Crie diretórios por estação e sessão. Separe cabeçalho de configuração, blocos de amostras, eventos e resumo de perdas.",
+        "Implemente fechamento de arquivo e estado de erro para cartão ausente ou cheio. Ensaie interrupções controladas para verificar o que foi preservado.",
+        "Calcule tamanho e checksum dos arquivos concluídos. Só marque uma transferência como confirmada após comparar o arquivo recebido.",
+        "No Wi-Fi, envie blocos sem interromper a aquisição. Repetir uma transferência com o mesmo identificador não deve criar outra sessão ou duplicar amostras."
+      ],
+      "check": "O arquivo copiado tem o mesmo tamanho e checksum do original, inclusive após reconectar a rede.",
+      "parts": [
+        "sd",
+        "esp32",
+        "power"
+      ]
+    },
+    {
+      "id": "etapa-7",
+      "title": "Analise sinal e espectro com contexto",
+      "kicker": "Interpretar",
+      "body": "Aprenda o processo com os dados sintéticos fornecidos e depois adapte o importador aos arquivos medidos. A unidade, a taxa e o método fazem parte do resultado.",
+      "actions": [
+        "Execute analisar_sinal.py para observar média, RMS e frequência dominante do exemplo. Confira primeiro se os intervalos de tempo são regulares.",
+        "Para dados reais, preserve o sinal bruto e registre remoção de tendência, filtros, janela e faixa de análise. Compare com referência ou condição de ensaio conhecida.",
+        "O módulo de espectroscopia importa arquivos de um instrumento externo. Registre instrumento, branco, referência, faixa, integração e identificação da amostra.",
+        "Comece com analisar_espectro.py e o CSV sintético. Um pico isolado não identifica uma substância, uma doença ou uma amostra biológica; essa interpretação exige método e validação próprios."
+      ],
+      "check": "Todo gráfico informa origem, unidade, processamento e condições do ensaio.",
+      "parts": [
+        "adxl355",
+        "spectrometer"
+      ],
+      "code": {
+        "language": "bash",
+        "text": "cd materiais\npython analisar_sinal.py\npython analisar_espectro.py"
+      }
+    },
+    {
+      "id": "etapa-8",
+      "title": "Valide a estação portátil",
+      "kicker": "Entregar",
+      "body": "Faça a demonstração completa da aquisição até o arquivo recuperado. Documente o que funcionou, o que falhou e o limite do instrumento construído.",
+      "actions": [
+        "Repita montagem e ensaio, registrando orientação, fixação, taxa observada, perdas e alimentação.",
+        "Compare uma sessão em bancada com outra na configuração portátil. Meça autonomia do conjunto real; capacidade nominal de uma bateria não basta.",
+        "Teste cartão ausente, Wi-Fi indisponível e reinício. A interface deve informar cada estado e preservar o que já foi adquirido.",
+        "Entregue BOM, diagrama, firmware, fotos, versão do CAD, dataset próprio, protocolo e relatório. Apresente a espectroscopia como etapa externa quando não tiver sido integrada e validada."
+      ],
+      "check": "Uma sessão é reproduzível e seus arquivos podem ser localizados e interpretados por outra equipe.",
+      "parts": [
+        "case",
+        "lid",
+        "esp32",
+        "sd"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "name": "Controlador",
+      "model": "Adafruit ESP32 Feather V2",
+      "quantity": "1",
+      "role": "Aquisição, gestão de buffers e comunicação.",
+      "selection": "Essencial; a pinagem é específica desta variante.",
+      "sourceUrl": "https://learn.adafruit.com/adafruit-esp32-feather-v2/pinouts",
+      "sourceLabel": "Pinagem Adafruit"
+    },
+    {
+      "name": "Acelerômetro",
+      "model": "EVAL-ADXL355-PMDZ",
+      "quantity": "1",
+      "role": "Aceleração em três eixos por SPI.",
+      "selection": "Fixação rígida; alimentação do módulo em 3,3 V.",
+      "sourceUrl": "https://analogdevicesinc.github.io/system-level/solutions/reference-designs/adxl355-pmdz/",
+      "sourceLabel": "Guia Analog Devices"
+    },
+    {
+      "name": "Armazenamento",
+      "model": "Breakout microSD SPI compatível com lógica de 3,3 V",
+      "quantity": "1 + cartão",
+      "role": "Gravação de amostras e eventos.",
+      "selection": "Conferir alimentação, MISO e CS; validar compartilhamento SPI.",
+      "sourceUrl": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/storage/sdmmc.html",
+      "sourceLabel": "Driver SD Espressif"
+    },
+    {
+      "name": "Referência temporal",
+      "model": "Adafruit DS3231 #3013 ou equivalente conferido",
+      "quantity": "1 opcional",
+      "role": "Referência civil de tempo em campo.",
+      "selection": "Proposto; alimentação e pull-ups a 3,3 V.",
+      "sourceUrl": "https://learn.adafruit.com/adafruit-ds3231-precision-rtc-breakout/pinouts",
+      "sourceLabel": "RTC Adafruit"
+    },
+    {
+      "name": "Ambiente",
+      "model": "BME280 breakout de referência Adafruit 2652",
+      "quantity": "1 opcional",
+      "role": "Temperatura, pressão e umidade de contexto.",
+      "selection": "Expansão em I²C; separar cadência do acelerômetro.",
+      "sourceUrl": "https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/arduino-test",
+      "sourceLabel": "BME280 Adafruit"
+    },
+    {
+      "name": "Base e gabinete",
+      "model": "Base rígida, maleta e espaçadores",
+      "quantity": "1 conjunto",
+      "role": "Acoplamento mecânico, transporte e manutenção.",
+      "selection": "Desenvolver CAD a partir dos módulos medidos.",
+      "sourceUrl": "https://www.freecad.org/",
+      "sourceLabel": "FreeCAD"
+    },
+    {
+      "name": "Energia",
+      "model": "USB; power bank fechado na etapa portátil",
+      "quantity": "1",
+      "role": "Alimentação regulada do conjunto.",
+      "selection": "Dimensionar e medir autonomia; não ligar célula avulsa como fonte USB.",
+      "sourceUrl": "https://learn.adafruit.com/adafruit-esp32-feather-v2/pinouts",
+      "sourceLabel": "Alimentação da Feather"
+    },
+    {
+      "name": "Espectroscopia",
+      "model": "Ocean Optics Ocean ST como referência visual; instrumento externo",
+      "quantity": "Conforme protocolo",
+      "role": "Aquisição de espectros no laboratório.",
+      "selection": "Expansão independente; usar fonte protegida, protocolo e manual do instrumento.",
+      "sourceUrl": "https://www.oceanoptics.com/wp-content/uploads/2024/05/Ocean_ST_Product-Sheet.pdf",
+      "sourceLabel": "Ficha Ocean Optics"
+    }
+  ],
+  "connections": [
+    {
+      "to": "PMDZ · P1-6 / P1-12 VDD",
+      "protocol": "3,3 V",
+      "detail": "Confirmar orientação do conector P1; alimentar conforme guia do módulo.",
+      "type": "power",
+      "from": "Feather · 3V"
+    },
+    {
+      "to": "PMDZ · P1-5 / P1-11 DGND",
+      "protocol": "Terra comum",
+      "detail": "Retorno de energia e referência dos sinais.",
+      "type": "ground",
+      "from": "Feather · GND"
+    },
+    {
+      "to": "PMDZ · P1-4 SCLK e SD · SCK",
+      "protocol": "SPI · relógio",
+      "detail": "Barramento compartilhado; cada periférico usa sua configuração de transação.",
+      "type": "data",
+      "from": "Feather · SCK / GPIO5"
+    },
+    {
+      "to": "PMDZ · P1-2 MOSI e SD · MOSI",
+      "protocol": "SPI · saída do controlador",
+      "detail": "No SD, esta entrada também pode estar marcada DI.",
+      "type": "data",
+      "from": "Feather · MO / GPIO19"
+    },
+    {
+      "to": "PMDZ · P1-3 MISO e SD · MISO",
+      "protocol": "SPI · entrada do controlador",
+      "detail": "No SD, pode estar marcada DO; o módulo não selecionado precisa liberar a linha.",
+      "type": "data",
+      "from": "Feather · MI / GPIO21"
+    },
+    {
+      "to": "PMDZ · P1-1 CS",
+      "protocol": "Seleção ADXL355",
+      "detail": "Escolha proposta do projeto; CS independente do cartão.",
+      "type": "data",
+      "from": "Feather · GPIO27"
+    },
+    {
+      "to": "microSD · CS",
+      "protocol": "Seleção microSD",
+      "detail": "Escolha proposta; mantenha os dois CS inativos antes da inicialização.",
+      "type": "data",
+      "from": "Feather · GPIO33"
+    },
+    {
+      "to": "Feather · GPIO32",
+      "protocol": "Sinal de dados prontos",
+      "detail": "Entrada reservada à aquisição; configurar conforme driver e datasheet.",
+      "type": "data",
+      "from": "PMDZ · P1-10 DRDY"
+    },
+    {
+      "to": "RTC e BME280 · SDA",
+      "protocol": "I²C · dados",
+      "detail": "Endereços distintos; usar aliases da variante Feather V2.",
+      "type": "data",
+      "from": "Feather · SDA / GPIO22"
+    },
+    {
+      "to": "RTC e BME280 · SCL",
+      "protocol": "I²C · relógio",
+      "detail": "Mapeamento específico Feather V2, conferido no pacote oficial Arduino; não é o padrão DevKitC.",
+      "type": "data",
+      "from": "Feather · SCL / GPIO20"
+    },
+    {
+      "to": "SD / RTC / BME280 · alimentação",
+      "protocol": "Energia das expansões",
+      "detail": "Usar módulos compatíveis e conferir orçamento de corrente do regulador.",
+      "type": "power",
+      "from": "Feather · 3V e GND"
+    },
+    {
+      "to": "Computador de análise",
+      "protocol": "Arquivo CSV/TXT",
+      "detail": "Importação de arquivo com metadados; não é leitura óptica direta por um GPIO.",
+      "type": "data",
+      "from": "Espectrômetro externo"
+    }
+  ],
+  "stack": [
+    {
+      "name": "ESP-IDF + FreeRTOS",
+      "role": "Aquisição, filas e tarefas com eventos de falha.",
+      "href": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/"
+    },
+    {
+      "name": "SPI + driver ADXL355",
+      "role": "Leitura dos três eixos e configuração rastreável.",
+      "href": "https://analogdevicesinc.github.io/system-level/solutions/reference-designs/adxl355-pmdz/"
+    },
+    {
+      "name": "SDSPI + FATFS",
+      "role": "Blocos de dados e preservação local.",
+      "href": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/storage/sdmmc.html"
+    },
+    {
+      "name": "Python + NumPy / SciPy",
+      "role": "Análise reprodutível dos sinais.",
+      "href": "https://docs.scipy.org/doc/scipy/"
+    },
+    {
+      "name": "FastAPI + React",
+      "role": "Consulta de sessões e visualização do piloto.",
+      "href": "https://fastapi.tiangolo.com/"
+    }
+  ],
+  "deliverables": [
+    "Estação com BOM, esquema e orientação dos eixos identificados.",
+    "Firmware de aquisição real, versão dos drivers e parâmetros registrados.",
+    "Arquivos brutos com sequência, tempo, unidade e contador de perdas.",
+    "Rotina de sincronização com confirmação de integridade.",
+    "Relatório com repetição, comparação, limites e evidências."
+  ],
+  "checks": [
+    "Placa Feather V2 identificada; pinagem não copiada de outro ESP32.",
+    "ADXL355 validado sozinho antes do compartilhamento SPI.",
+    "Cartão não bloqueia a aquisição sem registrar atraso ou perda.",
+    "UTC e tempo monotônico são preservados como informações distintas.",
+    "Espectros demonstrativos e resultados reais têm origem explícita."
+  ],
+  "references": [
+    {
+      "title": "Feather V2 · Adafruit",
+      "url": "https://learn.adafruit.com/adafruit-esp32-feather-v2/pinouts",
+      "why": "Conectores, energia e pinagem específica."
+    },
+    {
+      "title": "Variante oficial Arduino-ESP32",
+      "url": "https://github.com/espressif/arduino-esp32/blob/master/variants/adafruit_feather_esp32_v2/pins_arduino.h",
+      "why": "Aliases e GPIO efetivos da Feather V2."
+    },
+    {
+      "title": "EVAL-ADXL355-PMDZ · Analog Devices",
+      "url": "https://analogdevicesinc.github.io/system-level/solutions/reference-designs/adxl355-pmdz/",
+      "why": "Cabeçalho P1, alimentação e sinais SPI."
+    },
+    {
+      "title": "DS3231 · Adafruit",
+      "url": "https://learn.adafruit.com/adafruit-ds3231-precision-rtc-breakout/pinouts",
+      "why": "Alimentação e barramento do RTC."
+    },
+    {
+      "title": "SD/SDIO/MMC · Espressif",
+      "url": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/storage/sdmmc.html",
+      "why": "Camadas de driver e exemplos de cartão."
+    },
+    {
+      "title": "BME280 · Adafruit",
+      "url": "https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/arduino-test",
+      "why": "Expansão ambiental em I²C."
+    }
+  ],
+  "faq": [
+    {
+      "q": "O exemplo de firmware já lê o ADXL355?",
+      "a": "Não. O arquivo existente demonstra relógio monotônico e serial com valores sintéticos. A leitura real requer driver, configuração e ensaio na placa selecionada."
+    },
+    {
+      "q": "O kit é uma estação sismológica calibrada?",
+      "a": "O projeto constrói uma plataforma educacional de aquisição. Resposta mecânica, ruído, faixa, sincronização e comparação com referência precisam ser caracterizados antes de sustentar uma aplicação científica específica."
+    },
+    {
+      "q": "A conexão SCL20 serve em qualquer ESP32?",
+      "a": "Não. Ela pertence à variante Adafruit Feather ESP32 V2 indicada nas fontes. Use a identificação da placa, sua serigrafia e o pacote correto; outras placas possuem mapeamentos diferentes."
+    },
+    {
+      "q": "Como entra a análise química ou clínica?",
+      "a": "Como estudo de método com instrumento externo e dados documentados. O importador de espectros e o ESP32 não comprovam identificação química nem diagnóstico. Instrumentação óptica exige o protocolo supervisionado do laboratório."
+    }
+  ],
+  "downloads": [
+    {
+      "label": "Kit de estudos",
+      "href": "../materiais/kit-estudos-esp32.zip",
+      "detail": "Sinais, espectros sintéticos e exemplos."
+    },
+    {
+      "label": "BOM editável",
+      "href": "../materiais/bom.csv",
+      "detail": "Inventário e seleção dos módulos."
+    },
+    {
+      "label": "Guia do firmware didático",
+      "href": "../materiais/firmware/README.md",
+      "detail": "Compilação do exemplo de relógio e serial."
+    },
+    {
+      "label": "Análise de sinal",
+      "href": "../materiais/analisar_sinal.py",
+      "detail": "RMS e frequência dominante do exemplo."
+    },
+    {
+      "label": "Protocolo de ensaio",
+      "href": "../materiais/protocolo_experimento.md",
+      "detail": "Método, referência e evidências."
+    }
+  ]
+}
