@@ -1,0 +1,188 @@
+{
+  "slug": "biogeolab-esp32",
+  "name": "BioGeoLab",
+  "short": "BioGeoLab",
+  "domain": "Kit portátil ESP32 · sensoriamento e estudos",
+  "tagline": "O laboratório vai com você.",
+  "concept": [
+    "Um arco de equipamento portátil abriga uma linha de sinal: o contorno lembra tanto um estojo de campo quanto uma janela de instrumento. O percurso interno conecta aquisição, armazenamento e estudo.",
+    "A identidade retoma curvas e faixas dos anos 1970 com cores de laboratório contemporâneo. Violeta profundo, lima, rosa e creme constroem um sistema tátil, experimental e reconhecível."
+  ],
+  "personality": [
+    "Experimental",
+    "Portátil",
+    "Interdisciplinar"
+  ],
+  "colors": {
+    "bg": "#321548",
+    "panel": "#48235D",
+    "ink": "#FFF2D8",
+    "muted": "#DAC4E1",
+    "line": "#805E8D",
+    "accent": "#D6F86A",
+    "second": "#F39DCB",
+    "paper": "#FFF2D8",
+    "dark": "#321548"
+  },
+  "palette": [
+    {
+      "name": "Violeta instrumento",
+      "hex": "#321548",
+      "role": "Base institucional, marca e fundos escuros."
+    },
+    {
+      "name": "Lima sinal",
+      "hex": "#D6F86A",
+      "role": "Linha de aquisição e chamadas; texto violeta sobre a cor."
+    },
+    {
+      "name": "Rosa amostra",
+      "hex": "#F39DCB",
+      "role": "Faixas secundárias e conexões entre disciplinas."
+    },
+    {
+      "name": "Creme caderno",
+      "hex": "#FFF2D8",
+      "role": "Papel, rótulos e texto claro."
+    },
+    {
+      "name": "Violeta painel",
+      "hex": "#48235D",
+      "role": "Superfícies de interface e capas."
+    }
+  ],
+  "fonts": {
+    "display": "Fraunces",
+    "body": "DM Sans",
+    "mono": "JetBrains Mono"
+  },
+  "motif": "Arcos concêntricos, faixas retrofuturistas e traço de sinal.",
+  "graphic_rules": [
+    "Usar arcos largos e faixas curvas com espessura constante.",
+    "Combinar títulos Fraunces com dados monoespaçados; não usar a serifa em medidas.",
+    "Reservar lima para leitura e rosa para conexões; evitar brilho que prejudique texto.",
+    "Fotografar o kit, as mãos e o contexto de uso; identificar protótipos e dados de demonstração."
+  ],
+  "voice": {
+    "do": [
+      "Mostrar como montar, registrar e interpretar.",
+      "Identificar sensor, unidade e condição do experimento.",
+      "Conectar tecnologia, ambiente e trabalho de laboratório."
+    ],
+    "dont": [
+      "Prometer diagnóstico clínico.",
+      "Chamar instrumento externo de sensor integrado ao ESP32.",
+      "Apresentar meta de aquisição como desempenho já validado."
+    ],
+    "example": "Monte o kit, registre o sinal e leve a pergunta para o laboratório."
+  },
+  "applications": [
+    "Etiqueta do kit com sensor, revisão e código de amostra.",
+    "Slide de experimento com grandes arcos e uma faixa de dados.",
+    "Painel de aquisição com sinal, unidade, estado de conexão e registro."
+  ],
+  "cautions": [
+    "O kit é educacional e experimental; a comunicação não deve sugerir diagnóstico clínico.",
+    "Raman é instrumento externo; taxa de amostragem e precisão dependem de validação."
+  ],
+  "version": "1.0",
+  "year": 2027,
+  "created": "2026-11-03",
+  "logo": {
+    "concept": "Um arco portátil envolve uma linha de sinal com pico e recuperação, unindo equipamento de campo e investigação.",
+    "grid": "Módulo de 100 × 100 unidades. Arco exterior entre x=12 e x=88; topo em y=12; base em y=88; traço interno de 6 unidades.",
+    "clear_space": "1x em todos os lados; x = 10 unidades do símbolo de 100 × 100. A área externa de proteção não está incluída no arquivo.",
+    "min_width_print_mm": 40,
+    "min_width_digital_px": 180,
+    "symbol_min_px": 32,
+    "symbol_min_print_mm": 10,
+    "unit": 10,
+    "symbol_viewbox": [
+      0,
+      0,
+      100,
+      100
+    ],
+    "positive_colors": [
+      "#321548",
+      "#855394"
+    ],
+    "negative_colors": [
+      "#FFF2D8",
+      "#F39DCB"
+    ],
+    "horizontal_viewbox": [
+      0,
+      0,
+      380.47,
+      100
+    ],
+    "files": [
+      "assets/marca-horizontal.svg",
+      "assets/marca-negativa.svg",
+      "assets/marca-monocromatica.svg",
+      "assets/marca-vertical.svg",
+      "assets/simbolo.svg",
+      "assets/simbolo-negativo.svg",
+      "assets/simbolo-monocromatico.svg",
+      "assets/padrao.svg"
+    ],
+    "color_rules": "A versão positiva usa #321548 e #855394 sobre #FFF2D8. A versão negativa usa #FFF2D8 e #F39DCB sobre #321548. Essas variantes são específicas da marca; não substituir as cores por aproximação. A versão monocromática usa uma única tinta, #321548."
+  },
+  "font_files": {
+    "display_regular": "fontes/fraunces-regular.ttf",
+    "display_bold": "fontes/fraunces-bold.ttf",
+    "body_regular": "fontes/dm-sans-regular.ttf",
+    "body_bold": "fontes/dm-sans-bold.ttf",
+    "mono_regular": "fontes/jetbrains-mono-regular.ttf"
+  },
+  "font_web_files": {
+    "display": "fontes/fraunces.woff",
+    "body": "fontes/dm-sans.woff",
+    "mono": "fontes/jetbrains-mono.woff"
+  },
+  "contrast_pairs": [
+    {
+      "label": "Texto principal",
+      "foreground": "#FFF2D8",
+      "background": "#321548",
+      "ratio": 14.18,
+      "minimum": 4.5
+    },
+    {
+      "label": "Texto em painel",
+      "foreground": "#FFF2D8",
+      "background": "#48235D",
+      "ratio": 11.32,
+      "minimum": 4.5
+    },
+    {
+      "label": "Texto secundário",
+      "foreground": "#DAC4E1",
+      "background": "#321548",
+      "ratio": 9.7,
+      "minimum": 4.5
+    },
+    {
+      "label": "Chamada principal",
+      "foreground": "#321548",
+      "background": "#D6F86A",
+      "ratio": 13.09,
+      "minimum": 4.5
+    },
+    {
+      "label": "Link de destaque",
+      "foreground": "#D6F86A",
+      "background": "#321548",
+      "ratio": 13.09,
+      "minimum": 4.5
+    }
+  ],
+  "font_weights": {
+    "display_regular": 400,
+    "display_bold": 700,
+    "body_regular": 400,
+    "body_bold": 700,
+    "mono_regular": 400
+  }
+}

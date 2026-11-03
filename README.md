@@ -14,6 +14,30 @@ Início em **1º de fevereiro de 2027** · Entrega principal em **30 de julho de
 
 ![Trilha de estudos e cronograma com início em fevereiro](docs/trilha-publicada.jpg)
 
+## Identidade visual 2027
+
+**O laboratório vai com você.**
+
+Um arco de equipamento portátil abriga uma linha de sinal: o contorno lembra tanto um estojo de campo quanto uma janela de instrumento. O percurso interno conecta aquisição, armazenamento e estudo.
+
+**Personalidade:** Experimental · Portátil · Interdisciplinar.
+
+[**Explorar o manual visual ↗**](https://perabru.github.io/biogeolab-esp32/identidade-visual/) · [**Baixar guia PDF**](identidade-visual/guia-identidade-visual.pdf) · [**Baixar kit da marca**](identidade-visual/kit-identidade-visual.zip)
+
+O guia reúne conceito, assinaturas, construção, área de proteção, redução mínima, cores, tipografia, fundos, usos incorretos e aplicações. O kit inclui as marcas em SVG, os arquivos de fontes com suas licenças e os dados da identidade.
+
+| Cor | HEX | Aplicação |
+| --- | --- | --- |
+| Violeta instrumento | `#321548` | Base institucional, marca e fundos escuros. |
+| Lima sinal | `#D6F86A` | Linha de aquisição e chamadas; texto violeta sobre a cor. |
+| Rosa amostra | `#F39DCB` | Faixas secundárias e conexões entre disciplinas. |
+| Creme caderno | `#FFF2D8` | Papel, rótulos e texto claro. |
+| Violeta painel | `#48235D` | Superfícies de interface e capas. |
+
+**Tipografia:** Fraunces nos títulos, DM Sans nos textos e JetBrains Mono nos dados técnicos.
+
+Estrutura editorial inspirada no [Manual de Identidade Visual de São José dos Campos](https://www.sjc.sp.gov.br/media/aqpbdbrj/14448_e_s7_identidade-visual-psjc.pdf). As marcas e aplicações foram desenvolvidas para este projeto.
+
 ## Aprender para construir
 
 [**Abrir trilha de estudos ↗**](https://perabru.github.io/biogeolab-esp32/#study)
@@ -29,7 +53,7 @@ O Drive de Pobre foi solicitado e a tentativa de consulta ficou registrada: o ca
 
 ## O planejamento virou a página inicial
 
-O `index.html` é um quadro interativo inspirado no fluxo Kanban. O briefing técnico anterior permanece em [`briefing.html`](briefing.html), com sua identidade visual e documentação preservadas.
+O `index.html` é um quadro interativo inspirado no fluxo Kanban. O briefing técnico anterior permanece em [`briefing.html`](briefing.html), com a identidade visual 2027 aplicada e a documentação preservada.
 
 | Frente | Entrega planejada |
 | --- | --- |
@@ -52,7 +76,7 @@ As datas do INIC 2027 são **metas internas de prontidão**, sem inventar prazo 
 
 ## Abra e continue
 
-Baixe o repositório e abra `index.html`. HTML, CSS, JavaScript e fontes estão incorporados. Nenhuma instalação é necessária para usar o quadro.
+Baixe o repositório e abra `index.html`. HTML, CSS, JavaScript, fontes e símbolo da marca estão incorporados. Nenhuma instalação é necessária para usar o quadro.
 
 ```bash
 git clone https://github.com/perabru/biogeolab-esp32.git
@@ -70,10 +94,6 @@ A escrita acompanha a pesquisa. Os cartões cobrem estrutura, método, resultado
 O manual institucional e a orientação definem a aplicação final. Este quadro organiza a revisão; não emite certificação automática de conformidade.
 
 [Etapas de escrita, normas e fontes →](docs/monografia-inic.md)
-
-## Identidade preservada
-
-Títulos em **Fraunces**, texto em **DM Sans** e dados em **JetBrains Mono**, com fontes incorporadas e licenças preservadas.
 
 ## Arquivos principais
 
